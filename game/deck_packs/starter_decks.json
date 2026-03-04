@@ -1,0 +1,52 @@
+{
+  "type": "deck-pack",
+  "id": "starter-decks",
+  "name": "Starter Full Decks",
+  "decks": [
+    {
+      "id": "starter-balanced-core",
+      "name": "Starter Balanced Core",
+      "entries": [
+        {"cardId":"river-scout","count":2},{"cardId":"iron-guard","count":2},{"cardId":"ember-adept","count":2},{"cardId":"frost-weaver","count":2},{"cardId":"arcane-scholar","count":2},
+        {"cardId":"dune-sentinel","count":2},{"cardId":"totem-caller","count":2},{"cardId":"wildfang-alpha","count":2},{"cardId":"soul-lantern","count":2},{"cardId":"tangle-warden","count":2},
+        {"cardId":"pack-bolt","count":2},{"cardId":"pack-howl","count":2},{"cardId":"mana-surge","count":2},{"cardId":"primal-charge","count":2},{"cardId":"void-silence","count":2}
+      ]
+    },
+    {
+      "id": "beast-rush",
+      "name": "Beast Rush",
+      "entries": [
+        {"cardId":"river-scout","count":2},{"cardId":"pack-howl","count":2},{"cardId":"wildfang-alpha","count":2},{"cardId":"forest-pouncer","count":2},{"cardId":"tangle-warden","count":2},
+        {"cardId":"skybound-hunter","count":2},{"cardId":"grove-guardian","count":2},{"cardId":"alpha-command","count":2},{"cardId":"primal-charge","count":2},{"cardId":"pack-bolt","count":2},
+        {"cardId":"swift-ambush","count":2},{"cardId":"totem-caller","count":2},{"cardId":"ember-adept","count":2},{"cardId":"iron-guard","count":2},{"cardId":"dune-sentinel","count":2}
+      ]
+    },
+    {
+      "id": "shadow-control",
+      "name": "Shadow Control",
+      "entries": [
+        {"cardId":"iron-guard","count":2},{"cardId":"grave-oracle","count":2},{"cardId":"crypt-keeper","count":2},{"cardId":"bone-colossus","count":2},{"cardId":"soul-lantern","count":2},
+        {"cardId":"grave-bind","count":2},{"cardId":"dark-bargain","count":2},{"cardId":"void-silence","count":2},{"cardId":"soul-drain","count":2},{"cardId":"night-shroud","count":2},
+        {"cardId":"pack-bolt","count":2},{"cardId":"ember-adept","count":2},{"cardId":"river-scout","count":2},{"cardId":"arcane-scholar","count":2},{"cardId":"frost-weaver","count":2}
+      ]
+    },
+    {
+      "id": "elemental-spellweave",
+      "name": "Elemental Spellweave",
+      "entries": [
+        {"cardId":"ember-adept","count":2},{"cardId":"frost-weaver","count":2},{"cardId":"storm-channeler","count":2},{"cardId":"rift-elemental","count":2},{"cardId":"mana-surge","count":2},
+        {"cardId":"arc-flare","count":2},{"cardId":"chain-lightning","count":2},{"cardId":"tidal-burst","count":2},{"cardId":"pack-bolt","count":2},{"cardId":"arcane-scholar","count":2},
+        {"cardId":"pyre-hound","count":2},{"cardId":"skybound-hunter","count":2},{"cardId":"river-scout","count":2},{"cardId":"iron-guard","count":2},{"cardId":"grove-guardian","count":2}
+      ]
+    },
+    {
+      "id": "midrange-union",
+      "name": "Midrange Union",
+      "entries": [
+        {"cardId":"river-scout","count":2},{"cardId":"iron-guard","count":2},{"cardId":"ember-adept","count":2},{"cardId":"skybound-hunter","count":2},{"cardId":"grave-oracle","count":2},
+        {"cardId":"grove-guardian","count":2},{"cardId":"dune-sentinel","count":2},{"cardId":"arcane-scholar","count":2},{"cardId":"pack-bolt","count":2},{"cardId":"primal-charge","count":2},
+        {"cardId":"night-shroud","count":2},{"cardId":"tidal-burst","count":2},{"cardId":"chain-lightning","count":2},{"cardId":"totem-caller","count":2},{"cardId":"wildfang-alpha","count":2}
+      ]
+    }
+  ]
+}

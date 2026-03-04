@@ -1,0 +1,43 @@
+{
+  "type": "ai-pack",
+  "id": "boss-lich",
+  "name": "Boss: Lich Regent",
+  "boss": true,
+  "weights": {
+    "attackFace": 0.55,
+    "trade": 0.8,
+    "summon": 0.7
+  },
+  "script": [
+    "shadow-roar",
+    "grave-call"
+  ],
+  "summons": [
+    {
+      "name": "Bone Colossus",
+      "attack": 4,
+      "health": 6,
+      "taunt": true,
+      "race": "undead",
+      "element": "shadow"
+    },
+    {
+      "name": "Soul Lantern",
+      "attack": 2,
+      "health": 5,
+      "race": "undead",
+      "element": "shadow"
+    }
+  ],
+  "personality": {
+    "title": "Regent of the Ninth Crypt",
+    "backstory": "A dethroned emperor who bargains with eclipses and remembers every betrayal.",
+    "dimensionTag": "#Necra-9"
+  },
+  "strategy": "control",
+  "level": 9,
+  "thinkMsRange": [
+    600,
+    1000
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "type": "ai-pack",
+  "id": "tidemind",
+  "name": "Tidemind",
+  "weights": {
+    "attackFace": 0.45,
+    "trade": 0.7,
+    "summon": 0.65
+  },
+  "strategy": "value",
+  "level": 6,
+  "thinkMsRange": [
+    700,
+    1200
+  ],
+  "summons": [
+    {
+      "name": "Wave Archivist",
+      "attack": 3,
+      "health": 6,
+      "race": "mage",
+      "element": "water"
+    }
+  ],
+  "personality": {
+    "title": "The Tidemind of Mirr",
+    "backstory": "An oceanic intellect that wins by recursion, memory, and inevitability.",
+    "dimensionTag": "#Aqua-6"
+  }
+}

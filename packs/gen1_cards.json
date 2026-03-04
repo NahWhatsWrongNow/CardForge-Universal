@@ -1,0 +1,5869 @@
+{
+  "type": "card-pack",
+  "id": "gen1-foundation",
+  "name": "GEN1 Foundation Cards",
+  "cards": [
+    {
+      "id": "river-scout",
+      "name": "River Scout",
+      "type": "minion",
+      "cost": 1,
+      "attack": 1,
+      "health": 2,
+      "race": "beast",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "River Scout is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "iron-guard",
+      "name": "Iron Guard",
+      "type": "minion",
+      "cost": 2,
+      "attack": 2,
+      "health": 3,
+      "taunt": true,
+      "race": "undead",
+      "element": "shadow",
+      "rarity": "common",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Iron Guard is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "ember-adept",
+      "name": "Ember Adept",
+      "type": "minion",
+      "cost": 3,
+      "attack": 3,
+      "health": 2,
+      "race": "elemental",
+      "element": "fire",
+      "rarity": "rare",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Ember Adept is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "skybound-hunter",
+      "name": "Skybound Hunter",
+      "type": "minion",
+      "cost": 4,
+      "attack": 4,
+      "health": 3,
+      "race": "beast",
+      "element": "air",
+      "rarity": "rare",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Skybound Hunter is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "grave-oracle",
+      "name": "Grave Oracle",
+      "type": "minion",
+      "cost": 5,
+      "attack": 3,
+      "health": 6,
+      "race": "undead",
+      "element": "shadow",
+      "rarity": "epic",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Grave Oracle is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "wildfang-alpha",
+      "name": "Wildfang Alpha",
+      "type": "minion",
+      "cost": 3,
+      "attack": 3,
+      "health": 4,
+      "race": "beast",
+      "element": "earth",
+      "rarity": "common",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Wildfang Alpha is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "forest-pouncer",
+      "name": "Forest Pouncer",
+      "type": "minion",
+      "cost": 2,
+      "attack": 2,
+      "health": 1,
+      "race": "beast",
+      "element": "earth",
+      "rarity": "common",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Forest Pouncer is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "tangle-warden",
+      "name": "Tangle Warden",
+      "type": "minion",
+      "cost": 4,
+      "attack": 3,
+      "health": 5,
+      "race": "beast",
+      "element": "earth",
+      "rarity": "rare",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Tangle Warden is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "grove-guardian",
+      "name": "Grove Guardian",
+      "type": "minion",
+      "cost": 5,
+      "attack": 5,
+      "health": 5,
+      "race": "beast",
+      "element": "earth",
+      "rarity": "epic",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Grove Guardian is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "crypt-keeper",
+      "name": "Crypt Keeper",
+      "type": "minion",
+      "cost": 3,
+      "attack": 2,
+      "health": 4,
+      "race": "undead",
+      "element": "shadow",
+      "rarity": "common",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Crypt Keeper is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "bone-colossus",
+      "name": "Bone Colossus",
+      "type": "minion",
+      "cost": 7,
+      "attack": 6,
+      "health": 8,
+      "taunt": true,
+      "race": "undead",
+      "element": "shadow",
+      "rarity": "legendary",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Bone Colossus is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "soul-lantern",
+      "name": "Soul Lantern",
+      "type": "minion",
+      "cost": 4,
+      "attack": 2,
+      "health": 5,
+      "race": "undead",
+      "element": "shadow",
+      "rarity": "rare",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Soul Lantern is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "frost-weaver",
+      "name": "Frost Weaver",
+      "type": "minion",
+      "cost": 3,
+      "attack": 2,
+      "health": 3,
+      "race": "elemental",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Frost Weaver is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "storm-channeler",
+      "name": "Storm Channeler",
+      "type": "minion",
+      "cost": 5,
+      "attack": 4,
+      "health": 4,
+      "race": "elemental",
+      "element": "air",
+      "rarity": "rare",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Storm Channeler is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "rift-elemental",
+      "name": "Rift Elemental",
+      "type": "minion",
+      "cost": 6,
+      "attack": 5,
+      "health": 4,
+      "race": "elemental",
+      "element": "arcane",
+      "rarity": "epic",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Rift Elemental is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "pyre-hound",
+      "name": "Pyre Hound",
+      "type": "minion",
+      "cost": 4,
+      "attack": 4,
+      "health": 2,
+      "race": "elemental",
+      "element": "fire",
+      "rarity": "common",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Pyre Hound is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "dune-sentinel",
+      "name": "Dune Sentinel",
+      "type": "minion",
+      "cost": 3,
+      "attack": 3,
+      "health": 3,
+      "race": "construct",
+      "element": "earth",
+      "rarity": "common",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Dune Sentinel is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "arcane-scholar",
+      "name": "Arcane Scholar",
+      "type": "minion",
+      "cost": 2,
+      "attack": 1,
+      "health": 3,
+      "race": "mage",
+      "element": "arcane",
+      "rarity": "common",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Arcane Scholar is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "totem-caller",
+      "name": "Totem Caller",
+      "type": "minion",
+      "cost": 2,
+      "attack": 2,
+      "health": 2,
+      "race": "shaman",
+      "element": "air",
+      "rarity": "common",
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Totem Caller is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "pack-bolt",
+      "name": "Pack Bolt",
+      "type": "spell",
+      "cost": 1,
+      "damage": 2,
+      "rarity": "common",
+      "synergy": [
+        "elemental"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Pack Bolt is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "pack-howl",
+      "name": "Pack Howl",
+      "type": "spell",
+      "cost": 1,
+      "damage": 1,
+      "rarity": "common",
+      "synergy": [
+        "beast"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Pack Howl is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "alpha-command",
+      "name": "Alpha Command",
+      "type": "spell",
+      "cost": 3,
+      "damage": 3,
+      "rarity": "rare",
+      "synergy": [
+        "beast"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Alpha Command is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "primal-charge",
+      "name": "Primal Charge",
+      "type": "spell",
+      "cost": 2,
+      "damage": 2,
+      "rarity": "common",
+      "synergy": [
+        "beast"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Primal Charge is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "swift-ambush",
+      "name": "Swift Ambush",
+      "type": "spell",
+      "cost": 2,
+      "damage": 2,
+      "rarity": "common",
+      "synergy": [
+        "beast",
+        "air"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Swift Ambush is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "grave-bind",
+      "name": "Grave Bind",
+      "type": "spell",
+      "cost": 3,
+      "damage": 3,
+      "rarity": "rare",
+      "synergy": [
+        "undead"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Grave Bind is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "dark-bargain",
+      "name": "Dark Bargain",
+      "type": "spell",
+      "cost": 4,
+      "damage": 4,
+      "rarity": "epic",
+      "synergy": [
+        "undead",
+        "shadow"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Dark Bargain is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "void-silence",
+      "name": "Void Silence",
+      "type": "spell",
+      "cost": 2,
+      "damage": 1,
+      "rarity": "common",
+      "synergy": [
+        "shadow"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Void Silence is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "soul-drain",
+      "name": "Soul Drain",
+      "type": "spell",
+      "cost": 2,
+      "damage": 2,
+      "rarity": "common",
+      "synergy": [
+        "undead"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Soul Drain is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "night-shroud",
+      "name": "Night Shroud",
+      "type": "spell",
+      "cost": 3,
+      "damage": 2,
+      "rarity": "rare",
+      "synergy": [
+        "shadow"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Night Shroud is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "mana-surge",
+      "name": "Mana Surge",
+      "type": "spell",
+      "cost": 1,
+      "damage": 1,
+      "rarity": "common",
+      "synergy": [
+        "arcane"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Mana Surge is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "arc-flare",
+      "name": "Arc Flare",
+      "type": "spell",
+      "cost": 3,
+      "damage": 4,
+      "rarity": "rare",
+      "synergy": [
+        "arcane",
+        "elemental"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Arc Flare is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "chain-lightning",
+      "name": "Chain Lightning",
+      "type": "spell",
+      "cost": 4,
+      "damage": 4,
+      "rarity": "epic",
+      "synergy": [
+        "air",
+        "elemental"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Chain Lightning is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "tidal-burst",
+      "name": "Tidal Burst",
+      "type": "spell",
+      "cost": 2,
+      "damage": 3,
+      "rarity": "rare",
+      "synergy": [
+        "water",
+        "elemental"
+      ],
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Tidal Burst is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-001",
+      "name": "Forged Minion 1",
+      "type": "minion",
+      "cost": 9,
+      "attack": 9,
+      "health": 3,
+      "race": "elemental",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "combo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 1, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 1 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-002",
+      "name": "Forged Minion 2",
+      "type": "minion",
+      "cost": 8,
+      "attack": 3,
+      "health": 5,
+      "race": "dragon",
+      "element": "fire",
+      "rarity": "legendary",
+      "tags": [
+        "combo",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 2, bound by oath to the water court.",
+      "bibliography": "Forged Minion 2 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-003",
+      "name": "Forged Minion 3",
+      "type": "minion",
+      "cost": 2,
+      "attack": 9,
+      "health": 9,
+      "race": "human",
+      "element": "water",
+      "rarity": "rare",
+      "tags": [
+        "aggressive",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 3, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 3 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-004",
+      "name": "Forged Minion 4",
+      "type": "minion",
+      "cost": 6,
+      "attack": 10,
+      "health": 7,
+      "race": "shaman",
+      "element": "arcane",
+      "rarity": "common",
+      "tags": [
+        "taunt",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 4, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 4 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-005",
+      "name": "Forged Minion 5",
+      "type": "minion",
+      "cost": 7,
+      "attack": 10,
+      "health": 9,
+      "race": "human",
+      "element": "earth",
+      "rarity": "legendary",
+      "tags": [
+        "tribal",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 5, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 5 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-006",
+      "name": "Forged Minion 6",
+      "type": "minion",
+      "cost": 1,
+      "attack": 8,
+      "health": 5,
+      "race": "dragon",
+      "element": "arcane",
+      "rarity": "legendary",
+      "tags": [
+        "burn",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 6, bound by oath to the air court.",
+      "bibliography": "Forged Minion 6 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-007",
+      "name": "Forged Minion 7",
+      "type": "minion",
+      "cost": 1,
+      "attack": 4,
+      "health": 2,
+      "race": "beast",
+      "element": "arcane",
+      "rarity": "rare",
+      "tags": [
+        "tempo",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 7, bound by oath to the light court.",
+      "bibliography": "Forged Minion 7 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-008",
+      "name": "Forged Minion 8",
+      "type": "minion",
+      "cost": 1,
+      "attack": 6,
+      "health": 3,
+      "race": "beast",
+      "element": "air",
+      "rarity": "epic",
+      "tags": [
+        "tribal",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 8, bound by oath to the water court.",
+      "bibliography": "Forged Minion 8 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-009",
+      "name": "Forged Minion 9",
+      "type": "minion",
+      "cost": 9,
+      "attack": 1,
+      "health": 2,
+      "race": "dragon",
+      "element": "shadow",
+      "rarity": "common",
+      "tags": [
+        "aggressive",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 9, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 9 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-010",
+      "name": "Forged Minion 10",
+      "type": "minion",
+      "cost": 2,
+      "attack": 5,
+      "health": 4,
+      "race": "undead",
+      "element": "air",
+      "rarity": "legendary",
+      "tags": [
+        "value",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "options": {
+        "skin": "void",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 10, bound by oath to the water court.",
+      "bibliography": "Forged Minion 10 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-011",
+      "name": "Forged Minion 11",
+      "type": "minion",
+      "cost": 3,
+      "attack": 2,
+      "health": 6,
+      "race": "mage",
+      "element": "fire",
+      "rarity": "rare",
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 11, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 11 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-012",
+      "name": "Forged Minion 12",
+      "type": "minion",
+      "cost": 5,
+      "attack": 10,
+      "health": 12,
+      "race": "undead",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "aggressive",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 12, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 12 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-013",
+      "name": "Forged Minion 13",
+      "type": "minion",
+      "cost": 7,
+      "attack": 7,
+      "health": 10,
+      "race": "beast",
+      "element": "arcane",
+      "rarity": "legendary",
+      "tags": [
+        "tempo",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 13, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 13 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-014",
+      "name": "Forged Minion 14",
+      "type": "minion",
+      "cost": 4,
+      "attack": 10,
+      "health": 8,
+      "race": "construct",
+      "element": "shadow",
+      "rarity": "common",
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 14, bound by oath to the water court.",
+      "bibliography": "Forged Minion 14 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-015",
+      "name": "Forged Minion 15",
+      "type": "minion",
+      "cost": 9,
+      "attack": 9,
+      "health": 8,
+      "race": "elemental",
+      "element": "arcane",
+      "rarity": "rare",
+      "tags": [
+        "aggressive",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 15, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 15 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-016",
+      "name": "Forged Minion 16",
+      "type": "minion",
+      "cost": 2,
+      "attack": 10,
+      "health": 5,
+      "race": "mage",
+      "element": "air",
+      "rarity": "rare",
+      "tags": [
+        "value",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 16, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 16 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-017",
+      "name": "Forged Minion 17",
+      "type": "minion",
+      "cost": 7,
+      "attack": 1,
+      "health": 10,
+      "race": "beast",
+      "element": "shadow",
+      "rarity": "legendary",
+      "tags": [
+        "summon",
+        "combo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 17, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 17 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-018",
+      "name": "Forged Minion 18",
+      "type": "minion",
+      "cost": 5,
+      "attack": 8,
+      "health": 4,
+      "race": "construct",
+      "element": "shadow",
+      "rarity": "rare",
+      "tags": [
+        "summon",
+        "combo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 18, bound by oath to the light court.",
+      "bibliography": "Forged Minion 18 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-019",
+      "name": "Forged Minion 19",
+      "type": "minion",
+      "cost": 6,
+      "attack": 4,
+      "health": 1,
+      "race": "construct",
+      "element": "light",
+      "rarity": "epic",
+      "tags": [
+        "summon",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 19, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 19 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-020",
+      "name": "Forged Minion 20",
+      "type": "minion",
+      "cost": 4,
+      "attack": 1,
+      "health": 1,
+      "race": "beast",
+      "element": "air",
+      "rarity": "rare",
+      "tags": [
+        "burn",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 20, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 20 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-021",
+      "name": "Forged Minion 21",
+      "type": "minion",
+      "cost": 4,
+      "attack": 9,
+      "health": 7,
+      "race": "dragon",
+      "element": "water",
+      "rarity": "legendary",
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 21, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 21 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-022",
+      "name": "Forged Minion 22",
+      "type": "minion",
+      "cost": 5,
+      "attack": 4,
+      "health": 2,
+      "race": "dragon",
+      "element": "earth",
+      "rarity": "rare",
+      "tags": [
+        "control",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 22, bound by oath to the water court.",
+      "bibliography": "Forged Minion 22 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-023",
+      "name": "Forged Minion 23",
+      "type": "minion",
+      "cost": 3,
+      "attack": 10,
+      "health": 8,
+      "race": "dragon",
+      "element": "fire",
+      "rarity": "epic",
+      "tags": [
+        "burn",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "options": {
+        "skin": "void",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 23, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 23 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-024",
+      "name": "Forged Minion 24",
+      "type": "minion",
+      "cost": 9,
+      "attack": 4,
+      "health": 10,
+      "race": "undead",
+      "element": "shadow",
+      "rarity": "epic",
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 24, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 24 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-025",
+      "name": "Forged Minion 25",
+      "type": "minion",
+      "cost": 4,
+      "attack": 6,
+      "health": 5,
+      "race": "undead",
+      "element": "water",
+      "rarity": "legendary",
+      "tags": [
+        "combo",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 25, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 25 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-026",
+      "name": "Forged Minion 26",
+      "type": "minion",
+      "cost": 9,
+      "attack": 10,
+      "health": 5,
+      "race": "mage",
+      "element": "arcane",
+      "rarity": "epic",
+      "tags": [
+        "spellcraft",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 26, bound by oath to the air court.",
+      "bibliography": "Forged Minion 26 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-027",
+      "name": "Forged Minion 27",
+      "type": "minion",
+      "cost": 8,
+      "attack": 1,
+      "health": 2,
+      "race": "construct",
+      "element": "arcane",
+      "rarity": "common",
+      "tags": [
+        "control",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "options": {
+        "skin": "void",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 27, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 27 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-028",
+      "name": "Forged Minion 28",
+      "type": "minion",
+      "cost": 7,
+      "attack": 8,
+      "health": 7,
+      "race": "construct",
+      "element": "earth",
+      "rarity": "epic",
+      "tags": [
+        "burn",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 28, bound by oath to the water court.",
+      "bibliography": "Forged Minion 28 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-029",
+      "name": "Forged Minion 29",
+      "type": "minion",
+      "cost": 4,
+      "attack": 9,
+      "health": 10,
+      "race": "mage",
+      "element": "light",
+      "rarity": "epic",
+      "tags": [
+        "aggressive",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 29, bound by oath to the light court.",
+      "bibliography": "Forged Minion 29 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-030",
+      "name": "Forged Minion 30",
+      "type": "minion",
+      "cost": 5,
+      "attack": 1,
+      "health": 5,
+      "race": "undead",
+      "element": "shadow",
+      "rarity": "legendary",
+      "tags": [
+        "tempo",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 30, bound by oath to the water court.",
+      "bibliography": "Forged Minion 30 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-031",
+      "name": "Forged Minion 31",
+      "type": "minion",
+      "cost": 8,
+      "attack": 3,
+      "health": 12,
+      "race": "dragon",
+      "element": "shadow",
+      "rarity": "epic",
+      "tags": [
+        "burn",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 31, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 31 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-032",
+      "name": "Forged Minion 32",
+      "type": "minion",
+      "cost": 4,
+      "attack": 1,
+      "health": 2,
+      "race": "construct",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "tribal",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 32, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 32 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-033",
+      "name": "Forged Minion 33",
+      "type": "minion",
+      "cost": 1,
+      "attack": 10,
+      "health": 2,
+      "race": "construct",
+      "element": "arcane",
+      "rarity": "rare",
+      "tags": [
+        "tribal",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 33, bound by oath to the light court.",
+      "bibliography": "Forged Minion 33 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-034",
+      "name": "Forged Minion 34",
+      "type": "minion",
+      "cost": 6,
+      "attack": 6,
+      "health": 3,
+      "race": "dragon",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "combo",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 34, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 34 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-035",
+      "name": "Forged Minion 35",
+      "type": "minion",
+      "cost": 1,
+      "attack": 5,
+      "health": 12,
+      "race": "dragon",
+      "element": "earth",
+      "rarity": "legendary",
+      "tags": [
+        "spellcraft",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 35, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 35 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-036",
+      "name": "Forged Minion 36",
+      "type": "minion",
+      "cost": 1,
+      "attack": 1,
+      "health": 2,
+      "race": "elemental",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "combo",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 36, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 36 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-037",
+      "name": "Forged Minion 37",
+      "type": "minion",
+      "cost": 5,
+      "attack": 8,
+      "health": 8,
+      "race": "human",
+      "element": "earth",
+      "rarity": "legendary",
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 37, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 37 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-038",
+      "name": "Forged Minion 38",
+      "type": "minion",
+      "cost": 7,
+      "attack": 2,
+      "health": 4,
+      "race": "shaman",
+      "element": "air",
+      "rarity": "rare",
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 38, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 38 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-039",
+      "name": "Forged Minion 39",
+      "type": "minion",
+      "cost": 5,
+      "attack": 5,
+      "health": 10,
+      "race": "dragon",
+      "element": "arcane",
+      "rarity": "rare",
+      "tags": [
+        "aggressive",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 39, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 39 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-040",
+      "name": "Forged Minion 40",
+      "type": "minion",
+      "cost": 3,
+      "attack": 10,
+      "health": 4,
+      "race": "beast",
+      "element": "air",
+      "rarity": "common",
+      "tags": [
+        "tempo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 40, bound by oath to the light court.",
+      "bibliography": "Forged Minion 40 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-041",
+      "name": "Forged Minion 41",
+      "type": "minion",
+      "cost": 8,
+      "attack": 8,
+      "health": 1,
+      "race": "undead",
+      "element": "water",
+      "rarity": "legendary",
+      "tags": [
+        "taunt",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 41, bound by oath to the air court.",
+      "bibliography": "Forged Minion 41 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-042",
+      "name": "Forged Minion 42",
+      "type": "minion",
+      "cost": 5,
+      "attack": 9,
+      "health": 2,
+      "race": "shaman",
+      "element": "fire",
+      "rarity": "rare",
+      "tags": [
+        "aggressive",
+        "combo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 42, bound by oath to the air court.",
+      "bibliography": "Forged Minion 42 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-043",
+      "name": "Forged Minion 43",
+      "type": "minion",
+      "cost": 5,
+      "attack": 10,
+      "health": 12,
+      "race": "elemental",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "tribal",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "options": {
+        "skin": "void",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 43, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 43 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-044",
+      "name": "Forged Minion 44",
+      "type": "minion",
+      "cost": 1,
+      "attack": 5,
+      "health": 4,
+      "race": "undead",
+      "element": "light",
+      "rarity": "rare",
+      "tags": [
+        "burn",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 44, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 44 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-045",
+      "name": "Forged Minion 45",
+      "type": "minion",
+      "cost": 8,
+      "attack": 9,
+      "health": 5,
+      "race": "mage",
+      "element": "water",
+      "rarity": "legendary",
+      "tags": [
+        "value",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 45, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 45 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-046",
+      "name": "Forged Minion 46",
+      "type": "minion",
+      "cost": 3,
+      "attack": 4,
+      "health": 1,
+      "race": "shaman",
+      "element": "air",
+      "rarity": "legendary",
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 46, bound by oath to the air court.",
+      "bibliography": "Forged Minion 46 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-047",
+      "name": "Forged Minion 47",
+      "type": "minion",
+      "cost": 6,
+      "attack": 1,
+      "health": 9,
+      "race": "construct",
+      "element": "light",
+      "rarity": "common",
+      "tags": [
+        "tribal",
+        "combo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 47, bound by oath to the light court.",
+      "bibliography": "Forged Minion 47 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-048",
+      "name": "Forged Minion 48",
+      "type": "minion",
+      "cost": 6,
+      "attack": 1,
+      "health": 2,
+      "race": "mage",
+      "element": "air",
+      "rarity": "legendary",
+      "tags": [
+        "combo",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 48, bound by oath to the water court.",
+      "bibliography": "Forged Minion 48 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-049",
+      "name": "Forged Minion 49",
+      "type": "minion",
+      "cost": 1,
+      "attack": 3,
+      "health": 12,
+      "race": "construct",
+      "element": "water",
+      "rarity": "legendary",
+      "tags": [
+        "value",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "options": {
+        "skin": "void",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 49, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 49 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-050",
+      "name": "Forged Minion 50",
+      "type": "minion",
+      "cost": 3,
+      "attack": 3,
+      "health": 10,
+      "race": "shaman",
+      "element": "shadow",
+      "rarity": "epic",
+      "tags": [
+        "value",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "options": {
+        "skin": "void",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 50, bound by oath to the air court.",
+      "bibliography": "Forged Minion 50 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-051",
+      "name": "Forged Minion 51",
+      "type": "minion",
+      "cost": 9,
+      "attack": 9,
+      "health": 6,
+      "race": "mage",
+      "element": "arcane",
+      "rarity": "legendary",
+      "tags": [
+        "summon",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 51, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 51 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-052",
+      "name": "Forged Minion 52",
+      "type": "minion",
+      "cost": 2,
+      "attack": 9,
+      "health": 3,
+      "race": "beast",
+      "element": "fire",
+      "rarity": "rare",
+      "tags": [
+        "combo",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 52, bound by oath to the light court.",
+      "bibliography": "Forged Minion 52 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-053",
+      "name": "Forged Minion 53",
+      "type": "minion",
+      "cost": 9,
+      "attack": 9,
+      "health": 3,
+      "race": "shaman",
+      "element": "shadow",
+      "rarity": "legendary",
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 53, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 53 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-054",
+      "name": "Forged Minion 54",
+      "type": "minion",
+      "cost": 2,
+      "attack": 7,
+      "health": 1,
+      "race": "undead",
+      "element": "arcane",
+      "rarity": "legendary",
+      "tags": [
+        "burn",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 54, bound by oath to the water court.",
+      "bibliography": "Forged Minion 54 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-055",
+      "name": "Forged Minion 55",
+      "type": "minion",
+      "cost": 7,
+      "attack": 7,
+      "health": 3,
+      "race": "dragon",
+      "element": "air",
+      "rarity": "epic",
+      "tags": [
+        "aggressive",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 55, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 55 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-056",
+      "name": "Forged Minion 56",
+      "type": "minion",
+      "cost": 2,
+      "attack": 3,
+      "health": 1,
+      "race": "undead",
+      "element": "shadow",
+      "rarity": "common",
+      "tags": [
+        "control",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 56, bound by oath to the water court.",
+      "bibliography": "Forged Minion 56 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-057",
+      "name": "Forged Minion 57",
+      "type": "minion",
+      "cost": 7,
+      "attack": 8,
+      "health": 12,
+      "race": "beast",
+      "element": "water",
+      "rarity": "epic",
+      "tags": [
+        "control",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 57, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 57 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-058",
+      "name": "Forged Minion 58",
+      "type": "minion",
+      "cost": 5,
+      "attack": 10,
+      "health": 2,
+      "race": "undead",
+      "element": "earth",
+      "rarity": "epic",
+      "tags": [
+        "aggressive",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 58, bound by oath to the light court.",
+      "bibliography": "Forged Minion 58 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-059",
+      "name": "Forged Minion 59",
+      "type": "minion",
+      "cost": 6,
+      "attack": 7,
+      "health": 5,
+      "race": "elemental",
+      "element": "fire",
+      "rarity": "rare",
+      "tags": [
+        "combo",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 59, bound by oath to the water court.",
+      "bibliography": "Forged Minion 59 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-060",
+      "name": "Forged Minion 60",
+      "type": "minion",
+      "cost": 9,
+      "attack": 5,
+      "health": 9,
+      "race": "mage",
+      "element": "light",
+      "rarity": "rare",
+      "tags": [
+        "value",
+        "combo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "skin": "void",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 60, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 60 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-061",
+      "name": "Forged Minion 61",
+      "type": "minion",
+      "cost": 7,
+      "attack": 6,
+      "health": 11,
+      "race": "shaman",
+      "element": "shadow",
+      "rarity": "rare",
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "skin": "void",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 61, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 61 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-062",
+      "name": "Forged Minion 62",
+      "type": "minion",
+      "cost": 9,
+      "attack": 9,
+      "health": 2,
+      "race": "mage",
+      "element": "water",
+      "rarity": "epic",
+      "tags": [
+        "control",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "options": {
+        "skin": "void",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 62, bound by oath to the light court.",
+      "bibliography": "Forged Minion 62 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-063",
+      "name": "Forged Minion 63",
+      "type": "minion",
+      "cost": 9,
+      "attack": 6,
+      "health": 11,
+      "race": "elemental",
+      "element": "earth",
+      "rarity": "common",
+      "tags": [
+        "spellcraft",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "options": {
+        "skin": "void",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 63, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 63 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-064",
+      "name": "Forged Minion 64",
+      "type": "minion",
+      "cost": 1,
+      "attack": 1,
+      "health": 2,
+      "race": "mage",
+      "element": "air",
+      "rarity": "rare",
+      "tags": [
+        "spellcraft",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 64, bound by oath to the light court.",
+      "bibliography": "Forged Minion 64 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-065",
+      "name": "Forged Minion 65",
+      "type": "minion",
+      "cost": 4,
+      "attack": 6,
+      "health": 3,
+      "race": "human",
+      "element": "earth",
+      "rarity": "common",
+      "tags": [
+        "combo",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 65, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 65 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-066",
+      "name": "Forged Minion 66",
+      "type": "minion",
+      "cost": 8,
+      "attack": 6,
+      "health": 9,
+      "race": "elemental",
+      "element": "light",
+      "rarity": "rare",
+      "tags": [
+        "aggressive",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 66, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 66 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-067",
+      "name": "Forged Minion 67",
+      "type": "minion",
+      "cost": 5,
+      "attack": 9,
+      "health": 7,
+      "race": "construct",
+      "element": "water",
+      "rarity": "legendary",
+      "tags": [
+        "value",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 67, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 67 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-068",
+      "name": "Forged Minion 68",
+      "type": "minion",
+      "cost": 5,
+      "attack": 3,
+      "health": 6,
+      "race": "mage",
+      "element": "fire",
+      "rarity": "epic",
+      "tags": [
+        "tempo",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 68, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 68 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-069",
+      "name": "Forged Minion 69",
+      "type": "minion",
+      "cost": 9,
+      "attack": 8,
+      "health": 10,
+      "race": "construct",
+      "element": "fire",
+      "rarity": "common",
+      "tags": [
+        "spellcraft",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 69, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 69 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-070",
+      "name": "Forged Minion 70",
+      "type": "minion",
+      "cost": 8,
+      "attack": 3,
+      "health": 2,
+      "race": "construct",
+      "element": "light",
+      "rarity": "epic",
+      "tags": [
+        "summon",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 70, bound by oath to the light court.",
+      "bibliography": "Forged Minion 70 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-071",
+      "name": "Forged Minion 71",
+      "type": "minion",
+      "cost": 5,
+      "attack": 9,
+      "health": 12,
+      "race": "human",
+      "element": "light",
+      "rarity": "epic",
+      "tags": [
+        "tempo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 71, bound by oath to the water court.",
+      "bibliography": "Forged Minion 71 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-072",
+      "name": "Forged Minion 72",
+      "type": "minion",
+      "cost": 9,
+      "attack": 9,
+      "health": 8,
+      "race": "construct",
+      "element": "arcane",
+      "rarity": "rare",
+      "tags": [
+        "tribal",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 3
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 72, bound by oath to the water court.",
+      "bibliography": "Forged Minion 72 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-073",
+      "name": "Forged Minion 73",
+      "type": "minion",
+      "cost": 5,
+      "attack": 8,
+      "health": 1,
+      "race": "mage",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "tribal",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 73, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 73 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-074",
+      "name": "Forged Minion 74",
+      "type": "minion",
+      "cost": 6,
+      "attack": 1,
+      "health": 8,
+      "race": "construct",
+      "element": "air",
+      "rarity": "rare",
+      "tags": [
+        "burn",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 74, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 74 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-075",
+      "name": "Forged Minion 75",
+      "type": "minion",
+      "cost": 8,
+      "attack": 10,
+      "health": 9,
+      "race": "human",
+      "element": "fire",
+      "rarity": "legendary",
+      "tags": [
+        "spellcraft",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 75, bound by oath to the light court.",
+      "bibliography": "Forged Minion 75 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-076",
+      "name": "Forged Minion 76",
+      "type": "minion",
+      "cost": 1,
+      "attack": 9,
+      "health": 7,
+      "race": "elemental",
+      "element": "arcane",
+      "rarity": "common",
+      "tags": [
+        "tempo",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 76, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 76 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-077",
+      "name": "Forged Minion 77",
+      "type": "minion",
+      "cost": 6,
+      "attack": 8,
+      "health": 3,
+      "race": "shaman",
+      "element": "light",
+      "rarity": "common",
+      "tags": [
+        "value",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 77, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 77 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-078",
+      "name": "Forged Minion 78",
+      "type": "minion",
+      "cost": 4,
+      "attack": 1,
+      "health": 4,
+      "race": "dragon",
+      "element": "water",
+      "rarity": "rare",
+      "tags": [
+        "control",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 78, bound by oath to the water court.",
+      "bibliography": "Forged Minion 78 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-079",
+      "name": "Forged Minion 79",
+      "type": "minion",
+      "cost": 2,
+      "attack": 10,
+      "health": 10,
+      "race": "elemental",
+      "element": "shadow",
+      "rarity": "legendary",
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 79, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 79 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-080",
+      "name": "Forged Minion 80",
+      "type": "minion",
+      "cost": 7,
+      "attack": 10,
+      "health": 4,
+      "race": "elemental",
+      "element": "earth",
+      "rarity": "legendary",
+      "tags": [
+        "tempo",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 80, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 80 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-081",
+      "name": "Forged Minion 81",
+      "type": "minion",
+      "cost": 9,
+      "attack": 3,
+      "health": 8,
+      "race": "mage",
+      "element": "arcane",
+      "rarity": "common",
+      "tags": [
+        "spellcraft",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 81, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 81 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-082",
+      "name": "Forged Minion 82",
+      "type": "minion",
+      "cost": 1,
+      "attack": 7,
+      "health": 11,
+      "race": "elemental",
+      "element": "fire",
+      "rarity": "common",
+      "tags": [
+        "tribal",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 82, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 82 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-083",
+      "name": "Forged Minion 83",
+      "type": "minion",
+      "cost": 3,
+      "attack": 6,
+      "health": 12,
+      "race": "undead",
+      "element": "fire",
+      "rarity": "rare",
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "options": {
+        "skin": "void",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 83, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 83 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-084",
+      "name": "Forged Minion 84",
+      "type": "minion",
+      "cost": 5,
+      "attack": 1,
+      "health": 10,
+      "race": "undead",
+      "element": "arcane",
+      "rarity": "epic",
+      "tags": [
+        "spellcraft",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "options": {
+        "skin": "void",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 84, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 84 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-085",
+      "name": "Forged Minion 85",
+      "type": "minion",
+      "cost": 7,
+      "attack": 9,
+      "health": 5,
+      "race": "elemental",
+      "element": "shadow",
+      "rarity": "legendary",
+      "tags": [
+        "value",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "options": {
+        "skin": "void",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 85, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 85 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-086",
+      "name": "Forged Minion 86",
+      "type": "minion",
+      "cost": 6,
+      "attack": 4,
+      "health": 10,
+      "race": "elemental",
+      "element": "water",
+      "rarity": "legendary",
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 86, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 86 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-087",
+      "name": "Forged Minion 87",
+      "type": "minion",
+      "cost": 7,
+      "attack": 8,
+      "health": 6,
+      "race": "elemental",
+      "element": "earth",
+      "rarity": "common",
+      "tags": [
+        "value",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 87, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 87 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-088",
+      "name": "Forged Minion 88",
+      "type": "minion",
+      "cost": 3,
+      "attack": 8,
+      "health": 4,
+      "race": "human",
+      "element": "earth",
+      "rarity": "rare",
+      "tags": [
+        "aggressive",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "options": {
+        "skin": "void",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 88, bound by oath to the water court.",
+      "bibliography": "Forged Minion 88 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-089",
+      "name": "Forged Minion 89",
+      "type": "minion",
+      "cost": 9,
+      "attack": 2,
+      "health": 4,
+      "race": "mage",
+      "element": "shadow",
+      "rarity": "rare",
+      "tags": [
+        "taunt",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 89, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 89 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-090",
+      "name": "Forged Minion 90",
+      "type": "minion",
+      "cost": 4,
+      "attack": 8,
+      "health": 3,
+      "race": "construct",
+      "element": "arcane",
+      "rarity": "common",
+      "tags": [
+        "combo",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 90, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 90 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-091",
+      "name": "Forged Minion 91",
+      "type": "minion",
+      "cost": 4,
+      "attack": 10,
+      "health": 8,
+      "race": "shaman",
+      "element": "water",
+      "rarity": "epic",
+      "tags": [
+        "tempo",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 91, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 91 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-092",
+      "name": "Forged Minion 92",
+      "type": "minion",
+      "cost": 3,
+      "attack": 7,
+      "health": 4,
+      "race": "elemental",
+      "element": "light",
+      "rarity": "epic",
+      "tags": [
+        "combo",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 92, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 92 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-093",
+      "name": "Forged Minion 93",
+      "type": "minion",
+      "cost": 1,
+      "attack": 8,
+      "health": 8,
+      "race": "human",
+      "element": "fire",
+      "rarity": "rare",
+      "tags": [
+        "combo",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 93, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 93 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-094",
+      "name": "Forged Minion 94",
+      "type": "minion",
+      "cost": 5,
+      "attack": 3,
+      "health": 2,
+      "race": "human",
+      "element": "fire",
+      "rarity": "epic",
+      "tags": [
+        "value",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 94, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 94 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-095",
+      "name": "Forged Minion 95",
+      "type": "minion",
+      "cost": 5,
+      "attack": 9,
+      "health": 2,
+      "race": "human",
+      "element": "air",
+      "rarity": "rare",
+      "tags": [
+        "spellcraft",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "skin": "void",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 95, bound by oath to the shadow court.",
+      "bibliography": "Forged Minion 95 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-096",
+      "name": "Forged Minion 96",
+      "type": "minion",
+      "cost": 5,
+      "attack": 9,
+      "health": 11,
+      "race": "human",
+      "element": "air",
+      "rarity": "common",
+      "tags": [
+        "combo",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 96, bound by oath to the water court.",
+      "bibliography": "Forged Minion 96 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-097",
+      "name": "Forged Minion 97",
+      "type": "minion",
+      "cost": 4,
+      "attack": 4,
+      "health": 2,
+      "race": "construct",
+      "element": "air",
+      "rarity": "common",
+      "tags": [
+        "burn",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 97, bound by oath to the light court.",
+      "bibliography": "Forged Minion 97 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-098",
+      "name": "Forged Minion 98",
+      "type": "minion",
+      "cost": 5,
+      "attack": 5,
+      "health": 9,
+      "race": "undead",
+      "element": "air",
+      "rarity": "legendary",
+      "tags": [
+        "tempo",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "options": {
+        "skin": "void",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 98, bound by oath to the air court.",
+      "bibliography": "Forged Minion 98 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-099",
+      "name": "Forged Minion 99",
+      "type": "minion",
+      "cost": 6,
+      "attack": 4,
+      "health": 3,
+      "race": "shaman",
+      "element": "arcane",
+      "rarity": "epic",
+      "tags": [
+        "value",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 99, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 99 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-100",
+      "name": "Forged Minion 100",
+      "type": "minion",
+      "cost": 5,
+      "attack": 9,
+      "health": 5,
+      "race": "human",
+      "element": "earth",
+      "rarity": "rare",
+      "tags": [
+        "value",
+        "combo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 100, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 100 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-101",
+      "name": "Forged Minion 101",
+      "type": "minion",
+      "cost": 8,
+      "attack": 1,
+      "health": 2,
+      "race": "shaman",
+      "element": "light",
+      "rarity": "legendary",
+      "tags": [
+        "burn",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 101, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 101 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-102",
+      "name": "Forged Minion 102",
+      "type": "minion",
+      "cost": 3,
+      "attack": 3,
+      "health": 11,
+      "race": "human",
+      "element": "water",
+      "rarity": "epic",
+      "tags": [
+        "combo",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 102, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 102 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-103",
+      "name": "Forged Minion 103",
+      "type": "minion",
+      "cost": 7,
+      "attack": 9,
+      "health": 6,
+      "race": "human",
+      "element": "light",
+      "rarity": "common",
+      "tags": [
+        "combo",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 103, bound by oath to the water court.",
+      "bibliography": "Forged Minion 103 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-104",
+      "name": "Forged Minion 104",
+      "type": "minion",
+      "cost": 2,
+      "attack": 3,
+      "health": 10,
+      "race": "human",
+      "element": "shadow",
+      "rarity": "rare",
+      "tags": [
+        "spellcraft",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 104, bound by oath to the arcane court.",
+      "bibliography": "Forged Minion 104 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-105",
+      "name": "Forged Minion 105",
+      "type": "minion",
+      "cost": 4,
+      "attack": 3,
+      "health": 9,
+      "race": "construct",
+      "element": "air",
+      "rarity": "common",
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 105, bound by oath to the light court.",
+      "bibliography": "Forged Minion 105 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-106",
+      "name": "Forged Minion 106",
+      "type": "minion",
+      "cost": 3,
+      "attack": 4,
+      "health": 9,
+      "race": "mage",
+      "element": "shadow",
+      "rarity": "legendary",
+      "tags": [
+        "spellcraft",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "options": {
+        "skin": "void",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 106, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 106 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-107",
+      "name": "Forged Minion 107",
+      "type": "minion",
+      "cost": 9,
+      "attack": 8,
+      "health": 1,
+      "race": "dragon",
+      "element": "shadow",
+      "rarity": "rare",
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 107, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 107 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-108",
+      "name": "Forged Minion 108",
+      "type": "minion",
+      "cost": 3,
+      "attack": 3,
+      "health": 2,
+      "race": "shaman",
+      "element": "water",
+      "rarity": "epic",
+      "tags": [
+        "combo",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 108, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 108 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-109",
+      "name": "Forged Minion 109",
+      "type": "minion",
+      "cost": 3,
+      "attack": 2,
+      "health": 4,
+      "race": "undead",
+      "element": "water",
+      "rarity": "rare",
+      "tags": [
+        "value",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "skin": "void",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 109, bound by oath to the water court.",
+      "bibliography": "Forged Minion 109 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-110",
+      "name": "Forged Minion 110",
+      "type": "minion",
+      "cost": 5,
+      "attack": 3,
+      "health": 6,
+      "race": "construct",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "control",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 110, bound by oath to the water court.",
+      "bibliography": "Forged Minion 110 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-111",
+      "name": "Forged Minion 111",
+      "type": "minion",
+      "cost": 3,
+      "attack": 2,
+      "health": 7,
+      "race": "human",
+      "element": "water",
+      "rarity": "legendary",
+      "tags": [
+        "combo",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 111, bound by oath to the water court.",
+      "bibliography": "Forged Minion 111 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-112",
+      "name": "Forged Minion 112",
+      "type": "minion",
+      "cost": 9,
+      "attack": 8,
+      "health": 4,
+      "race": "shaman",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "taunt",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 112, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 112 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-113",
+      "name": "Forged Minion 113",
+      "type": "minion",
+      "cost": 9,
+      "attack": 1,
+      "health": 12,
+      "race": "beast",
+      "element": "arcane",
+      "rarity": "legendary",
+      "tags": [
+        "control",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "skin": "verdant",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 113, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 113 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-114",
+      "name": "Forged Minion 114",
+      "type": "minion",
+      "cost": 1,
+      "attack": 2,
+      "health": 1,
+      "race": "elemental",
+      "element": "water",
+      "rarity": "rare",
+      "tags": [
+        "aggressive",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 114, bound by oath to the water court.",
+      "bibliography": "Forged Minion 114 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-115",
+      "name": "Forged Minion 115",
+      "type": "minion",
+      "cost": 2,
+      "attack": 10,
+      "health": 3,
+      "race": "mage",
+      "element": "water",
+      "rarity": "common",
+      "tags": [
+        "tempo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 115, bound by oath to the light court.",
+      "bibliography": "Forged Minion 115 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-116",
+      "name": "Forged Minion 116",
+      "type": "minion",
+      "cost": 6,
+      "attack": 8,
+      "health": 9,
+      "race": "elemental",
+      "element": "fire",
+      "rarity": "common",
+      "tags": [
+        "taunt",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 3
+      },
+      "options": {
+        "skin": "ember",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 116, bound by oath to the light court.",
+      "bibliography": "Forged Minion 116 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-117",
+      "name": "Forged Minion 117",
+      "type": "minion",
+      "cost": 4,
+      "attack": 1,
+      "health": 8,
+      "race": "elemental",
+      "element": "earth",
+      "rarity": "epic",
+      "tags": [
+        "aggressive",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 117, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 117 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-118",
+      "name": "Forged Minion 118",
+      "type": "minion",
+      "cost": 6,
+      "attack": 7,
+      "health": 3,
+      "race": "human",
+      "element": "fire",
+      "rarity": "rare",
+      "tags": [
+        "control",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "options": {
+        "skin": "void",
+        "voice": "gruff"
+      },
+      "heroBackstory": "A veteran of shardfront 118, bound by oath to the fire court.",
+      "bibliography": "Forged Minion 118 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-119",
+      "name": "Forged Minion 119",
+      "type": "minion",
+      "cost": 5,
+      "attack": 1,
+      "health": 5,
+      "race": "human",
+      "element": "light",
+      "rarity": "common",
+      "tags": [
+        "tribal",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "options": {
+        "skin": "void",
+        "voice": "calm"
+      },
+      "heroBackstory": "A veteran of shardfront 119, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 119 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-120",
+      "name": "Forged Minion 120",
+      "type": "minion",
+      "cost": 1,
+      "attack": 2,
+      "health": 1,
+      "race": "human",
+      "element": "arcane",
+      "rarity": "rare",
+      "tags": [
+        "tribal",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "options": {
+        "skin": "classic",
+        "voice": "arcane"
+      },
+      "heroBackstory": "A veteran of shardfront 120, bound by oath to the earth court.",
+      "bibliography": "Forged Minion 120 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-001",
+      "name": "Forged Spell 1",
+      "type": "spell",
+      "cost": 4,
+      "damage": 5,
+      "rarity": "legendary",
+      "element": "earth",
+      "synergy": [
+        "human",
+        "undead"
+      ],
+      "tags": [
+        "spellcraft",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 1, rewritten by oracles.",
+      "bibliography": "Forged Spell 1 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-002",
+      "name": "Forged Spell 2",
+      "type": "spell",
+      "cost": 3,
+      "damage": 4,
+      "rarity": "common",
+      "element": "air",
+      "synergy": [
+        "beast",
+        "human"
+      ],
+      "tags": [
+        "summon",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 2, rewritten by warlocks.",
+      "bibliography": "Forged Spell 2 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-003",
+      "name": "Forged Spell 3",
+      "type": "spell",
+      "cost": 1,
+      "damage": 7,
+      "rarity": "rare",
+      "element": "light",
+      "synergy": [
+        "dragon",
+        "undead"
+      ],
+      "tags": [
+        "tribal",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 3, rewritten by warlocks.",
+      "bibliography": "Forged Spell 3 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-004",
+      "name": "Forged Spell 4",
+      "type": "spell",
+      "cost": 6,
+      "damage": 3,
+      "rarity": "rare",
+      "element": "fire",
+      "synergy": [
+        "construct",
+        "mage"
+      ],
+      "tags": [
+        "burn",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 4, rewritten by warlocks.",
+      "bibliography": "Forged Spell 4 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-005",
+      "name": "Forged Spell 5",
+      "type": "spell",
+      "cost": 6,
+      "damage": 7,
+      "rarity": "common",
+      "element": "arcane",
+      "synergy": [
+        "beast",
+        "undead"
+      ],
+      "tags": [
+        "control",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 5, rewritten by warlocks.",
+      "bibliography": "Forged Spell 5 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-006",
+      "name": "Forged Spell 6",
+      "type": "spell",
+      "cost": 3,
+      "damage": 7,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "mage",
+        "undead"
+      ],
+      "tags": [
+        "summon",
+        "combo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 6, rewritten by exiles.",
+      "bibliography": "Forged Spell 6 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-007",
+      "name": "Forged Spell 7",
+      "type": "spell",
+      "cost": 1,
+      "damage": 0,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "beast",
+        "undead"
+      ],
+      "tags": [
+        "tribal",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 7, rewritten by warlocks.",
+      "bibliography": "Forged Spell 7 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-008",
+      "name": "Forged Spell 8",
+      "type": "spell",
+      "cost": 6,
+      "damage": 4,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "mage",
+        "undead"
+      ],
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 8, rewritten by warlocks.",
+      "bibliography": "Forged Spell 8 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-009",
+      "name": "Forged Spell 9",
+      "type": "spell",
+      "cost": 7,
+      "damage": 5,
+      "rarity": "legendary",
+      "element": "air",
+      "synergy": [
+        "undead",
+        "beast"
+      ],
+      "tags": [
+        "aggressive",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 9, rewritten by oracles.",
+      "bibliography": "Forged Spell 9 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-010",
+      "name": "Forged Spell 10",
+      "type": "spell",
+      "cost": 3,
+      "damage": 6,
+      "rarity": "legendary",
+      "element": "arcane",
+      "synergy": [
+        "mage",
+        "shaman"
+      ],
+      "tags": [
+        "control",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 10, rewritten by exiles.",
+      "bibliography": "Forged Spell 10 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-011",
+      "name": "Forged Spell 11",
+      "type": "spell",
+      "cost": 3,
+      "damage": 8,
+      "rarity": "epic",
+      "element": "shadow",
+      "synergy": [
+        "shaman",
+        "elemental"
+      ],
+      "tags": [
+        "aggressive",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 11, rewritten by oracles.",
+      "bibliography": "Forged Spell 11 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-012",
+      "name": "Forged Spell 12",
+      "type": "spell",
+      "cost": 7,
+      "damage": 7,
+      "rarity": "legendary",
+      "element": "air",
+      "synergy": [
+        "construct",
+        "dragon"
+      ],
+      "tags": [
+        "taunt",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 12, rewritten by exiles.",
+      "bibliography": "Forged Spell 12 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-013",
+      "name": "Forged Spell 13",
+      "type": "spell",
+      "cost": 5,
+      "damage": 2,
+      "rarity": "common",
+      "element": "fire",
+      "synergy": [
+        "construct",
+        "human"
+      ],
+      "tags": [
+        "tribal",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 13, rewritten by warlocks.",
+      "bibliography": "Forged Spell 13 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-014",
+      "name": "Forged Spell 14",
+      "type": "spell",
+      "cost": 3,
+      "damage": 4,
+      "rarity": "rare",
+      "element": "fire",
+      "synergy": [
+        "shaman",
+        "undead"
+      ],
+      "tags": [
+        "tribal",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 14, rewritten by oracles.",
+      "bibliography": "Forged Spell 14 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-015",
+      "name": "Forged Spell 15",
+      "type": "spell",
+      "cost": 2,
+      "damage": 5,
+      "rarity": "legendary",
+      "element": "light",
+      "synergy": [
+        "elemental",
+        "construct"
+      ],
+      "tags": [
+        "tempo",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 15, rewritten by warlocks.",
+      "bibliography": "Forged Spell 15 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-016",
+      "name": "Forged Spell 16",
+      "type": "spell",
+      "cost": 4,
+      "damage": 7,
+      "rarity": "common",
+      "element": "earth",
+      "synergy": [
+        "mage",
+        "beast"
+      ],
+      "tags": [
+        "summon",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 16, rewritten by exiles.",
+      "bibliography": "Forged Spell 16 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-017",
+      "name": "Forged Spell 17",
+      "type": "spell",
+      "cost": 4,
+      "damage": 2,
+      "rarity": "rare",
+      "element": "water",
+      "synergy": [
+        "human",
+        "elemental"
+      ],
+      "tags": [
+        "tempo",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 17, rewritten by exiles.",
+      "bibliography": "Forged Spell 17 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-018",
+      "name": "Forged Spell 18",
+      "type": "spell",
+      "cost": 4,
+      "damage": 4,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "dragon",
+        "mage"
+      ],
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 18, rewritten by warlocks.",
+      "bibliography": "Forged Spell 18 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-019",
+      "name": "Forged Spell 19",
+      "type": "spell",
+      "cost": 1,
+      "damage": 8,
+      "rarity": "rare",
+      "element": "air",
+      "synergy": [
+        "shaman",
+        "human"
+      ],
+      "tags": [
+        "summon",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 19, rewritten by exiles.",
+      "bibliography": "Forged Spell 19 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-020",
+      "name": "Forged Spell 20",
+      "type": "spell",
+      "cost": 8,
+      "damage": 4,
+      "rarity": "legendary",
+      "element": "arcane",
+      "synergy": [
+        "beast",
+        "elemental"
+      ],
+      "tags": [
+        "spellcraft",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 20, rewritten by warlocks.",
+      "bibliography": "Forged Spell 20 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-021",
+      "name": "Forged Spell 21",
+      "type": "spell",
+      "cost": 2,
+      "damage": 3,
+      "rarity": "legendary",
+      "element": "air",
+      "synergy": [
+        "dragon",
+        "construct"
+      ],
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 21, rewritten by exiles.",
+      "bibliography": "Forged Spell 21 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-022",
+      "name": "Forged Spell 22",
+      "type": "spell",
+      "cost": 5,
+      "damage": 7,
+      "rarity": "epic",
+      "element": "earth",
+      "synergy": [
+        "shaman",
+        "elemental"
+      ],
+      "tags": [
+        "spellcraft",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 22, rewritten by warlocks.",
+      "bibliography": "Forged Spell 22 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-023",
+      "name": "Forged Spell 23",
+      "type": "spell",
+      "cost": 3,
+      "damage": 4,
+      "rarity": "rare",
+      "element": "arcane",
+      "synergy": [
+        "undead",
+        "shaman"
+      ],
+      "tags": [
+        "burn",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 23, rewritten by exiles.",
+      "bibliography": "Forged Spell 23 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-024",
+      "name": "Forged Spell 24",
+      "type": "spell",
+      "cost": 7,
+      "damage": 3,
+      "rarity": "common",
+      "element": "fire",
+      "synergy": [
+        "human",
+        "dragon"
+      ],
+      "tags": [
+        "tempo",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 24, rewritten by warlocks.",
+      "bibliography": "Forged Spell 24 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-025",
+      "name": "Forged Spell 25",
+      "type": "spell",
+      "cost": 6,
+      "damage": 8,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "shaman",
+        "construct"
+      ],
+      "tags": [
+        "tempo",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 25, rewritten by exiles.",
+      "bibliography": "Forged Spell 25 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-026",
+      "name": "Forged Spell 26",
+      "type": "spell",
+      "cost": 6,
+      "damage": 2,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "construct",
+        "elemental"
+      ],
+      "tags": [
+        "spellcraft",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 26, rewritten by exiles.",
+      "bibliography": "Forged Spell 26 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-027",
+      "name": "Forged Spell 27",
+      "type": "spell",
+      "cost": 7,
+      "damage": 1,
+      "rarity": "epic",
+      "element": "fire",
+      "synergy": [
+        "beast",
+        "mage"
+      ],
+      "tags": [
+        "combo",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 27, rewritten by warlocks.",
+      "bibliography": "Forged Spell 27 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-028",
+      "name": "Forged Spell 28",
+      "type": "spell",
+      "cost": 5,
+      "damage": 6,
+      "rarity": "rare",
+      "element": "water",
+      "synergy": [
+        "shaman",
+        "human"
+      ],
+      "tags": [
+        "aggressive",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 28, rewritten by oracles.",
+      "bibliography": "Forged Spell 28 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-029",
+      "name": "Forged Spell 29",
+      "type": "spell",
+      "cost": 3,
+      "damage": 1,
+      "rarity": "common",
+      "element": "light",
+      "synergy": [
+        "mage",
+        "construct"
+      ],
+      "tags": [
+        "summon",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 29, rewritten by oracles.",
+      "bibliography": "Forged Spell 29 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-030",
+      "name": "Forged Spell 30",
+      "type": "spell",
+      "cost": 3,
+      "damage": 4,
+      "rarity": "common",
+      "element": "air",
+      "synergy": [
+        "elemental",
+        "dragon"
+      ],
+      "tags": [
+        "aggressive",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 30, rewritten by exiles.",
+      "bibliography": "Forged Spell 30 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-031",
+      "name": "Forged Spell 31",
+      "type": "spell",
+      "cost": 6,
+      "damage": 8,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "beast",
+        "elemental"
+      ],
+      "tags": [
+        "taunt",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 31, rewritten by oracles.",
+      "bibliography": "Forged Spell 31 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-032",
+      "name": "Forged Spell 32",
+      "type": "spell",
+      "cost": 5,
+      "damage": 6,
+      "rarity": "legendary",
+      "element": "air",
+      "synergy": [
+        "beast",
+        "elemental"
+      ],
+      "tags": [
+        "taunt",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 32, rewritten by exiles.",
+      "bibliography": "Forged Spell 32 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-033",
+      "name": "Forged Spell 33",
+      "type": "spell",
+      "cost": 4,
+      "damage": 7,
+      "rarity": "legendary",
+      "element": "earth",
+      "synergy": [
+        "elemental",
+        "dragon"
+      ],
+      "tags": [
+        "tempo",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 33, rewritten by warlocks.",
+      "bibliography": "Forged Spell 33 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-034",
+      "name": "Forged Spell 34",
+      "type": "spell",
+      "cost": 4,
+      "damage": 7,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "beast",
+        "construct"
+      ],
+      "tags": [
+        "control",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 34, rewritten by oracles.",
+      "bibliography": "Forged Spell 34 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-035",
+      "name": "Forged Spell 35",
+      "type": "spell",
+      "cost": 6,
+      "damage": 4,
+      "rarity": "rare",
+      "element": "fire",
+      "synergy": [
+        "shaman",
+        "mage"
+      ],
+      "tags": [
+        "tribal",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 35, rewritten by exiles.",
+      "bibliography": "Forged Spell 35 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-036",
+      "name": "Forged Spell 36",
+      "type": "spell",
+      "cost": 2,
+      "damage": 5,
+      "rarity": "common",
+      "element": "fire",
+      "synergy": [
+        "dragon",
+        "undead"
+      ],
+      "tags": [
+        "tribal",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 36, rewritten by warlocks.",
+      "bibliography": "Forged Spell 36 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-037",
+      "name": "Forged Spell 37",
+      "type": "spell",
+      "cost": 1,
+      "damage": 2,
+      "rarity": "rare",
+      "element": "water",
+      "synergy": [
+        "shaman",
+        "construct"
+      ],
+      "tags": [
+        "value",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 37, rewritten by oracles.",
+      "bibliography": "Forged Spell 37 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-038",
+      "name": "Forged Spell 38",
+      "type": "spell",
+      "cost": 1,
+      "damage": 8,
+      "rarity": "legendary",
+      "element": "fire",
+      "synergy": [
+        "shaman",
+        "mage"
+      ],
+      "tags": [
+        "summon",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 38, rewritten by exiles.",
+      "bibliography": "Forged Spell 38 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-039",
+      "name": "Forged Spell 39",
+      "type": "spell",
+      "cost": 4,
+      "damage": 4,
+      "rarity": "legendary",
+      "element": "earth",
+      "synergy": [
+        "mage",
+        "construct"
+      ],
+      "tags": [
+        "aggressive",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 39, rewritten by exiles.",
+      "bibliography": "Forged Spell 39 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-040",
+      "name": "Forged Spell 40",
+      "type": "spell",
+      "cost": 2,
+      "damage": 0,
+      "rarity": "common",
+      "element": "light",
+      "synergy": [
+        "shaman",
+        "construct"
+      ],
+      "tags": [
+        "spellcraft",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 40, rewritten by oracles.",
+      "bibliography": "Forged Spell 40 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-041",
+      "name": "Forged Spell 41",
+      "type": "spell",
+      "cost": 8,
+      "damage": 4,
+      "rarity": "rare",
+      "element": "shadow",
+      "synergy": [
+        "beast",
+        "construct"
+      ],
+      "tags": [
+        "tribal",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 41, rewritten by oracles.",
+      "bibliography": "Forged Spell 41 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-042",
+      "name": "Forged Spell 42",
+      "type": "spell",
+      "cost": 3,
+      "damage": 1,
+      "rarity": "common",
+      "element": "arcane",
+      "synergy": [
+        "shaman",
+        "construct"
+      ],
+      "tags": [
+        "value",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 42, rewritten by oracles.",
+      "bibliography": "Forged Spell 42 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-043",
+      "name": "Forged Spell 43",
+      "type": "spell",
+      "cost": 4,
+      "damage": 7,
+      "rarity": "common",
+      "element": "arcane",
+      "synergy": [
+        "dragon",
+        "human"
+      ],
+      "tags": [
+        "tribal",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 43, rewritten by warlocks.",
+      "bibliography": "Forged Spell 43 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-044",
+      "name": "Forged Spell 44",
+      "type": "spell",
+      "cost": 7,
+      "damage": 5,
+      "rarity": "rare",
+      "element": "fire",
+      "synergy": [
+        "construct",
+        "mage"
+      ],
+      "tags": [
+        "tribal",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 44, rewritten by exiles.",
+      "bibliography": "Forged Spell 44 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-045",
+      "name": "Forged Spell 45",
+      "type": "spell",
+      "cost": 6,
+      "damage": 7,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "undead",
+        "construct"
+      ],
+      "tags": [
+        "combo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 45, rewritten by exiles.",
+      "bibliography": "Forged Spell 45 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-046",
+      "name": "Forged Spell 46",
+      "type": "spell",
+      "cost": 1,
+      "damage": 2,
+      "rarity": "common",
+      "element": "fire",
+      "synergy": [
+        "mage",
+        "undead"
+      ],
+      "tags": [
+        "spellcraft",
+        "tempo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 46, rewritten by warlocks.",
+      "bibliography": "Forged Spell 46 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-047",
+      "name": "Forged Spell 47",
+      "type": "spell",
+      "cost": 2,
+      "damage": 8,
+      "rarity": "legendary",
+      "element": "earth",
+      "synergy": [
+        "human",
+        "beast"
+      ],
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 47, rewritten by warlocks.",
+      "bibliography": "Forged Spell 47 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-048",
+      "name": "Forged Spell 48",
+      "type": "spell",
+      "cost": 7,
+      "damage": 0,
+      "rarity": "legendary",
+      "element": "air",
+      "synergy": [
+        "undead",
+        "shaman"
+      ],
+      "tags": [
+        "taunt",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 48, rewritten by warlocks.",
+      "bibliography": "Forged Spell 48 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-049",
+      "name": "Forged Spell 49",
+      "type": "spell",
+      "cost": 6,
+      "damage": 0,
+      "rarity": "common",
+      "element": "air",
+      "synergy": [
+        "elemental",
+        "undead"
+      ],
+      "tags": [
+        "control",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 49, rewritten by warlocks.",
+      "bibliography": "Forged Spell 49 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-050",
+      "name": "Forged Spell 50",
+      "type": "spell",
+      "cost": 1,
+      "damage": 6,
+      "rarity": "rare",
+      "element": "water",
+      "synergy": [
+        "beast",
+        "human"
+      ],
+      "tags": [
+        "spellcraft",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 3
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 50, rewritten by warlocks.",
+      "bibliography": "Forged Spell 50 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-051",
+      "name": "Forged Spell 51",
+      "type": "spell",
+      "cost": 5,
+      "damage": 6,
+      "rarity": "rare",
+      "element": "water",
+      "synergy": [
+        "shaman",
+        "elemental"
+      ],
+      "tags": [
+        "summon",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 51, rewritten by exiles.",
+      "bibliography": "Forged Spell 51 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-052",
+      "name": "Forged Spell 52",
+      "type": "spell",
+      "cost": 3,
+      "damage": 0,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "undead",
+        "beast"
+      ],
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 52, rewritten by exiles.",
+      "bibliography": "Forged Spell 52 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-053",
+      "name": "Forged Spell 53",
+      "type": "spell",
+      "cost": 6,
+      "damage": 8,
+      "rarity": "legendary",
+      "element": "water",
+      "synergy": [
+        "construct",
+        "shaman"
+      ],
+      "tags": [
+        "control",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 53, rewritten by exiles.",
+      "bibliography": "Forged Spell 53 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-054",
+      "name": "Forged Spell 54",
+      "type": "spell",
+      "cost": 2,
+      "damage": 2,
+      "rarity": "common",
+      "element": "air",
+      "synergy": [
+        "undead",
+        "dragon"
+      ],
+      "tags": [
+        "control",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 54, rewritten by oracles.",
+      "bibliography": "Forged Spell 54 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-055",
+      "name": "Forged Spell 55",
+      "type": "spell",
+      "cost": 3,
+      "damage": 6,
+      "rarity": "legendary",
+      "element": "fire",
+      "synergy": [
+        "dragon",
+        "elemental"
+      ],
+      "tags": [
+        "control",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 55, rewritten by exiles.",
+      "bibliography": "Forged Spell 55 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-056",
+      "name": "Forged Spell 56",
+      "type": "spell",
+      "cost": 2,
+      "damage": 7,
+      "rarity": "epic",
+      "element": "air",
+      "synergy": [
+        "beast",
+        "dragon"
+      ],
+      "tags": [
+        "aggressive",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 56, rewritten by warlocks.",
+      "bibliography": "Forged Spell 56 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-057",
+      "name": "Forged Spell 57",
+      "type": "spell",
+      "cost": 7,
+      "damage": 1,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "mage",
+        "undead"
+      ],
+      "tags": [
+        "tempo",
+        "combo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 57, rewritten by oracles.",
+      "bibliography": "Forged Spell 57 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-058",
+      "name": "Forged Spell 58",
+      "type": "spell",
+      "cost": 5,
+      "damage": 3,
+      "rarity": "common",
+      "element": "light",
+      "synergy": [
+        "construct",
+        "dragon"
+      ],
+      "tags": [
+        "taunt",
+        "combo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 58, rewritten by exiles.",
+      "bibliography": "Forged Spell 58 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-059",
+      "name": "Forged Spell 59",
+      "type": "spell",
+      "cost": 8,
+      "damage": 0,
+      "rarity": "common",
+      "element": "shadow",
+      "synergy": [
+        "human",
+        "undead"
+      ],
+      "tags": [
+        "control",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 59, rewritten by warlocks.",
+      "bibliography": "Forged Spell 59 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-060",
+      "name": "Forged Spell 60",
+      "type": "spell",
+      "cost": 7,
+      "damage": 0,
+      "rarity": "rare",
+      "element": "air",
+      "synergy": [
+        "human",
+        "shaman"
+      ],
+      "tags": [
+        "combo",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 60, rewritten by warlocks.",
+      "bibliography": "Forged Spell 60 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-061",
+      "name": "Forged Spell 61",
+      "type": "spell",
+      "cost": 4,
+      "damage": 1,
+      "rarity": "epic",
+      "element": "water",
+      "synergy": [
+        "elemental",
+        "mage"
+      ],
+      "tags": [
+        "tempo",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 61, rewritten by exiles.",
+      "bibliography": "Forged Spell 61 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-062",
+      "name": "Forged Spell 62",
+      "type": "spell",
+      "cost": 8,
+      "damage": 2,
+      "rarity": "epic",
+      "element": "fire",
+      "synergy": [
+        "human",
+        "shaman"
+      ],
+      "tags": [
+        "control",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 62, rewritten by warlocks.",
+      "bibliography": "Forged Spell 62 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-063",
+      "name": "Forged Spell 63",
+      "type": "spell",
+      "cost": 8,
+      "damage": 5,
+      "rarity": "legendary",
+      "element": "earth",
+      "synergy": [
+        "dragon",
+        "undead"
+      ],
+      "tags": [
+        "summon",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 63, rewritten by warlocks.",
+      "bibliography": "Forged Spell 63 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-064",
+      "name": "Forged Spell 64",
+      "type": "spell",
+      "cost": 4,
+      "damage": 7,
+      "rarity": "common",
+      "element": "fire",
+      "synergy": [
+        "elemental",
+        "undead"
+      ],
+      "tags": [
+        "value",
+        "combo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 64, rewritten by exiles.",
+      "bibliography": "Forged Spell 64 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-065",
+      "name": "Forged Spell 65",
+      "type": "spell",
+      "cost": 7,
+      "damage": 3,
+      "rarity": "common",
+      "element": "light",
+      "synergy": [
+        "construct",
+        "human"
+      ],
+      "tags": [
+        "spellcraft",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 65, rewritten by exiles.",
+      "bibliography": "Forged Spell 65 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-066",
+      "name": "Forged Spell 66",
+      "type": "spell",
+      "cost": 8,
+      "damage": 0,
+      "rarity": "rare",
+      "element": "light",
+      "synergy": [
+        "mage",
+        "dragon"
+      ],
+      "tags": [
+        "taunt",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 66, rewritten by exiles.",
+      "bibliography": "Forged Spell 66 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-067",
+      "name": "Forged Spell 67",
+      "type": "spell",
+      "cost": 4,
+      "damage": 3,
+      "rarity": "legendary",
+      "element": "light",
+      "synergy": [
+        "human",
+        "dragon"
+      ],
+      "tags": [
+        "tempo",
+        "combo",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 67, rewritten by exiles.",
+      "bibliography": "Forged Spell 67 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-068",
+      "name": "Forged Spell 68",
+      "type": "spell",
+      "cost": 6,
+      "damage": 1,
+      "rarity": "legendary",
+      "element": "arcane",
+      "synergy": [
+        "mage",
+        "dragon"
+      ],
+      "tags": [
+        "combo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 68, rewritten by exiles.",
+      "bibliography": "Forged Spell 68 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-069",
+      "name": "Forged Spell 69",
+      "type": "spell",
+      "cost": 4,
+      "damage": 8,
+      "rarity": "epic",
+      "element": "shadow",
+      "synergy": [
+        "undead",
+        "construct"
+      ],
+      "tags": [
+        "combo",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 69, rewritten by oracles.",
+      "bibliography": "Forged Spell 69 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-070",
+      "name": "Forged Spell 70",
+      "type": "spell",
+      "cost": 5,
+      "damage": 0,
+      "rarity": "common",
+      "element": "water",
+      "synergy": [
+        "human",
+        "construct"
+      ],
+      "tags": [
+        "value",
+        "summon",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 70, rewritten by oracles.",
+      "bibliography": "Forged Spell 70 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-071",
+      "name": "Forged Spell 71",
+      "type": "spell",
+      "cost": 6,
+      "damage": 5,
+      "rarity": "epic",
+      "element": "arcane",
+      "synergy": [
+        "construct",
+        "human"
+      ],
+      "tags": [
+        "tempo",
+        "control",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 71, rewritten by exiles.",
+      "bibliography": "Forged Spell 71 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-072",
+      "name": "Forged Spell 72",
+      "type": "spell",
+      "cost": 7,
+      "damage": 6,
+      "rarity": "epic",
+      "element": "water",
+      "synergy": [
+        "shaman",
+        "human"
+      ],
+      "tags": [
+        "control",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 72, rewritten by oracles.",
+      "bibliography": "Forged Spell 72 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-073",
+      "name": "Forged Spell 73",
+      "type": "spell",
+      "cost": 7,
+      "damage": 2,
+      "rarity": "legendary",
+      "element": "shadow",
+      "synergy": [
+        "beast",
+        "dragon"
+      ],
+      "tags": [
+        "taunt",
+        "tribal",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "options": {
+        "fx": "rift",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 73, rewritten by warlocks.",
+      "bibliography": "Forged Spell 73 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-074",
+      "name": "Forged Spell 74",
+      "type": "spell",
+      "cost": 1,
+      "damage": 2,
+      "rarity": "rare",
+      "element": "arcane",
+      "synergy": [
+        "mage",
+        "dragon"
+      ],
+      "tags": [
+        "value",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 74, rewritten by exiles.",
+      "bibliography": "Forged Spell 74 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-075",
+      "name": "Forged Spell 75",
+      "type": "spell",
+      "cost": 3,
+      "damage": 4,
+      "rarity": "legendary",
+      "element": "air",
+      "synergy": [
+        "human",
+        "undead"
+      ],
+      "tags": [
+        "tribal",
+        "aggressive",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 75, rewritten by warlocks.",
+      "bibliography": "Forged Spell 75 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-076",
+      "name": "Forged Spell 76",
+      "type": "spell",
+      "cost": 5,
+      "damage": 0,
+      "rarity": "epic",
+      "element": "earth",
+      "synergy": [
+        "undead",
+        "beast"
+      ],
+      "tags": [
+        "summon",
+        "burn",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 76, rewritten by exiles.",
+      "bibliography": "Forged Spell 76 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-077",
+      "name": "Forged Spell 77",
+      "type": "spell",
+      "cost": 1,
+      "damage": 4,
+      "rarity": "epic",
+      "element": "earth",
+      "synergy": [
+        "dragon",
+        "human"
+      ],
+      "tags": [
+        "summon",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "options": {
+        "fx": "pulse",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 77, rewritten by warlocks.",
+      "bibliography": "Forged Spell 77 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-078",
+      "name": "Forged Spell 78",
+      "type": "spell",
+      "cost": 5,
+      "damage": 6,
+      "rarity": "legendary",
+      "element": "fire",
+      "synergy": [
+        "undead",
+        "human"
+      ],
+      "tags": [
+        "tribal",
+        "taunt",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "roar"
+      },
+      "heroBackstory": "An incantation archived in vault 78, rewritten by oracles.",
+      "bibliography": "Forged Spell 78 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-079",
+      "name": "Forged Spell 79",
+      "type": "spell",
+      "cost": 4,
+      "damage": 3,
+      "rarity": "rare",
+      "element": "light",
+      "synergy": [
+        "human",
+        "dragon"
+      ],
+      "tags": [
+        "value",
+        "spellcraft",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "options": {
+        "fx": "spark",
+        "voiceLine": "chant"
+      },
+      "heroBackstory": "An incantation archived in vault 79, rewritten by oracles.",
+      "bibliography": "Forged Spell 79 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-080",
+      "name": "Forged Spell 80",
+      "type": "spell",
+      "cost": 4,
+      "damage": 4,
+      "rarity": "epic",
+      "element": "earth",
+      "synergy": [
+        "human",
+        "shaman"
+      ],
+      "tags": [
+        "summon",
+        "value",
+        "GEN1"
+      ],
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "options": {
+        "fx": "nova",
+        "voiceLine": "whisper"
+      },
+      "heroBackstory": "An incantation archived in vault 80, rewritten by warlocks.",
+      "bibliography": "Forged Spell 80 is documented in the Gen1 chronicles."
+    }
+  ]
+}
