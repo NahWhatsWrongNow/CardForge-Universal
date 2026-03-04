@@ -1,0 +1,3402 @@
+{
+  "updatedAt": "2026-03-04T16:34:15.485289Z",
+  "count": 233,
+  "cards": [
+    {
+      "id": "river-scout",
+      "name": "River Scout",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "iron-guard",
+      "name": "Iron Guard",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "ember-adept",
+      "name": "Ember Adept",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "skybound-hunter",
+      "name": "Skybound Hunter",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "grave-oracle",
+      "name": "Grave Oracle",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "wildfang-alpha",
+      "name": "Wildfang Alpha",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "forest-pouncer",
+      "name": "Forest Pouncer",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "tangle-warden",
+      "name": "Tangle Warden",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "grove-guardian",
+      "name": "Grove Guardian",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "crypt-keeper",
+      "name": "Crypt Keeper",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "bone-colossus",
+      "name": "Bone Colossus",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "soul-lantern",
+      "name": "Soul Lantern",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "frost-weaver",
+      "name": "Frost Weaver",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "storm-channeler",
+      "name": "Storm Channeler",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "rift-elemental",
+      "name": "Rift Elemental",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 6,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "pyre-hound",
+      "name": "Pyre Hound",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "dune-sentinel",
+      "name": "Dune Sentinel",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "arcane-scholar",
+      "name": "Arcane Scholar",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "totem-caller",
+      "name": "Totem Caller",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "pack-bolt",
+      "name": "Pack Bolt",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "pack-howl",
+      "name": "Pack Howl",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "alpha-command",
+      "name": "Alpha Command",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "primal-charge",
+      "name": "Primal Charge",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "swift-ambush",
+      "name": "Swift Ambush",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "grave-bind",
+      "name": "Grave Bind",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "dark-bargain",
+      "name": "Dark Bargain",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "void-silence",
+      "name": "Void Silence",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "soul-drain",
+      "name": "Soul Drain",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "night-shroud",
+      "name": "Night Shroud",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "mana-surge",
+      "name": "Mana Surge",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "arc-flare",
+      "name": "Arc Flare",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "chain-lightning",
+      "name": "Chain Lightning",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "tidal-burst",
+      "name": "Tidal Burst",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": []
+    },
+    {
+      "id": "generated-minion-001",
+      "name": "Forged Minion 1",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-minion-002",
+      "name": "Forged Minion 2",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "combo",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-minion-003",
+      "name": "Forged Minion 3",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-minion-004",
+      "name": "Forged Minion 4",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "taunt",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-minion-005",
+      "name": "Forged Minion 5",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "tribal",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-006",
+      "name": "Forged Minion 6",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 1,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "burn",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-minion-007",
+      "name": "Forged Minion 7",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "tempo",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-008",
+      "name": "Forged Minion 8",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-minion-009",
+      "name": "Forged Minion 9",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "tags": [
+        "aggressive",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-minion-010",
+      "name": "Forged Minion 10",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-011",
+      "name": "Forged Minion 11",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-012",
+      "name": "Forged Minion 12",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-minion-013",
+      "name": "Forged Minion 13",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "tempo",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-014",
+      "name": "Forged Minion 14",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-015",
+      "name": "Forged Minion 15",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 9,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "aggressive",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-minion-016",
+      "name": "Forged Minion 16",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-minion-017",
+      "name": "Forged Minion 17",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "combo"
+      ]
+    },
+    {
+      "id": "generated-minion-018",
+      "name": "Forged Minion 18",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "combo"
+      ]
+    },
+    {
+      "id": "generated-minion-019",
+      "name": "Forged Minion 19",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 6,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-020",
+      "name": "Forged Minion 20",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "burn",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-minion-021",
+      "name": "Forged Minion 21",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-022",
+      "name": "Forged Minion 22",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "control",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-minion-023",
+      "name": "Forged Minion 23",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "tags": [
+        "burn",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-minion-024",
+      "name": "Forged Minion 24",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 9,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-025",
+      "name": "Forged Minion 25",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "combo",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-minion-026",
+      "name": "Forged Minion 26",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "spellcraft",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-minion-027",
+      "name": "Forged Minion 27",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 8,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "control",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-minion-028",
+      "name": "Forged Minion 28",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "burn",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-029",
+      "name": "Forged Minion 29",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-minion-030",
+      "name": "Forged Minion 30",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "tempo",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-minion-031",
+      "name": "Forged Minion 31",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 8,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "burn",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-032",
+      "name": "Forged Minion 32",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-minion-033",
+      "name": "Forged Minion 33",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "tags": [
+        "tribal",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-034",
+      "name": "Forged Minion 34",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "combo",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-minion-035",
+      "name": "Forged Minion 35",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-minion-036",
+      "name": "Forged Minion 36",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-037",
+      "name": "Forged Minion 37",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-038",
+      "name": "Forged Minion 38",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 7,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-039",
+      "name": "Forged Minion 39",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-minion-040",
+      "name": "Forged Minion 40",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "tags": [
+        "tempo",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-minion-041",
+      "name": "Forged Minion 41",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "taunt",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-042",
+      "name": "Forged Minion 42",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "combo"
+      ]
+    },
+    {
+      "id": "generated-minion-043",
+      "name": "Forged Minion 43",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-044",
+      "name": "Forged Minion 44",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "burn",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-045",
+      "name": "Forged Minion 45",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-046",
+      "name": "Forged Minion 46",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-047",
+      "name": "Forged Minion 47",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "tribal",
+        "combo"
+      ]
+    },
+    {
+      "id": "generated-minion-048",
+      "name": "Forged Minion 48",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 6,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "combo",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-049",
+      "name": "Forged Minion 49",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "value",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-050",
+      "name": "Forged Minion 50",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-051",
+      "name": "Forged Minion 51",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 9,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-052",
+      "name": "Forged Minion 52",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "combo",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-minion-053",
+      "name": "Forged Minion 53",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 9,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-054",
+      "name": "Forged Minion 54",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "burn",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-minion-055",
+      "name": "Forged Minion 55",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "aggressive",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-minion-056",
+      "name": "Forged Minion 56",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "control",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-minion-057",
+      "name": "Forged Minion 57",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 7,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-058",
+      "name": "Forged Minion 58",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-059",
+      "name": "Forged Minion 59",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-060",
+      "name": "Forged Minion 60",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 9,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "combo"
+      ]
+    },
+    {
+      "id": "generated-minion-061",
+      "name": "Forged Minion 61",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 7,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-062",
+      "name": "Forged Minion 62",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "control",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-minion-063",
+      "name": "Forged Minion 63",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-minion-064",
+      "name": "Forged Minion 64",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-minion-065",
+      "name": "Forged Minion 65",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "combo",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-066",
+      "name": "Forged Minion 66",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 8,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-067",
+      "name": "Forged Minion 67",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-minion-068",
+      "name": "Forged Minion 68",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "tempo",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-069",
+      "name": "Forged Minion 69",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-070",
+      "name": "Forged Minion 70",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 8,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-minion-071",
+      "name": "Forged Minion 71",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "tempo",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-minion-072",
+      "name": "Forged Minion 72",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 9,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 3
+      },
+      "tags": [
+        "tribal",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-minion-073",
+      "name": "Forged Minion 73",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-minion-074",
+      "name": "Forged Minion 74",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "burn",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-075",
+      "name": "Forged Minion 75",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "spellcraft",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-076",
+      "name": "Forged Minion 76",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-077",
+      "name": "Forged Minion 77",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-minion-078",
+      "name": "Forged Minion 78",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-minion-079",
+      "name": "Forged Minion 79",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-080",
+      "name": "Forged Minion 80",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "tempo",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-minion-081",
+      "name": "Forged Minion 81",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-082",
+      "name": "Forged Minion 82",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-minion-083",
+      "name": "Forged Minion 83",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-084",
+      "name": "Forged Minion 84",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "spellcraft",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-085",
+      "name": "Forged Minion 85",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-086",
+      "name": "Forged Minion 86",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 6,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-087",
+      "name": "Forged Minion 87",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 7,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-minion-088",
+      "name": "Forged Minion 88",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-minion-089",
+      "name": "Forged Minion 89",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "taunt",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-minion-090",
+      "name": "Forged Minion 90",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-minion-091",
+      "name": "Forged Minion 91",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-minion-092",
+      "name": "Forged Minion 92",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "combo",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-093",
+      "name": "Forged Minion 93",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "combo",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-094",
+      "name": "Forged Minion 94",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-095",
+      "name": "Forged Minion 95",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-096",
+      "name": "Forged Minion 96",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-097",
+      "name": "Forged Minion 97",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "burn",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-minion-098",
+      "name": "Forged Minion 98",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-minion-099",
+      "name": "Forged Minion 99",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 6,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "value",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-minion-100",
+      "name": "Forged Minion 100",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "value",
+        "combo"
+      ]
+    },
+    {
+      "id": "generated-minion-101",
+      "name": "Forged Minion 101",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "burn",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-minion-102",
+      "name": "Forged Minion 102",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "combo",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-minion-103",
+      "name": "Forged Minion 103",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 7,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "combo",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-minion-104",
+      "name": "Forged Minion 104",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-minion-105",
+      "name": "Forged Minion 105",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-106",
+      "name": "Forged Minion 106",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-minion-107",
+      "name": "Forged Minion 107",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 9,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-108",
+      "name": "Forged Minion 108",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "combo",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-109",
+      "name": "Forged Minion 109",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-minion-110",
+      "name": "Forged Minion 110",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "control",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-minion-111",
+      "name": "Forged Minion 111",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "combo",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-minion-112",
+      "name": "Forged Minion 112",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "taunt",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-minion-113",
+      "name": "Forged Minion 113",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 9,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-minion-114",
+      "name": "Forged Minion 114",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "aggressive",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-minion-115",
+      "name": "Forged Minion 115",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "tempo",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-minion-116",
+      "name": "Forged Minion 116",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 3
+      },
+      "tags": [
+        "taunt",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-minion-117",
+      "name": "Forged Minion 117",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-minion-118",
+      "name": "Forged Minion 118",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "control",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-minion-119",
+      "name": "Forged Minion 119",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-minion-120",
+      "name": "Forged Minion 120",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "tribal",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-001",
+      "name": "Forged Spell 1",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-spell-002",
+      "name": "Forged Spell 2",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-spell-003",
+      "name": "Forged Spell 3",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-spell-004",
+      "name": "Forged Spell 4",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "burn",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-spell-005",
+      "name": "Forged Spell 5",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "control",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-spell-006",
+      "name": "Forged Spell 6",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "combo"
+      ]
+    },
+    {
+      "id": "generated-spell-007",
+      "name": "Forged Spell 7",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-008",
+      "name": "Forged Spell 8",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "spellcraft",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-spell-009",
+      "name": "Forged Spell 9",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-spell-010",
+      "name": "Forged Spell 10",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-011",
+      "name": "Forged Spell 11",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "aggressive",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-012",
+      "name": "Forged Spell 12",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "taunt",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-013",
+      "name": "Forged Spell 13",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-spell-014",
+      "name": "Forged Spell 14",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "tribal",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-spell-015",
+      "name": "Forged Spell 15",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "tempo",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-016",
+      "name": "Forged Spell 16",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-spell-017",
+      "name": "Forged Spell 17",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-spell-018",
+      "name": "Forged Spell 18",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-spell-019",
+      "name": "Forged Spell 19",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-spell-020",
+      "name": "Forged Spell 20",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-spell-021",
+      "name": "Forged Spell 21",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-spell-022",
+      "name": "Forged Spell 22",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "tags": [
+        "spellcraft",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-spell-023",
+      "name": "Forged Spell 23",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "burn",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-024",
+      "name": "Forged Spell 24",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-025",
+      "name": "Forged Spell 25",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "tempo",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-spell-026",
+      "name": "Forged Spell 26",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-027",
+      "name": "Forged Spell 27",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "combo",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-spell-028",
+      "name": "Forged Spell 28",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-029",
+      "name": "Forged Spell 29",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-spell-030",
+      "name": "Forged Spell 30",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-031",
+      "name": "Forged Spell 31",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "taunt",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-032",
+      "name": "Forged Spell 32",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "taunt",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-033",
+      "name": "Forged Spell 33",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "tempo",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-spell-034",
+      "name": "Forged Spell 34",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "control",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-spell-035",
+      "name": "Forged Spell 35",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-spell-036",
+      "name": "Forged Spell 36",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-spell-037",
+      "name": "Forged Spell 37",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-038",
+      "name": "Forged Spell 38",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-039",
+      "name": "Forged Spell 39",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-040",
+      "name": "Forged Spell 40",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-spell-041",
+      "name": "Forged Spell 41",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 8,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-042",
+      "name": "Forged Spell 42",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-spell-043",
+      "name": "Forged Spell 43",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-spell-044",
+      "name": "Forged Spell 44",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 7,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-spell-045",
+      "name": "Forged Spell 45",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-046",
+      "name": "Forged Spell 46",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "tempo"
+      ]
+    },
+    {
+      "id": "generated-spell-047",
+      "name": "Forged Spell 47",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-spell-048",
+      "name": "Forged Spell 48",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "taunt",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-spell-049",
+      "name": "Forged Spell 49",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-spell-050",
+      "name": "Forged Spell 50",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-051",
+      "name": "Forged Spell 51",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-052",
+      "name": "Forged Spell 52",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-spell-053",
+      "name": "Forged Spell 53",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "control",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-spell-054",
+      "name": "Forged Spell 54",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-spell-055",
+      "name": "Forged Spell 55",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "control",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-spell-056",
+      "name": "Forged Spell 56",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 2,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "value"
+      ]
+    },
+    {
+      "id": "generated-spell-057",
+      "name": "Forged Spell 57",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 7,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "combo"
+      ]
+    },
+    {
+      "id": "generated-spell-058",
+      "name": "Forged Spell 58",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "taunt",
+        "combo"
+      ]
+    },
+    {
+      "id": "generated-spell-059",
+      "name": "Forged Spell 59",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 8,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "control",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-spell-060",
+      "name": "Forged Spell 60",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 7,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-spell-061",
+      "name": "Forged Spell 61",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-spell-062",
+      "name": "Forged Spell 62",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 8,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "tags": [
+        "control",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-063",
+      "name": "Forged Spell 63",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-064",
+      "name": "Forged Spell 64",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "tags": [
+        "value",
+        "combo"
+      ]
+    },
+    {
+      "id": "generated-spell-065",
+      "name": "Forged Spell 65",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 7,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-066",
+      "name": "Forged Spell 66",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 8,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "taunt",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-spell-067",
+      "name": "Forged Spell 67",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "combo"
+      ]
+    },
+    {
+      "id": "generated-spell-068",
+      "name": "Forged Spell 68",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-069",
+      "name": "Forged Spell 69",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-spell-070",
+      "name": "Forged Spell 70",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "summon"
+      ]
+    },
+    {
+      "id": "generated-spell-071",
+      "name": "Forged Spell 71",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 6,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "control"
+      ]
+    },
+    {
+      "id": "generated-spell-072",
+      "name": "Forged Spell 72",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 7,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-073",
+      "name": "Forged Spell 73",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "taunt",
+        "tribal"
+      ]
+    },
+    {
+      "id": "generated-spell-074",
+      "name": "Forged Spell 74",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-075",
+      "name": "Forged Spell 75",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "tribal",
+        "aggressive"
+      ]
+    },
+    {
+      "id": "generated-spell-076",
+      "name": "Forged Spell 76",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "burn"
+      ]
+    },
+    {
+      "id": "generated-spell-077",
+      "name": "Forged Spell 77",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-078",
+      "name": "Forged Spell 78",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "tribal",
+        "taunt"
+      ]
+    },
+    {
+      "id": "generated-spell-079",
+      "name": "Forged Spell 79",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "value",
+        "spellcraft"
+      ]
+    },
+    {
+      "id": "generated-spell-080",
+      "name": "Forged Spell 80",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "value"
+      ]
+    }
+  ]
+}

@@ -81,10 +81,14 @@ function claimQuest(questId) {
   const quest = state.quests.find((entry) => entry.id === questId);
   if (!quest) return;
   const status = evaluateQuest(quest, state.profile.questProgress);
-  if (!status.done || state.profile.questClaims[questId]) return;
+  if (!status.done || state.profile.questClaims[questId]) {
+    toast('Quest unavailable.', 'info');
+    return;
+  }
   state.profile.economy.gold += quest.reward;
   state.profile.questClaims[questId] = true;
   persistProfile();
+  toast(`Claimed ${quest.goal}`, 'info');
   renderPanels();
 }
 
@@ -94,6 +98,7 @@ function claimDailyGift() {
   state.profile.economy.lastDailyGiftAt = today;
   state.profile.economy.gold += 75;
   persistProfile();
+  toast('Daily gift claimed (+75g).', 'info');
   renderPanels();
 }
 
@@ -103,6 +108,7 @@ function claimDemoWin() {
   state.profile.stats.streak += 1;
   state.profile.economy.gold += reward;
   persistProfile();
+  toast(`Win reward claimed (+${reward}g).`, 'info');
   renderPanels();
 }
 
@@ -159,7 +165,16 @@ async function runEnemyTurn() {
   state.aiThinkingLine = '';
   cleanupDead();
   render();
+  toast('Enemy turn complete.', 'info');
   renderPanels();
+}
+
+
+function endTurn() {
+  state.mana = 3;
+  state.hand = getAllCards().slice(0, 5).map((card) => ({ ...card, instanceId: uid('card') }));
+  runEnemyTurn();
+  render();
 }
 
 function renderPanels() {
@@ -216,7 +231,7 @@ function renderPanels() {
     lore.textContent = `${profile.personality.title} ${profile.personality.dimensionTag}: ${profile.personality.backstory}`;
     aiHost.appendChild(lore);
   }
-  const runButton = document.createElement('button'); runButton.textContent = 'Run Enemy Turn'; runButton.onclick = runEnemyTurn;
+  const runButton = document.createElement('button'); runButton.textContent = state.aiThinking ? 'Thinking...' : 'Run Enemy Turn'; runButton.disabled = state.aiThinking; runButton.onclick = runEnemyTurn;
   const bossButton = document.createElement('button'); bossButton.textContent = state.bossMode ? 'Disable Boss Mode' : 'Enable Boss Mode'; bossButton.onclick = () => { state.bossMode = !state.bossMode; renderPanels(); };
   aiHost.append(runButton, bossButton);
   const trace = document.createElement('div'); trace.id = 'ai-trace'; trace.textContent = `Decision trace: ${state.lastAiTrace}`; aiHost.appendChild(trace);
@@ -307,6 +322,7 @@ async function buyAndOpen(productId, quantity = 1, discount = 1) {
     emitVfx('pack-open', { product: product.id, count: opened.pulls.length });
   }
   persistProfile();
+  toast(`Opened ${quantity} pack(s).`, 'info');
   renderPanels();
 }
 
@@ -362,6 +378,7 @@ async function boot() {
   state.hand = getAllCards().slice(0, 5).map((card) => ({ ...card, instanceId: uid('card') }));
   applyThemeAndSettings();
   render();
+  toast('Runtime ready.', 'info');
   renderPanels();
 }
 
@@ -512,12 +529,14 @@ function highlightAttackTargets(attackerId) {
 
 function dragWithGhost(node, onMove, onDrop) {
   node.onpointerdown = (event) => {
+    event.preventDefault();
+    document.body.classList.add('dragging');
     const ghost = node.cloneNode(true);
     ghost.classList.add('ghost');
     document.body.appendChild(ghost);
     const move = (e) => { ghost.style.left = `${e.clientX + 6}px`; ghost.style.top = `${e.clientY + 6}px`; onMove(e); };
     move(event);
-    const up = (e) => { document.removeEventListener('pointermove', move); onDrop(e); ghost.remove(); clearHighlights(); showHint(''); };
+    const up = (e) => { document.removeEventListener('pointermove', move); onDrop(e); ghost.remove(); clearHighlights(); showHint(''); document.body.classList.remove('dragging'); };
     document.addEventListener('pointermove', move);
     document.addEventListener('pointerup', up, { once: true });
   };
@@ -537,12 +556,13 @@ function enableAttackDrag(node, attackerId) {
   });
 }
 
-document.querySelector('#chat-input').addEventListener('keydown', (event) => {
-  if (event.key !== 'Enter') return;
-  const cmd = event.target.value.trim();
+function handleConsoleCommand(raw) {
+  const cmd = raw.trim();
+  if (!cmd) return;
   if (cmd === './DevAbil') {
     setDevUnlocked(true);
     toast('Developer panels unlocked.', 'info');
+    return;
   }
   if (cmd === './ResetProgress') {
     state.profile = resetProfile();
@@ -550,11 +570,30 @@ document.querySelector('#chat-input').addEventListener('keydown', (event) => {
     toast('Progress reset.', 'info');
     renderPanels();
     render();
+    return;
   }
+  if (cmd === './help') {
+    toast('Commands: ./help, ./DevAbil, ./ResetProgress', 'info');
+    log('Available commands: ./help | ./DevAbil | ./ResetProgress');
+    return;
+  }
+  toast('Unknown command. Use ./help', 'error');
+}
+
+document.querySelector('#chat-input').addEventListener('keydown', (event) => {
+  if (event.key !== 'Enter') return;
+  handleConsoleCommand(event.target.value);
   event.target.value = '';
 });
 
-document.querySelector('#menu-btn').addEventListener('click', () => { window.location.href = '../index.html'; });
+document.querySelector('#chat-send').addEventListener('click', () => {
+  const input = document.querySelector('#chat-input');
+  handleConsoleCommand(input.value);
+  input.value = '';
+});
+
+document.querySelector('#menu-btn').addEventListener('click', () => { window.location.assign('../index.html'); });
 document.querySelector('#win-demo').addEventListener('click', claimDemoWin);
+document.querySelector('#end-turn').addEventListener('click', endTurn);
 
 boot();

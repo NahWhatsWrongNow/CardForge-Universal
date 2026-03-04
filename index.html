@@ -10,11 +10,55 @@
   <main class="launcher">
     <h1>CardForge Universal</h1>
     <p>Modular card game runtime + creator suite.</p>
+
     <div class="links">
-      <a href="./game/index.html">Open Game Runtime</a>
-      <a href="./creator/index.html">Open Creator Suite</a>
+      <a href="./game/index.html">Play Game</a>
+      <a href="./creator/index.html">Open Creator</a>
+      <button id="open-options">Options</button>
+      <button id="open-shop">Shop Info</button>
+      <button id="open-other">Other</button>
     </div>
+
+    <section id="menu-panels">
+      <article id="options-panel" class="menu-panel hidden"><h2>Options</h2><p>In-game options are available under Settings panel in Runtime.</p></article>
+      <article id="shop-panel" class="menu-panel hidden"><h2>Shop</h2><p>Shop is available in Runtime with Daily Gift and pack bundles.</p></article>
+      <article id="other-panel" class="menu-panel hidden"><h2>Carnex (auto-updating card index)</h2><div id="cardex-meta"></div><input id="cardex-search" placeholder="Search Carnex cards..." /><div id="cardex-list"></div></article>
+    </section>
+
     <p class="hint">Run with <code>python -m http.server 8080</code></p>
   </main>
+
+  <script>
+    const panels = ['options-panel', 'shop-panel', 'other-panel'];
+    function show(id) {
+      panels.forEach((pid) => document.getElementById(pid).classList.toggle('hidden', pid !== id));
+    }
+    document.getElementById('open-options').onclick = () => show('options-panel');
+    document.getElementById('open-shop').onclick = () => show('shop-panel');
+    document.getElementById('open-other').onclick = async () => {
+      show('other-panel');
+      const res = await fetch('./cardex.json');
+      const payload = await res.json();
+      const meta = document.getElementById('cardex-meta');
+      const list = document.getElementById('cardex-list');
+      const search = document.getElementById('cardex-search');
+      meta.textContent = `Updated: ${payload.updatedAt} • Cards: ${payload.count}`;
+      const render = () => {
+        const q = search.value.trim().toLowerCase();
+        list.innerHTML = '';
+        payload.cards
+          .filter((c) => c.name.toLowerCase().includes(q))
+          .slice(0, 250)
+          .forEach((card) => {
+            const row = document.createElement('article');
+            row.className = `rarity-${card.rarity}`;
+            row.textContent = `${card.name} [${card.type}] cost ${card.cost} • ability: ${card.ability.action} ${card.ability.amount}`;
+            list.appendChild(row);
+          });
+      };
+      search.oninput = render;
+      render();
+    };
+  </script>
 </body>
 </html>

@@ -26,3 +26,15 @@ a {
   border-radius: 10px;
 }
 .hint { opacity: 0.8; }
+
+button { background: #3f67ff; color:#fff; border:none; padding:.7rem 1rem; border-radius:10px; cursor:pointer; }
+#menu-panels { margin-top:1rem; }
+.menu-panel { background: rgba(20,24,42,.88); border:1px solid #344167; border-radius:12px; padding: .8rem; }
+.hidden { display:none; }
+#cardex-list { max-height: 320px; overflow:auto; display:grid; gap:.3rem; margin-top:.5rem; }
+#cardex-list article { padding:.35rem .45rem; border-radius:8px; background:#11182e; border:1px solid #2d3f6b; }
+#cardex-search { width:100%; margin-top:.4rem; padding:.45rem; border-radius:8px; border:1px solid #45527a; background:#11172d; color:#eef; }
+.rarity-common { border-left:4px solid #bdbdbd; }
+.rarity-rare { border-left:4px solid #5ea5ff; }
+.rarity-epic { border-left:4px solid #c06fff; }
+.rarity-legendary { border-left:4px solid #ffce5f; }
