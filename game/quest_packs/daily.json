@@ -1,1 +1,9 @@
-{ "type": "quest-pack", "id": "daily-core", "name": "Daily Core", "quests": [{ "id": "play-3", "goal": "Play 3 cards" }] }
+{
+  "type": "quest-pack",
+  "id": "daily-core",
+  "name": "Daily Core",
+  "quests": [
+    { "id": "play-3", "goal": "Play 3 cards", "metric": "cardsPlayed", "target": 3, "reward": 60 },
+    { "id": "open-1", "goal": "Open 1 pack", "metric": "packsOpened", "target": 1, "reward": 40 }
+  ]
+}

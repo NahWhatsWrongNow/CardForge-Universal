@@ -18,6 +18,15 @@ const defaultProfile = {
     favoriteTribe: 'none',
     streak: 0,
   },
+  economy: {
+    gold: 250,
+    pityByProduct: {},
+  },
+  questProgress: {
+    cardsPlayed: 0,
+    packsOpened: 0,
+  },
+  questClaims: {},
 };
 
 export function loadProfile() {
@@ -30,6 +39,9 @@ export function loadProfile() {
       ...parsed,
       settings: { ...defaultProfile.settings, ...(parsed.settings ?? {}) },
       stats: { ...defaultProfile.stats, ...(parsed.stats ?? {}) },
+      economy: { ...defaultProfile.economy, ...(parsed.economy ?? {}) },
+      questProgress: { ...defaultProfile.questProgress, ...(parsed.questProgress ?? {}) },
+      questClaims: { ...defaultProfile.questClaims, ...(parsed.questClaims ?? {}) },
     };
   } catch {
     return structuredClone(defaultProfile);

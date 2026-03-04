@@ -1,18 +1,22 @@
 import { Registry } from '../core/registry.js';
 import { loadPlugins } from '../core/loader.js';
-import { setDevUnlocked } from '../core/storage.js';
+import { loadProfile, saveProfile, setDevUnlocked } from '../core/storage.js';
 import { toast, uid } from '../core/utils.js';
 import { emitVfx, onVfx } from './engine/animation_bus.js';
 import { explainInvalidAction } from './engine/targeting.js';
 import { getRivalryIndicators, resolveCombat, resolveSpellPower } from './engine/rivalry.js';
+import { evaluateQuest, getWinReward, openPack } from './engine/economy.js';
 
 const registry = new Registry();
 const state = {
+  profile: loadProfile(),
   playerHealth: 30,
   enemyHealth: 30,
   mana: 3,
   hand: [],
   rivalryPacks: [],
+  quests: [],
+  storeProducts: [],
   playerMinions: [],
   enemyMinions: [
     { id: uid('enemy'), name: 'Guard Pup', attack: 1, health: 3, taunt: true, defense: false, race: 'undead', element: 'shadow', statuses: {} },
@@ -29,16 +33,134 @@ const showHint = (msg = '') => {
   document.querySelector('#hint').textContent = msg;
 };
 
+function persistProfile() {
+  saveProfile(state.profile);
+}
+
+function bumpQuestMetric(metric, amount = 1) {
+  state.profile.questProgress[metric] = (state.profile.questProgress[metric] ?? 0) + amount;
+  persistProfile();
+}
+
+function claimQuest(questId) {
+  const quest = state.quests.find((entry) => entry.id === questId);
+  if (!quest) return;
+
+  const status = evaluateQuest(quest, state.profile.questProgress);
+  if (!status.done) {
+    toast('Quest not complete yet.', 'info');
+    return;
+  }
+
+  if (state.profile.questClaims[questId]) {
+    toast('Quest reward already claimed.', 'info');
+    return;
+  }
+
+  state.profile.economy.gold += quest.reward;
+  state.profile.questClaims[questId] = true;
+  persistProfile();
+  log(`Quest claimed: ${quest.goal} (+${quest.reward} gold).`);
+  renderEconomyAndPanels();
+}
+
+function claimDemoWin() {
+  const reward = getWinReward(state.profile.stats.streak);
+  state.profile.stats.wins += 1;
+  state.profile.stats.streak += 1;
+  state.profile.economy.gold += reward;
+  persistProfile();
+  log(`Victory reward claimed: +${reward} gold.`);
+  renderEconomyAndPanels();
+}
+
+function renderEconomyAndPanels() {
+  document.querySelector('#gold').textContent = state.profile.economy.gold;
+  document.querySelector('#streak').textContent = state.profile.stats.streak;
+
+  const questHost = document.querySelector('#quests');
+  questHost.innerHTML = '<h3>Daily Quests</h3>';
+  state.quests.forEach((quest) => {
+    const status = evaluateQuest(quest, state.profile.questProgress);
+    const claimed = !!state.profile.questClaims[quest.id];
+    const row = document.createElement('div');
+    row.innerHTML = `<div>${quest.goal} (${status.current}/${quest.target}) - ${quest.reward}g</div>`;
+    const button = document.createElement('button');
+    button.textContent = claimed ? 'Claimed' : 'Claim';
+    button.disabled = claimed || !status.done;
+    button.onclick = () => claimQuest(quest.id);
+    row.appendChild(button);
+    questHost.appendChild(row);
+  });
+
+  const storeHost = document.querySelector('#store');
+  storeHost.innerHTML = '<h3>Store</h3>';
+  state.storeProducts.forEach((product) => {
+    const row = document.createElement('div');
+    row.innerHTML = `<div>${product.name} - ${product.price}g</div>`;
+    const button = document.createElement('button');
+    button.textContent = 'Buy + Open';
+    button.disabled = state.profile.economy.gold < product.price;
+    button.onclick = () => buyAndOpen(product.id);
+    row.appendChild(button);
+    storeHost.appendChild(row);
+  });
+}
+
+async function buyAndOpen(productId) {
+  const product = state.storeProducts.find((entry) => entry.id === productId);
+  if (!product) return;
+
+  if (state.profile.economy.gold < product.price) {
+    toast('Not enough gold.', 'error');
+    return;
+  }
+
+  state.profile.economy.gold -= product.price;
+  const cards = registry.list('cardPacks').flatMap((pack) => pack.cards);
+  const pityState = state.profile.economy.pityByProduct[product.id] ?? { missesUntilGuaranteed: 0 };
+  const opened = openPack(cards, product, pityState);
+
+  state.profile.economy.pityByProduct[product.id] = opened.pityState;
+  state.profile.stats.packsOpened += 1;
+  bumpQuestMetric('packsOpened', 1);
+  persistProfile();
+
+  await animatePackOpening(opened.pulls);
+  log(`Opened ${product.name}: ${opened.pulls.map((card) => `${card.name} (${card.rarity})`).join(', ')}`);
+  renderEconomyAndPanels();
+}
+
+async function animatePackOpening(cards) {
+  const panel = document.querySelector('#pack-opening');
+  const reveal = document.querySelector('#pack-reveal');
+  panel.classList.remove('hidden');
+  reveal.innerHTML = '';
+
+  for (const card of cards) {
+    const node = document.createElement('div');
+    node.className = `pack-card ${card.rarity}`;
+    node.innerHTML = `<strong>${card.name}</strong><div>${card.rarity}</div>`;
+    reveal.appendChild(node);
+    await new Promise((resolve) => setTimeout(resolve, 220));
+    node.classList.add('show');
+  }
+}
+
 async function boot() {
   const errors = await loadPlugins(registry, [
     { manifest: './mode_packs/index.json', base: './mode_packs', type: 'mode-pack', kind: 'modes' },
     { manifest: './ai_packs/index.json', base: './ai_packs', type: 'ai-pack', kind: 'ai' },
     { manifest: './race_packs/index.json', base: './race_packs', type: 'race-pack', kind: 'rivalryPacks' },
+    { manifest: './quest_packs/index.json', base: './quest_packs', type: 'quest-pack', kind: 'questPacks' },
+    { manifest: './store_packs/index.json', base: './store_packs', type: 'store-pack', kind: 'storePacks' },
     { manifest: '../packs/index.json', base: '../packs', type: 'card-pack', kind: 'cardPacks' },
   ], log);
   errors.forEach((error) => log(`Error: ${error}`));
 
   state.rivalryPacks = registry.list('rivalryPacks');
+  state.quests = registry.list('questPacks').flatMap((pack) => pack.quests ?? []);
+  state.storeProducts = registry.list('storePacks').flatMap((pack) => pack.products ?? []);
 
   onVfx('play-card', ({ payload }) => log(`VFX play-card: ${payload.cardId}`));
   onVfx('attack', ({ payload }) => log(`VFX attack: ${payload.attackerId} -> ${payload.targetId}`));
@@ -46,8 +168,9 @@ async function boot() {
 
   const cards = registry.list('cardPacks').flatMap((pack) => pack.cards);
   state.hand = cards.slice(0, 4).map((card) => ({ ...card, instanceId: uid('card') }));
-  log(`Loaded ${state.rivalryPacks.length} rivalry pack(s) for layered combat/spell/status checks.`);
+  log(`Loaded ${state.rivalryPacks.length} rivalry pack(s), ${state.quests.length} quest(s), and ${state.storeProducts.length} store product(s).`);
   render();
+  renderEconomyAndPanels();
 }
 
 function render() {
@@ -128,8 +251,10 @@ function playCard(cardId) {
       statuses: {},
     });
     emitVfx('play-card', { cardId: card.id });
+    bumpQuestMetric('cardsPlayed', 1);
     log(`Played ${card.name}.`);
     render();
+    renderEconomyAndPanels();
     return;
   }
 
@@ -148,8 +273,10 @@ function playCard(cardId) {
     emitVfx('play-card', { cardId: card.id });
     state.hand.splice(index, 1);
     state.mana -= card.cost;
+    bumpQuestMetric('cardsPlayed', 1);
     cleanupDead();
     render();
+    renderEconomyAndPanels();
     return;
   }
 
@@ -352,5 +479,7 @@ document.querySelector('#chat-input').addEventListener('keydown', (event) => {
   }
   event.target.value = '';
 });
+
+document.querySelector('#win-demo').addEventListener('click', claimDemoWin);
 
 boot();

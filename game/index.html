@@ -13,6 +13,12 @@
       <input id="chat-input" placeholder="Type ./DevAbil to unlock dev mode" />
     </header>
 
+    <section id="economy-bar">
+      <div><strong>Gold:</strong> <span id="gold">0</span></div>
+      <div><strong>Streak:</strong> <span id="streak">0</span></div>
+      <button id="win-demo">Claim Demo Win Reward</button>
+    </section>
+
     <section id="board">
       <div class="hero enemy target" data-target-id="enemy-hero">Enemy Hero <span id="enemy-health">30</span></div>
       <div id="enemy-minions" class="lane"></div>
@@ -21,6 +27,16 @@
       <div id="drop-zone" class="target">Drag cards here to play</div>
       <svg id="attack-layer"></svg>
       <div id="float-layer"></div>
+    </section>
+
+    <section id="side-panels">
+      <aside id="quests" class="panel"></aside>
+      <aside id="store" class="panel"></aside>
+    </section>
+
+    <section id="pack-opening" class="panel hidden">
+      <h3>Pack Opening</h3>
+      <div id="pack-reveal"></div>
     </section>
 
     <section id="hand"></section>
