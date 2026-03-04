@@ -1,3 +1,4 @@
+:root { --accent: #6f7cff; }
 body { margin: 0; font-family: system-ui, sans-serif; background: #0f1325; color: #eef; }
 main { max-width: 980px; margin: 0 auto; padding: 1rem; }
 .panel { background: #151a31; border: 1px solid #37436c; border-radius: 10px; padding: 0.9rem; margin: 0.8rem 0; }
@@ -11,3 +12,6 @@ textarea { width: 100%; resize: vertical; }
 .actions { display: flex; gap: 0.55rem; margin-top: 0.6rem; }
 pre { background: #0b1020; padding: 0.75rem; border-radius: 8px; overflow: auto; white-space: pre-wrap; }
 @media (max-width: 800px) { .grid-form { grid-template-columns: 1fr; } .condition-row { grid-template-columns: 1fr; } }
+
+.top-row { display:flex; justify-content:space-between; align-items:center; gap:1rem; }
+.menu-btn { text-decoration:none; color:#fff; background:var(--accent); border-radius:8px; padding:.45rem .7rem; }

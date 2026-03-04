@@ -12,6 +12,7 @@ const SCHEMAS = {
   'backdrop-pack': ['id', 'name', 'backdrops'],
   'audio-pack': ['id', 'name', 'playlists'],
   'cosmetic-pack': ['id', 'name', 'cardBacks'],
+  'theme-pack': ['id', 'name', 'themes'],
 };
 
 export function validateSchema(item, expectedType) {

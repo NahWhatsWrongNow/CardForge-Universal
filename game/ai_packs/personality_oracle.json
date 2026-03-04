@@ -1,0 +1,10 @@
+{
+  "type": "ai-pack",
+  "id": "star-oracle",
+  "name": "Personality AI: Star Oracle",
+  "weights": { "attackFace": 0.5, "trade": 0.6, "summon": 0.6 },
+  "summons": [
+    { "name": "Comet Seer", "attack": 2, "health": 4, "race": "mage", "element": "arcane" }
+  ],
+  "personality": {"title":"Nysra the Star Oracle","backstory":"A prophetess who predicts outcomes by reading fractures in starlight.","dimensionTag":"#Aster-2"}
+}

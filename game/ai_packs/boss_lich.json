@@ -8,5 +8,6 @@
   "summons": [
     { "name": "Bone Colossus", "attack": 4, "health": 6, "taunt": true, "race": "undead", "element": "shadow" },
     { "name": "Soul Lantern", "attack": 2, "health": 5, "race": "undead", "element": "shadow" }
-  ]
+  ],
+  "personality": {"title":"Regent of the Ninth Crypt","backstory":"A dethroned emperor who bargains with eclipses and remembers every betrayal.","dimensionTag":"#Necra-9"}
 }

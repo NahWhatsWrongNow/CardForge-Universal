@@ -5,21 +5,41 @@ function pickRandom(list = []) {
   return list[Math.floor(Math.random() * list.length)];
 }
 
+function canLethalHero(state, attacker) {
+  return state.playerMinions.length === 0 && attacker && attacker.attack >= state.playerHealth;
+}
+
+function bestTradeTarget(state) {
+  if (state.playerMinions.length === 0) return null;
+  return [...state.playerMinions].sort((a, b) => (a.health + a.attack) - (b.health + b.attack))[0];
+}
+
 export function chooseAction(state, profile) {
   if (!profile) return { type: 'pass', trace: 'no-profile' };
   const weights = profile.weights ?? {};
   const enemyAttacker = state.enemyMinions.find((unit) => !unit.defense);
 
-  if (profile.boss && state.bossMode && (profile.script ?? []).includes('shadow-roar') && Math.random() < 0.35) {
+  if (canLethalHero(state, enemyAttacker)) {
+    return { type: 'attack-hero', attackerId: enemyAttacker.id, trace: 'genius:lethal-check' };
+  }
+
+  if (profile.boss && state.bossMode && (profile.script ?? []).includes('shadow-roar') && Math.random() < 0.4) {
     return { type: 'boss-roar', trace: 'script:shadow-roar' };
   }
 
-  if (state.enemyMinions.length < 3 && Math.random() < (weights.summon ?? 0)) {
+  if (profile.id === 'insane' && state.playerMinions.length > 0 && enemyAttacker) {
+    const target = bestTradeTarget(state);
+    if (target && target.attack >= 4) {
+      return { type: 'attack-minion', attackerId: enemyAttacker.id, targetId: target.id, trace: 'insane:remove-high-threat' };
+    }
+  }
+
+  if (state.enemyMinions.length < 5 && Math.random() < (weights.summon ?? 0.2)) {
     return { type: 'summon', trace: 'weighted:summon' };
   }
 
   if (enemyAttacker && state.playerMinions.length > 0 && Math.random() < (weights.trade ?? 0.5)) {
-    const target = [...state.playerMinions].sort((a, b) => (a.health + a.attack) - (b.health + b.attack))[0];
+    const target = bestTradeTarget(state);
     return { type: 'attack-minion', attackerId: enemyAttacker.id, targetId: target.id, trace: 'weighted:trade' };
   }
 

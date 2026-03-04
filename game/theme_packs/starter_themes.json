@@ -1,0 +1,11 @@
+{
+  "type": "theme-pack",
+  "id": "starter-themes",
+  "name": "Starter UI Themes",
+  "themes": [
+    {"id":"arcane-night","name":"Arcane Night","appBg":"#0f1220","panelBg":"#10152a","accent":"#6f7cff"},
+    {"id":"sunfire-court","name":"Sunfire Court","appBg":"#2b1c14","panelBg":"#3a261a","accent":"#ffb35e"},
+    {"id":"verdant-sigil","name":"Verdant Sigil","appBg":"#102016","panelBg":"#163325","accent":"#67d890"},
+    {"id":"void-neon","name":"Void Neon","appBg":"#120f24","panelBg":"#1d1836","accent":"#cd73ff"}
+  ]
+}
