@@ -1,0 +1,27 @@
+{
+  "type": "store-pack",
+  "id": "starter-store",
+  "name": "Starter Store",
+  "products": [
+    {
+      "id": "gen1-pack",
+      "name": "GEN1 Vanguard Pack",
+      "description": "4 GEN1 cards with rare pity every 4 misses.",
+      "price": 100,
+      "count": 4,
+      "poolTag": "GEN1",
+      "weights": { "common": 0.72, "rare": 0.23, "epic": 0.04, "legendary": 0.01 },
+      "pity": { "threshold": 4, "rarity": "rare" }
+    },
+    {
+      "id": "gen2-pack",
+      "name": "GEN2 Hex Pack",
+      "description": "5 GEN2 cards featuring hero debuffs and poison mechanics.",
+      "price": 180,
+      "count": 5,
+      "poolTag": "GEN2",
+      "weights": { "common": 0.5, "rare": 0.33, "epic": 0.14, "legendary": 0.03 },
+      "pity": { "threshold": 3, "rarity": "epic" }
+    }
+  ]
+}

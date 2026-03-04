@@ -1,0 +1,19 @@
+{
+  "type": "ai-pack",
+  "id": "iron-warden",
+  "name": "Tomas Varr",
+  "level": 7,
+  "strategy": "control",
+  "thinkMsRange": [450, 1050],
+  "weights": { "attackFace": 0.2, "trade": 0.8, "summon": 0.5 },
+  "summons": [
+    { "name": "Bastion Sentry", "attack": 2, "health": 6, "taunt": true, "race": "construct", "element": "earth", "rarity": "epic" },
+    { "name": "Wallforged Scout", "attack": 3, "health": 4, "taunt": false, "race": "construct", "element": "arcane", "rarity": "rare" }
+  ],
+  "personality": {
+    "title": "Warden of the Brass Lattice",
+    "dimensionTag": "#Ferrum-8",
+    "backstory": "Tomas Varr patrols city-rings of living metal where each duel rewrites the fortress architecture.",
+    "victoryLine": "You heard the bell-chains of Ferrum-8. Follow them if you dare."
+  }
+}
