@@ -8,10 +8,16 @@ header { display: flex; gap: 1rem; align-items: center; }
 #drop-zone { text-align: center; padding: 0.5rem; border: 1px dashed #6f7cff; border-radius: 8px; color: #b8c1ff; }
 #hand { display: flex; gap: 0.6rem; overflow-x: auto; }
 .card, .minion { width: 120px; background: #2a3154; border: 1px solid #576195; border-radius: 10px; padding: 0.5rem; touch-action: none; }
-.minion[data-defense='true'] { outline: 2px solid #58d3ff; }
+.minion[data-defense='true'] { outline: 2px solid #58d3ff; box-shadow: 0 0 18px rgba(88, 211, 255, 0.45); }
 .minion.taunt { box-shadow: 0 0 0 2px #f6ca62 inset; }
+#hint { min-height: 24px; margin-bottom: 0.5rem; color: #9ad5ff; }
 #log { min-height: 100px; background: #10152a; border-radius: 8px; padding: 0.6rem; font-size: 0.9rem; }
-#attack-layer { position: absolute; inset: 0; pointer-events: none; }
+#attack-layer, #float-layer { position: absolute; inset: 0; pointer-events: none; }
+.attack-line { stroke: #ff6e8c; stroke-width: 4; stroke-linecap: round; filter: drop-shadow(0 0 6px rgba(255, 110, 140, 0.7)); }
+.damage-float { position: absolute; color: #ffd0d8; font-weight: 700; text-shadow: 0 0 8px rgba(0,0,0,.6); animation: float-up .85s ease-out forwards; }
+@keyframes float-up { from { transform: translateY(0); opacity: 1; } to { transform: translateY(-34px); opacity: 0; } }
+.target-valid { outline: 2px solid #7dffa2; box-shadow: 0 0 0 2px rgba(125,255,162,.35) inset; }
+.target-blocked { outline: 2px solid #ff8395; }
 .ghost { position: fixed; z-index: 30; opacity: 0.85; pointer-events: none; }
 #toast-host { position: fixed; top: 10px; right: 10px; display: grid; gap: 8px; }
 .toast { transform: translateY(-6px); opacity: 0; transition: all .2s; background: #2d355a; padding: .45rem .6rem; border-radius: 8px; }

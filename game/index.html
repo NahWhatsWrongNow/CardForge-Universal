@@ -14,15 +14,17 @@
     </header>
 
     <section id="board">
-      <div class="hero enemy" data-target="enemy-hero">Enemy Hero <span id="enemy-health">30</span></div>
+      <div class="hero enemy target" data-target-id="enemy-hero">Enemy Hero <span id="enemy-health">30</span></div>
       <div id="enemy-minions" class="lane"></div>
       <div id="player-minions" class="lane"></div>
-      <div class="hero player" data-target="player-hero">Player Hero <span id="player-health">30</span></div>
-      <div id="drop-zone">Drag cards here to play</div>
+      <div class="hero player" data-target-id="player-hero">Player Hero <span id="player-health">30</span></div>
+      <div id="drop-zone" class="target">Drag cards here to play</div>
       <svg id="attack-layer"></svg>
+      <div id="float-layer"></div>
     </section>
 
     <section id="hand"></section>
+    <aside id="hint"></aside>
     <aside id="log"></aside>
     <div id="toast-host"></div>
   </div>
