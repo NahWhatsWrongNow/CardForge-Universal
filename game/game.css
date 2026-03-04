@@ -10,6 +10,11 @@ header { display: flex; gap: 1rem; align-items: center; }
 .card, .minion { width: 120px; background: #2a3154; border: 1px solid #576195; border-radius: 10px; padding: 0.5rem; touch-action: none; }
 .minion[data-defense='true'] { outline: 2px solid #58d3ff; box-shadow: 0 0 18px rgba(88, 211, 255, 0.45); }
 .minion.taunt { box-shadow: 0 0 0 2px #f6ca62 inset; }
+.minion.rivalry-advantage { border-color: #7dffa2; }
+.minion.rivalry-danger { box-shadow: 0 0 0 2px rgba(255, 131, 149, 0.35) inset; }
+.minion .meta { font-size: 0.72rem; opacity: 0.8; }
+.status-row { min-height: 18px; }
+.status { display: inline-block; font-size: 0.65rem; background: #3f4f88; border-radius: 999px; padding: 0.1rem 0.45rem; }
 #hint { min-height: 24px; margin-bottom: 0.5rem; color: #9ad5ff; }
 #log { min-height: 100px; background: #10152a; border-radius: 8px; padding: 0.6rem; font-size: 0.9rem; }
 #attack-layer, #float-layer { position: absolute; inset: 0; pointer-events: none; }

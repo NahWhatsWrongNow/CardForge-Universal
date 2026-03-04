@@ -4,6 +4,7 @@ import { setDevUnlocked } from '../core/storage.js';
 import { toast, uid } from '../core/utils.js';
 import { emitVfx, onVfx } from './engine/animation_bus.js';
 import { explainInvalidAction } from './engine/targeting.js';
+import { getRivalryIndicators, resolveCombat, resolveSpellPower } from './engine/rivalry.js';
 
 const registry = new Registry();
 const state = {
@@ -11,9 +12,11 @@ const state = {
   enemyHealth: 30,
   mana: 3,
   hand: [],
+  rivalryPacks: [],
   playerMinions: [],
   enemyMinions: [
-    { id: uid('enemy'), name: 'Guard Pup', attack: 1, health: 3, taunt: true, defense: false },
+    { id: uid('enemy'), name: 'Guard Pup', attack: 1, health: 3, taunt: true, defense: false, race: 'undead', element: 'shadow', statuses: {} },
+    { id: uid('enemy'), name: 'Ash Spirit', attack: 2, health: 2, taunt: false, defense: false, race: 'elemental', element: 'fire', statuses: {} },
   ],
 };
 
@@ -30,10 +33,12 @@ async function boot() {
   const errors = await loadPlugins(registry, [
     { manifest: './mode_packs/index.json', base: './mode_packs', type: 'mode-pack', kind: 'modes' },
     { manifest: './ai_packs/index.json', base: './ai_packs', type: 'ai-pack', kind: 'ai' },
+    { manifest: './race_packs/index.json', base: './race_packs', type: 'race-pack', kind: 'rivalryPacks' },
     { manifest: '../packs/index.json', base: '../packs', type: 'card-pack', kind: 'cardPacks' },
   ], log);
   errors.forEach((error) => log(`Error: ${error}`));
 
+  state.rivalryPacks = registry.list('rivalryPacks');
 
   onVfx('play-card', ({ payload }) => log(`VFX play-card: ${payload.cardId}`));
   onVfx('attack', ({ payload }) => log(`VFX attack: ${payload.attackerId} -> ${payload.targetId}`));
@@ -41,6 +46,7 @@ async function boot() {
 
   const cards = registry.list('cardPacks').flatMap((pack) => pack.cards);
   state.hand = cards.slice(0, 4).map((card) => ({ ...card, instanceId: uid('card') }));
+  log(`Loaded ${state.rivalryPacks.length} rivalry pack(s) for layered combat/spell/status checks.`);
   render();
 }
 
@@ -65,14 +71,22 @@ function render() {
 
 function renderLane(selector, minions, playerOwned) {
   const lane = document.querySelector(selector);
+  const opponents = playerOwned ? state.enemyMinions : state.playerMinions;
   lane.innerHTML = '';
   minions.forEach((minion) => {
     const node = document.createElement('div');
-    node.className = `minion target ${minion.taunt ? 'taunt' : ''}`;
+    const indicators = getRivalryIndicators(minion, opponents, state, playerOwned ? 'player' : 'enemy');
+    node.className = `minion target ${minion.taunt ? 'taunt' : ''} ${indicators.hasAdvantage ? 'rivalry-advantage' : ''} ${indicators.hasDisadvantage ? 'rivalry-danger' : ''}`;
     node.dataset.id = minion.id;
     node.dataset.targetId = minion.id;
     node.dataset.defense = String(minion.defense);
-    node.innerHTML = `<strong>${minion.name}</strong><div>${minion.attack}/${minion.health}</div><button>Defense</button>`;
+    node.innerHTML = `
+      <strong>${minion.name}</strong>
+      <div>${Math.max(0, minion.attack - (minion.statuses?.weakened ? 1 : 0))}/${minion.health}</div>
+      <div class="meta">${minion.race ?? 'neutral'} · ${minion.element ?? 'none'}</div>
+      <div class="status-row">${minion.statuses?.weakened ? '<span class="status">Weakened</span>' : ''}</div>
+      <button>Defense</button>
+    `;
 
     node.querySelector('button').onclick = () => {
       minion.defense = !minion.defense;
@@ -92,23 +106,55 @@ function playCard(cardId) {
   const index = state.hand.findIndex((c) => c.instanceId === cardId);
   if (index === -1) return;
   const card = state.hand[index];
-  if (card.type !== 'minion') {
-    showHint(explainInvalidAction('unsupported'));
-    toast('Only minions are in this demo runtime.', 'info');
-    return;
-  }
+
   if (card.cost > state.mana) {
     showHint(explainInvalidAction('mana'));
     toast('Not enough mana.', 'error');
     return;
   }
 
-  state.hand.splice(index, 1);
-  state.mana -= card.cost;
-  state.playerMinions.push({ id: uid('m'), name: card.name, attack: card.attack, health: card.health, taunt: !!card.taunt, defense: false });
-  emitVfx('play-card', { cardId: card.id });
-  log(`Played ${card.name}.`);
-  render();
+  if (card.type === 'minion') {
+    state.hand.splice(index, 1);
+    state.mana -= card.cost;
+    state.playerMinions.push({
+      id: uid('m'),
+      name: card.name,
+      attack: card.attack,
+      health: card.health,
+      taunt: !!card.taunt,
+      defense: false,
+      race: card.race ?? 'neutral',
+      element: card.element ?? 'none',
+      statuses: {},
+    });
+    emitVfx('play-card', { cardId: card.id });
+    log(`Played ${card.name}.`);
+    render();
+    return;
+  }
+
+  if (card.type === 'spell') {
+    if (state.playerMinions.length === 0 || state.enemyMinions.length === 0) {
+      showHint('Spell layer demo needs a friendly minion caster and enemy minion target.');
+      toast('Need both sides to have minions for this spell demo.', 'info');
+      return;
+    }
+    const caster = state.playerMinions[0];
+    const target = state.enemyMinions[0];
+    const spell = resolveSpellPower(caster, target, card.damage ?? 0, state, 'player');
+    target.health -= spell.power;
+    spawnDamageNumber(document.querySelector(`[data-id="${target.id}"]`), spell.power);
+    log(`Spell ${card.name} (${caster.name} -> ${target.name}) dealt ${spell.power}. Rules: ${spell.matchedRuleIds.join(', ') || 'none'}.`);
+    emitVfx('play-card', { cardId: card.id });
+    state.hand.splice(index, 1);
+    state.mana -= card.cost;
+    cleanupDead();
+    render();
+    return;
+  }
+
+  showHint(explainInvalidAction('unsupported'));
+  toast('This card type is not available in runtime yet.', 'info');
 }
 
 function attackWith(attackerId, targetId) {
@@ -142,11 +188,18 @@ function attackWith(attackerId, targetId) {
   } else {
     const defender = state.enemyMinions.find((m) => m.id === targetId);
     if (!defender) return;
-    defender.health -= attacker.attack;
-    attacker.health -= defender.attack;
-    spawnDamageNumber(document.querySelector(`[data-id="${defender.id}"]`), attacker.attack);
-    spawnDamageNumber(attackerEl, defender.attack);
-    log(`${attacker.name} attacked ${defender.name}.`);
+    const result = resolveCombat(attacker, defender, state, 'player');
+
+    defender.health -= result.damageToDefender;
+    attacker.health -= result.damageToAttacker;
+    spawnDamageNumber(document.querySelector(`[data-id="${defender.id}"]`), result.damageToDefender);
+    spawnDamageNumber(attackerEl, result.damageToAttacker);
+
+    const extra = result.events.length > 0 ? ` (${result.events.join(', ')})` : '';
+    log(`${attacker.name} attacked ${defender.name} for ${result.damageToDefender}/${result.damageToAttacker}${extra}. Rules: ${result.matchedRuleIds.join(', ') || 'none'}.`);
+    if (result.events.includes('fear')) {
+      showHint('Fear triggered: attack was interrupted this round.');
+    }
   }
 
   drawAttackLine(attackerEl, targetEl);

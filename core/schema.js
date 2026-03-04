@@ -7,6 +7,7 @@ const SCHEMAS = {
   'store-pack': ['id', 'name', 'products'],
   'ability-pack': ['id', 'name', 'templates'],
   ability: ['id', 'name', 'trigger', 'effect'],
+  'race-pack': ['id', 'name', 'rivalries'],
 };
 
 export function validateSchema(item, expectedType) {
