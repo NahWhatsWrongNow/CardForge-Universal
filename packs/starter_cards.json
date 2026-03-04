@@ -1,0 +1,10 @@
+{
+  "type": "card-pack",
+  "id": "starter-foundation",
+  "name": "Starter Foundation",
+  "cards": [
+    { "id": "river-scout", "name": "River Scout", "type": "minion", "cost": 1, "attack": 1, "health": 2 },
+    { "id": "iron-guard", "name": "Iron Guard", "type": "minion", "cost": 2, "attack": 2, "health": 3, "taunt": true },
+    { "id": "ember-adept", "name": "Ember Adept", "type": "minion", "cost": 3, "attack": 3, "health": 2 }
+  ]
+}

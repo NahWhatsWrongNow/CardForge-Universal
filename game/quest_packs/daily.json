@@ -1,0 +1,1 @@
+{ "type": "quest-pack", "id": "daily-core", "name": "Daily Core", "quests": [{ "id": "play-3", "goal": "Play 3 cards" }] }
