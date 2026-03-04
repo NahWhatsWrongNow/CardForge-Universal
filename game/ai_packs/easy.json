@@ -1,0 +1,9 @@
+{
+  "type": "ai-pack",
+  "id": "easy",
+  "name": "Easy AI",
+  "weights": { "attackFace": 0.3, "trade": 0.45, "summon": 0.25 },
+  "summons": [
+    { "name": "Timid Squire", "attack": 1, "health": 2, "race": "beast", "element": "earth" }
+  ]
+}

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CardForge Creator</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main>
+    <h1>Creator Suite — Guided Builder 2.0</h1>
+    <p>Phase 2 scaffold: templates, targeting, condition groups, and explainable abilities.</p>
+
+    <section id="plugin-list" class="panel">
+      <h2>Plugin Loader Report</h2>
+    </section>
+
+    <section class="panel">
+      <h2>Card Creator (Minion + Spell)</h2>
+      <form id="card-form" class="grid-form">
+        <input name="id" placeholder="card id" required />
+        <input name="name" placeholder="card name" required />
+        <select name="cardType">
+          <option value="minion">Minion</option>
+          <option value="spell">Spell</option>
+        </select>
+        <input name="cost" type="number" min="0" value="1" />
+        <input name="attack" type="number" min="0" value="1" />
+        <input name="health" type="number" min="1" value="1" />
+        <label><input name="taunt" type="checkbox" /> Taunt</label>
+        <button type="submit">Preview Card JSON</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Hero Creator</h2>
+      <form id="hero-form" class="grid-form">
+        <input name="id" placeholder="hero id" required />
+        <input name="name" placeholder="hero name" required />
+        <input name="health" type="number" min="1" value="30" />
+        <input name="powerName" placeholder="hero power name" required />
+        <input name="powerCost" type="number" min="0" value="2" />
+        <input name="tribe" placeholder="tribe affinity (optional)" />
+        <button type="submit">Preview Hero JSON</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Ability Builder 2.0</h2>
+      <div class="grid-form">
+        <label>Template
+          <select id="ability-template"></select>
+        </label>
+        <label>Trigger
+          <select id="ability-trigger">
+            <option value="onPlay">On Play</option>
+            <option value="onAttack">On Attack</option>
+            <option value="onDeath">On Death</option>
+            <option value="heroPower">Hero Power</option>
+          </select>
+        </label>
+      </div>
+
+      <h3>Targeting Panel</h3>
+      <div class="grid-form">
+        <label>Source
+          <select id="target-source">
+            <option value="self">Self</option>
+            <option value="controller">Controller</option>
+            <option value="opponent">Opponent</option>
+          </select>
+        </label>
+        <label>Target Scope
+          <select id="target-scope">
+            <option value="enemy-minion">Enemy Minion</option>
+            <option value="friendly-minion">Friendly Minion</option>
+            <option value="all-enemy-minions">All Enemy Minions</option>
+            <option value="enemy-hero">Enemy Hero</option>
+            <option value="any">Any Target</option>
+          </select>
+        </label>
+        <label>Filter Tag
+          <input id="target-filter" placeholder="e.g. dragonkin" />
+        </label>
+      </div>
+
+      <h3>Conditions (AND/OR groups)</h3>
+      <div id="condition-groups"></div>
+      <button id="add-group" type="button">Add Condition Group</button>
+
+      <h3>Advanced JSON (optional)</h3>
+      <textarea id="advanced-json" rows="6" placeholder='{"extra": "override fields"}'></textarea>
+
+      <div class="actions">
+        <button id="preview-ability" type="button">Preview Ability JSON</button>
+        <button id="explain-ability" type="button">Explain Ability</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Output</h2>
+      <pre id="preview"></pre>
+      <pre id="explanation"></pre>
+    </section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

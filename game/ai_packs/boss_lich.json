@@ -1,0 +1,12 @@
+{
+  "type": "ai-pack",
+  "id": "boss-lich",
+  "name": "Boss: Lich Regent",
+  "boss": true,
+  "weights": { "attackFace": 0.55, "trade": 0.8, "summon": 0.7 },
+  "script": ["shadow-roar", "grave-call"],
+  "summons": [
+    { "name": "Bone Colossus", "attack": 4, "health": 6, "taunt": true, "race": "undead", "element": "shadow" },
+    { "name": "Soul Lantern", "attack": 2, "health": 5, "race": "undead", "element": "shadow" }
+  ]
+}

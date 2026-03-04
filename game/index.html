@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CardForge Game</title>
+  <link rel="stylesheet" href="./game.css" />
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>CardForge Runtime</h1>
+      <input id="chat-input" placeholder="Type ./DevAbil to unlock dev mode" />
+    </header>
+
+    <section id="economy-bar">
+      <div><strong>Gold:</strong> <span id="gold">0</span></div>
+      <div><strong>Streak:</strong> <span id="streak">0</span></div>
+      <button id="win-demo">Claim Demo Win Reward</button>
+    </section>
+
+    <section id="board">
+      <div class="hero enemy target" data-target-id="enemy-hero">Enemy Hero <span id="enemy-health">30</span></div>
+      <div id="enemy-minions" class="lane"></div>
+      <div id="player-minions" class="lane"></div>
+      <div class="hero player" data-target-id="player-hero">Player Hero <span id="player-health">30</span></div>
+      <div id="drop-zone" class="target">Drag cards here to play</div>
+      <svg id="attack-layer"></svg>
+      <div id="float-layer"></div>
+    </section>
+
+    <section id="side-panels">
+      <aside id="quests" class="panel"></aside>
+      <aside id="store" class="panel"></aside>
+      <aside id="ai-panel" class="panel"></aside>
+      <aside id="settings-panel" class="panel"></aside>
+      <aside id="deck-panel" class="panel"></aside>
+    </section>
+
+    <section id="pack-opening" class="panel hidden">
+      <h3>Pack Opening</h3>
+      <div id="pack-reveal"></div>
+    </section>
+
+    <section id="hand"></section>
+    <aside id="hint"></aside>
+    <aside id="log"></aside>
+    <div id="toast-host"></div>
+  </div>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>

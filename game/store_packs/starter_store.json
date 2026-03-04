@@ -1,0 +1,15 @@
+{
+  "type": "store-pack",
+  "id": "starter-store",
+  "name": "Starter Store",
+  "products": [
+    {
+      "id": "basic-pack",
+      "name": "Basic Pack",
+      "price": 100,
+      "count": 3,
+      "weights": { "common": 0.75, "rare": 0.22, "epic": 0.03 },
+      "pity": { "threshold": 4, "rarity": "rare" }
+    }
+  ]
+}
