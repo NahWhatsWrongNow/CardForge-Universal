@@ -9,13 +9,19 @@
 <body>
   <main>
     <div class="top-row">
-      <h1>Creator Suite — Guided Builder 2.0+</h1>
+      <h1>Creator Suite — Guided Builder 2.1</h1>
       <a class="menu-btn" href="../index.html">Back to Menu</a>
     </div>
-    <p>Expanded creator with richer card fields and AI personality builder.</p>
 
-    <section id="plugin-list" class="panel">
-      <h2>Plugin Loader Report</h2>
+    <section id="plugin-list" class="panel"><h2>Plugin Loader Report</h2></section>
+
+    <section class="panel">
+      <h2>Card Template Picker</h2>
+      <div class="grid-form">
+        <select id="card-template-select"></select>
+        <button id="use-template" type="button">Use Template in Card Creator</button>
+      </div>
+      <small>Includes blank cards and spell/minion templates for every current ability template.</small>
     </section>
 
     <section class="panel">
@@ -28,8 +34,8 @@
         <input name="attack" type="number" min="0" value="1" />
         <input name="health" type="number" min="1" value="1" />
         <input name="damage" type="number" min="0" value="2" />
-        <input name="race" placeholder="race (beast/undead/etc)" />
-        <input name="element" placeholder="element (fire/shadow/etc)" />
+        <input name="race" placeholder="race" />
+        <input name="element" placeholder="element" />
         <select name="rarity"><option>common</option><option>rare</option><option>epic</option><option>legendary</option></select>
         <input name="synergy" placeholder="synergy tags csv" />
         <label><input name="taunt" type="checkbox" /> Taunt</label>
@@ -53,20 +59,7 @@
     </section>
 
     <section class="panel">
-      <h2>Hero Creator</h2>
-      <form id="hero-form" class="grid-form">
-        <input name="id" placeholder="hero id" required />
-        <input name="name" placeholder="hero name" required />
-        <input name="health" type="number" min="1" value="30" />
-        <input name="powerName" placeholder="hero power name" required />
-        <input name="powerCost" type="number" min="0" value="2" />
-        <input name="tribe" placeholder="tribe affinity (optional)" />
-        <button type="submit">Preview Hero JSON</button>
-      </form>
-    </section>
-
-    <section class="panel">
-      <h2>Ability Builder 2.0</h2>
+      <h2>Ability Builder</h2>
       <div class="grid-form">
         <label>Template <select id="ability-template"></select></label>
         <label>Trigger
@@ -75,16 +68,14 @@
           </select>
         </label>
       </div>
-      <h3>Targeting Panel</h3>
       <div class="grid-form">
         <label>Source <select id="target-source"><option value="self">Self</option><option value="controller">Controller</option><option value="opponent">Opponent</option></select></label>
         <label>Target Scope <select id="target-scope"><option value="enemy-minion">Enemy Minion</option><option value="friendly-minion">Friendly Minion</option><option value="all-enemy-minions">All Enemy Minions</option><option value="enemy-hero">Enemy Hero</option><option value="any">Any Target</option></select></label>
         <label>Filter Tag <input id="target-filter" placeholder="e.g. dragonkin" /></label>
       </div>
-      <h3>Conditions (AND/OR groups)</h3>
+      <h3>Conditions</h3>
       <div id="condition-groups"></div>
       <button id="add-group" type="button">Add Condition Group</button>
-      <h3>Advanced JSON (optional)</h3>
       <textarea id="advanced-json" rows="6" placeholder='{"extra": "override fields"}'></textarea>
       <div class="actions">
         <button id="preview-ability" type="button">Preview Ability JSON</button>
@@ -92,11 +83,7 @@
       </div>
     </section>
 
-    <section class="panel">
-      <h2>Output</h2>
-      <pre id="preview"></pre>
-      <pre id="explanation"></pre>
-    </section>
+    <section class="panel"><h2>Output</h2><pre id="preview"></pre><pre id="explanation"></pre></section>
   </main>
   <script type="module" src="./app.js"></script>
 </body>

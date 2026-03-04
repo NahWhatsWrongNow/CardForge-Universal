@@ -12,28 +12,17 @@ const registry = new Registry();
 const state = {
   profile: loadProfile(),
   playerHealth: 30,
+  playerMaxHealth: 30,
   enemyHealth: 30,
+  enemyMaxHealth: 30,
   mana: 3,
   hand: [],
-  rivalryPacks: [],
-  quests: [],
-  storeProducts: [],
-  aiProfiles: [],
-  backdrops: [],
-  playlists: [],
-  cardBacks: [],
-  themes: [],
-  decks: [],
-  deckMode: 'planning',
-  deckSearch: '',
-  selectedDeckId: null,
-  selectedAiId: null,
-  bossMode: false,
-  lastAiTrace: 'not-run',
+  rivalryPacks: [], quests: [], storeProducts: [], aiProfiles: [], backdrops: [], playlists: [], cardBacks: [], themes: [], decks: [],
+  deckMode: 'planning', deckSearch: '', selectedDeckId: null, selectedAiId: null, bossMode: false, lastAiTrace: 'not-run',
   playerMinions: [],
   enemyMinions: [
-    { id: uid('enemy'), name: 'Guard Pup', attack: 1, health: 3, taunt: true, defense: false, race: 'undead', element: 'shadow', statuses: {} },
-    { id: uid('enemy'), name: 'Ash Spirit', attack: 2, health: 2, taunt: false, defense: false, race: 'elemental', element: 'fire', statuses: {} },
+    { id: uid('enemy'), name: 'Guard Pup', attack: 1, health: 3, maxHealth: 3, taunt: true, defense: false, race: 'undead', element: 'shadow', statuses: {}, rarity: 'common' },
+    { id: uid('enemy'), name: 'Ash Spirit', attack: 2, health: 2, maxHealth: 2, taunt: false, defense: false, race: 'elemental', element: 'fire', statuses: {}, rarity: 'rare' },
   ],
 };
 
@@ -41,39 +30,28 @@ const log = (msg) => {
   const host = document.querySelector('#log');
   host.innerHTML = `<div>${msg}</div>` + host.innerHTML;
 };
+const showHint = (msg = '') => { document.querySelector('#hint').textContent = msg; };
+const getAllCards = () => registry.list('cardPacks').flatMap((pack) => pack.cards);
+const currentAiProfile = () => state.aiProfiles.find((profile) => profile.id === state.selectedAiId) ?? state.aiProfiles[0] ?? null;
+const getSelectedDeck = () => state.decks.find((deck) => deck.id === state.selectedDeckId) ?? state.decks[0] ?? null;
+const persistProfile = () => saveProfile(state.profile);
 
-const showHint = (msg = '') => {
-  document.querySelector('#hint').textContent = msg;
-};
-
-function getAllCards() {
-  return registry.list('cardPacks').flatMap((pack) => pack.cards);
-}
-
-function currentAiProfile() {
-  return state.aiProfiles.find((profile) => profile.id === state.selectedAiId) ?? state.aiProfiles[0] ?? null;
-}
-
-function getSelectedDeck() {
-  return state.decks.find((deck) => deck.id === state.selectedDeckId) ?? state.decks[0] ?? null;
-}
-
-function persistProfile() {
-  saveProfile(state.profile);
+function setBar(id, value, max) {
+  const pct = Math.max(0, Math.min(100, (value / Math.max(1, max)) * 100));
+  const bar = document.querySelector(id);
+  if (bar) bar.style.width = `${pct}%`;
 }
 
 function applyThemeAndSettings() {
   const board = document.querySelector('#board');
   const backdrop = state.backdrops.find((item) => item.id === state.profile.settings.selectedBackdrop) ?? state.backdrops[0];
   if (backdrop?.css) board.style.background = backdrop.css;
-
   const theme = state.themes.find((item) => item.id === state.profile.settings.selectedTheme) ?? state.themes[0];
   if (theme) {
     document.body.style.background = theme.appBg;
     document.querySelectorAll('.panel').forEach((panel) => { panel.style.background = theme.panelBg; });
     document.documentElement.style.setProperty('--accent', theme.accent);
   }
-
   document.body.style.transform = `scale(${state.profile.settings.uiScale})`;
   document.body.style.transformOrigin = 'top center';
   document.body.classList.toggle('high-contrast', !!state.profile.settings.highContrast);
@@ -103,27 +81,19 @@ function claimQuest(questId) {
   const quest = state.quests.find((entry) => entry.id === questId);
   if (!quest) return;
   const status = evaluateQuest(quest, state.profile.questProgress);
-  if (!status.done || state.profile.questClaims[questId]) {
-    toast('Quest unavailable.', 'info');
-    return;
-  }
+  if (!status.done || state.profile.questClaims[questId]) return;
   state.profile.economy.gold += quest.reward;
   state.profile.questClaims[questId] = true;
   persistProfile();
-  log(`Quest claimed: ${quest.goal} (+${quest.reward} gold).`);
   renderPanels();
 }
 
 function claimDailyGift() {
   const today = new Date().toDateString();
-  if (state.profile.economy.lastDailyGiftAt === today) {
-    toast('Daily gift already claimed.', 'info');
-    return;
-  }
+  if (state.profile.economy.lastDailyGiftAt === today) return;
   state.profile.economy.lastDailyGiftAt = today;
   state.profile.economy.gold += 75;
   persistProfile();
-  toast('Daily gift: +75 gold', 'info');
   renderPanels();
 }
 
@@ -133,7 +103,6 @@ function claimDemoWin() {
   state.profile.stats.streak += 1;
   state.profile.economy.gold += reward;
   persistProfile();
-  log(`Victory reward claimed: +${reward} gold.`);
   renderPanels();
 }
 
@@ -143,7 +112,6 @@ function performEnemyAttack(attackerId, targetId) {
   if (targetId === 'player-hero') {
     state.playerHealth -= attacker.attack;
     spawnDamageNumber(document.querySelector('[data-target-id="player-hero"]'), attacker.attack);
-    log(`Enemy ${attacker.name} attacked your hero for ${attacker.attack}.`);
     return;
   }
   const defender = state.playerMinions.find((m) => m.id === targetId);
@@ -153,7 +121,6 @@ function performEnemyAttack(attackerId, targetId) {
   attacker.health -= result.damageToAttacker;
   spawnDamageNumber(document.querySelector(`[data-id="${defender.id}"]`), result.damageToDefender);
   spawnDamageNumber(document.querySelector(`[data-id="${attacker.id}"]`), result.damageToAttacker);
-  log(`Enemy ${attacker.name} attacked ${defender.name}. Trace: ${result.matchedRuleIds.join(', ') || 'none'}.`);
 }
 
 function runEnemyTurn() {
@@ -164,9 +131,9 @@ function runEnemyTurn() {
   if (action.type === 'summon') {
     const summon = createSummon(profile);
     if (summon) {
+      summon.maxHealth = summon.health;
       state.enemyMinions.push(summon);
       emitVfx('summon', { side: 'enemy', unit: summon.name });
-      log(`${profile.name} summons ${summon.name}.`);
     }
   } else if (action.type === 'attack-minion') {
     performEnemyAttack(action.attackerId, action.targetId);
@@ -177,9 +144,6 @@ function runEnemyTurn() {
     state.enemyMinions.forEach((m) => { m.attack += 1; });
     spawnDamageNumber(document.querySelector('[data-target-id="player-hero"]'), 2);
     emitVfx('boss-skill', { skill: 'shadow-roar' });
-    log('Boss skill: shadow-roar triggered.');
-  } else {
-    log(`${profile.name} passes.`);
   }
   cleanupDead();
   render();
@@ -191,7 +155,7 @@ function renderPanels() {
   document.querySelector('#streak').textContent = state.profile.stats.streak;
 
   const questHost = document.querySelector('#quests');
-  questHost.innerHTML = '<h3>Daily Quests</h3>';
+  questHost.innerHTML = '<h3>Quests</h3>';
   state.quests.forEach((quest) => {
     const status = evaluateQuest(quest, state.profile.questProgress);
     const claimed = !!state.profile.questClaims[quest.id];
@@ -205,30 +169,25 @@ function renderPanels() {
     questHost.appendChild(row);
   });
 
-  const storeHost = document.querySelector('#store');
-  storeHost.innerHTML = '<h3>Store + Gifts</h3>';
+  const shop = document.querySelector('#shop-panel');
+  shop.innerHTML = '<h3>Shop</h3>';
   const giftButton = document.createElement('button');
-  giftButton.textContent = 'Claim Daily Gift (+75g)';
+  giftButton.textContent = 'Daily Gift (+75g)';
   giftButton.onclick = claimDailyGift;
-  storeHost.appendChild(giftButton);
-
+  shop.appendChild(giftButton);
   state.storeProducts.forEach((product) => {
     const row = document.createElement('div');
     row.innerHTML = `<div><strong>${product.name}</strong> - ${product.price}g</div><div>${product.description ?? ''}</div>`;
-    const buy1 = document.createElement('button');
-    buy1.textContent = 'Buy x1';
-    buy1.disabled = state.profile.economy.gold < product.price;
-    buy1.onclick = () => buyAndOpen(product.id, 1);
-    const buy5 = document.createElement('button');
-    buy5.textContent = 'Buy x5 (discount)';
-    buy5.disabled = state.profile.economy.gold < Math.floor(product.price * 4.5);
-    buy5.onclick = () => buyAndOpen(product.id, 5, 0.9);
-    row.append(buy1, buy5);
-    storeHost.appendChild(row);
+    const b1 = document.createElement('button'); b1.textContent = 'Buy x1'; b1.onclick = () => buyAndOpen(product.id, 1);
+    const b5 = document.createElement('button'); b5.textContent = 'Buy x5'; b5.onclick = () => buyAndOpen(product.id, 5, 0.9);
+    b1.disabled = state.profile.economy.gold < product.price;
+    b5.disabled = state.profile.economy.gold < Math.floor(product.price * 4.5);
+    row.append(b1, b5);
+    shop.appendChild(row);
   });
 
   const aiHost = document.querySelector('#ai-panel');
-  aiHost.innerHTML = '<h3>AI Control</h3>';
+  aiHost.innerHTML = '<h3>AI</h3>';
   const aiSelect = document.createElement('select');
   state.aiProfiles.forEach((profile) => {
     const option = document.createElement('option');
@@ -239,156 +198,94 @@ function renderPanels() {
   });
   aiSelect.onchange = () => { state.selectedAiId = aiSelect.value; renderPanels(); };
   aiHost.appendChild(aiSelect);
-
-  const aiProfile = currentAiProfile();
-  if (aiProfile?.personality) {
-    const lore = document.createElement('div');
-    lore.id = 'ai-trace';
-    lore.textContent = `${aiProfile.personality.title} ${aiProfile.personality.dimensionTag}: ${aiProfile.personality.backstory}`;
+  const profile = currentAiProfile();
+  if (profile?.personality) {
+    const lore = document.createElement('div'); lore.id = 'ai-trace';
+    lore.textContent = `${profile.personality.title} ${profile.personality.dimensionTag}: ${profile.personality.backstory}`;
     aiHost.appendChild(lore);
   }
-
-  const runButton = document.createElement('button');
-  runButton.textContent = 'Run Enemy Turn';
-  runButton.onclick = runEnemyTurn;
-  const bossButton = document.createElement('button');
-  bossButton.textContent = state.bossMode ? 'Disable Boss Mode' : 'Enable Boss Mode';
-  bossButton.onclick = () => { state.bossMode = !state.bossMode; renderPanels(); };
+  const runButton = document.createElement('button'); runButton.textContent = 'Run Enemy Turn'; runButton.onclick = runEnemyTurn;
+  const bossButton = document.createElement('button'); bossButton.textContent = state.bossMode ? 'Disable Boss Mode' : 'Enable Boss Mode'; bossButton.onclick = () => { state.bossMode = !state.bossMode; renderPanels(); };
   aiHost.append(runButton, bossButton);
-  const trace = document.createElement('div');
-  trace.id = 'ai-trace';
-  trace.textContent = `Decision trace: ${state.lastAiTrace}`;
-  aiHost.appendChild(trace);
+  const trace = document.createElement('div'); trace.id = 'ai-trace'; trace.textContent = `Decision trace: ${state.lastAiTrace}`; aiHost.appendChild(trace);
 
-  const settingsHost = document.querySelector('#settings-panel');
-  settingsHost.innerHTML = '<h3>Themes + Accessibility</h3>';
-
+  const settings = document.querySelector('#settings-panel');
+  settings.innerHTML = '<h3>Settings</h3>';
   const themeSelect = document.createElement('select');
   state.themes.forEach((entry) => {
-    const option = document.createElement('option');
-    option.value = entry.id;
-    option.textContent = entry.name;
-    option.selected = state.profile.settings.selectedTheme === entry.id;
-    themeSelect.appendChild(option);
+    const option = document.createElement('option'); option.value = entry.id; option.textContent = `Theme: ${entry.name}`; option.selected = state.profile.settings.selectedTheme === entry.id; themeSelect.appendChild(option);
   });
   themeSelect.onchange = () => { state.profile.settings.selectedTheme = themeSelect.value; persistProfile(); applyThemeAndSettings(); };
-  settingsHost.appendChild(themeSelect);
+  settings.appendChild(themeSelect);
 
-  const backdropSelect = document.createElement('select');
+  const backdrop = document.createElement('select');
   state.backdrops.forEach((entry) => {
-    const option = document.createElement('option');
-    option.value = entry.id;
-    option.textContent = `Backdrop: ${entry.name}`;
-    option.selected = state.profile.settings.selectedBackdrop === entry.id;
-    backdropSelect.appendChild(option);
+    const option = document.createElement('option'); option.value = entry.id; option.textContent = `Backdrop: ${entry.name}`; option.selected = state.profile.settings.selectedBackdrop === entry.id; backdrop.appendChild(option);
   });
-  backdropSelect.onchange = () => { state.profile.settings.selectedBackdrop = backdropSelect.value; persistProfile(); applyThemeAndSettings(); };
-  settingsHost.appendChild(backdropSelect);
+  backdrop.onchange = () => { state.profile.settings.selectedBackdrop = backdrop.value; persistProfile(); applyThemeAndSettings(); };
+  settings.appendChild(backdrop);
 
-  const audioSelect = document.createElement('select');
+  const playlist = document.createElement('select');
   state.playlists.forEach((entry) => {
-    const option = document.createElement('option');
-    option.value = entry.id;
-    option.textContent = `Playlist: ${entry.name}`;
-    option.selected = state.profile.settings.selectedPlaylist === entry.id;
-    audioSelect.appendChild(option);
+    const option = document.createElement('option'); option.value = entry.id; option.textContent = `Playlist: ${entry.name}`; option.selected = state.profile.settings.selectedPlaylist === entry.id; playlist.appendChild(option);
   });
-  audioSelect.onchange = () => { state.profile.settings.selectedPlaylist = audioSelect.value; persistProfile(); };
-  settingsHost.appendChild(audioSelect);
+  playlist.onchange = () => { state.profile.settings.selectedPlaylist = playlist.value; persistProfile(); };
+  settings.appendChild(playlist);
 
-  const backSelect = document.createElement('select');
+  const cardBack = document.createElement('select');
   state.cardBacks.forEach((entry) => {
-    const option = document.createElement('option');
-    option.value = entry.id;
-    option.textContent = `Card Back: ${entry.name}`;
-    option.selected = state.profile.settings.selectedCardBack === entry.id;
-    backSelect.appendChild(option);
+    const option = document.createElement('option'); option.value = entry.id; option.textContent = `Card Back: ${entry.name}`; option.selected = state.profile.settings.selectedCardBack === entry.id; cardBack.appendChild(option);
   });
-  backSelect.onchange = () => { state.profile.settings.selectedCardBack = backSelect.value; persistProfile(); render(); };
-  settingsHost.appendChild(backSelect);
+  cardBack.onchange = () => { state.profile.settings.selectedCardBack = cardBack.value; persistProfile(); render(); };
+  settings.appendChild(cardBack);
 
-  [['High Contrast', 'highContrast'], ['Reduce Motion', 'reduceMotion']].forEach(([label, key]) => {
-    const btn = document.createElement('button');
-    btn.textContent = `${label}: ${state.profile.settings[key] ? 'On' : 'Off'}`;
-    btn.onclick = () => {
-      state.profile.settings[key] = !state.profile.settings[key];
-      persistProfile();
-      applyThemeAndSettings();
-      renderPanels();
-    };
-    settingsHost.appendChild(btn);
+  [['High Contrast','highContrast'],['Reduce Motion','reduceMotion']].forEach(([label,key])=>{
+    const btn=document.createElement('button'); btn.textContent=`${label}: ${state.profile.settings[key]?'On':'Off'}`;
+    btn.onclick=()=>{ state.profile.settings[key]=!state.profile.settings[key]; persistProfile(); applyThemeAndSettings(); renderPanels(); };
+    settings.appendChild(btn);
   });
 
-  const deckHost = document.querySelector('#deck-panel');
-  deckHost.innerHTML = '<h3>Deck Builder</h3>';
-  const modeSelect = document.createElement('select');
-  modeSelect.innerHTML = `<option value="planning" ${state.deckMode === 'planning' ? 'selected' : ''}>Planning Mode (all cards)</option><option value="final" ${state.deckMode === 'final' ? 'selected' : ''}>Final Mode (owned only)</option>`;
-  modeSelect.onchange = () => { state.deckMode = modeSelect.value; renderPanels(); };
-  deckHost.appendChild(modeSelect);
-
+  const deck = document.querySelector('#deckbuilder-panel');
+  deck.innerHTML = '<h3>Deck Builder</h3>';
+  const mode = document.createElement('select');
+  mode.innerHTML = `<option value="planning" ${state.deckMode === 'planning' ? 'selected' : ''}>Planning (all cards)</option><option value="final" ${state.deckMode === 'final' ? 'selected' : ''}>Final (owned)</option>`;
+  mode.onchange = () => { state.deckMode = mode.value; renderPanels(); };
+  deck.appendChild(mode);
   const deckSelect = document.createElement('select');
-  state.decks.forEach((deck) => {
-    const option = document.createElement('option');
-    option.value = deck.id;
-    option.textContent = deck.name;
-    option.selected = deck.id === state.selectedDeckId;
-    deckSelect.appendChild(option);
-  });
+  state.decks.forEach((d)=>{ const opt=document.createElement('option'); opt.value=d.id; opt.textContent=d.name; opt.selected=d.id===state.selectedDeckId; deckSelect.appendChild(opt); });
   deckSelect.onchange = () => { state.selectedDeckId = deckSelect.value; renderPanels(); };
-  deckHost.appendChild(deckSelect);
-
-  const search = document.createElement('input');
-  search.placeholder = 'Search cards...';
-  search.value = state.deckSearch;
-  search.oninput = () => { state.deckSearch = search.value.toLowerCase(); renderPanels(); };
-  deckHost.appendChild(search);
+  deck.appendChild(deckSelect);
+  const search = document.createElement('input'); search.placeholder='Search cards...'; search.value=state.deckSearch; search.oninput=()=>{ state.deckSearch=search.value.toLowerCase(); renderPanels();}; deck.appendChild(search);
 
   const selectedDeck = getSelectedDeck();
   if (selectedDeck) {
     const total = selectedDeck.entries.reduce((sum, entry) => sum + entry.count, 0);
-    const preview = document.createElement('div');
-    preview.id = 'deck-preview';
-    preview.textContent = `${selectedDeck.name}: ${total}/30 cards`;
-    deckHost.appendChild(preview);
+    const preview = document.createElement('div'); preview.id = 'deck-preview'; preview.textContent = `${selectedDeck.name}: ${total}/30 cards`; deck.appendChild(preview);
   }
 
-  const cards = getAllCards();
-  const visibleCards = cards
-    .filter((card) => (state.deckMode === 'planning' || (state.profile.collection[card.id] ?? 0) > 0))
+  const list = document.createElement('div'); list.id = 'deck-list';
+  const visibleCards = getAllCards()
+    .filter((card) => state.deckMode === 'planning' || (state.profile.collection[card.id] ?? 0) > 0)
     .filter((card) => card.name.toLowerCase().includes(state.deckSearch))
-    .sort((a, b) => compatibilityScore(b, selectedDeck) - compatibilityScore(a, selectedDeck));
-
-  const list = document.createElement('div');
-  list.id = 'deck-list';
-  visibleCards.forEach((card) => {
-    const owned = state.profile.collection[card.id] ?? 0;
-    const row = document.createElement('article');
-    row.textContent = `${card.name} (${card.type}) • compat ${compatibilityScore(card, selectedDeck)} • owned ${owned}`;
-    list.appendChild(row);
-  });
-  deckHost.appendChild(list);
+    .sort((a,b)=>compatibilityScore(b, selectedDeck)-compatibilityScore(a, selectedDeck));
+  visibleCards.forEach((card)=>{ const row=document.createElement('article'); row.textContent=`${card.name} (${card.type}) • compat ${compatibilityScore(card, selectedDeck)} • owned ${state.profile.collection[card.id] ?? 0}`; list.appendChild(row); });
+  deck.appendChild(list);
 }
 
 async function buyAndOpen(productId, quantity = 1, discount = 1) {
   const product = state.storeProducts.find((entry) => entry.id === productId);
   if (!product) return;
   const totalPrice = Math.floor(product.price * quantity * discount);
-  if (state.profile.economy.gold < totalPrice) {
-    toast('Not enough gold.', 'error');
-    return;
-  }
+  if (state.profile.economy.gold < totalPrice) return;
   state.profile.economy.gold -= totalPrice;
   for (let i = 0; i < quantity; i += 1) {
     const pityState = state.profile.economy.pityByProduct[product.id] ?? { missesUntilGuaranteed: 0 };
     const opened = openPack(getAllCards(), product, pityState);
     state.profile.economy.pityByProduct[product.id] = opened.pityState;
     state.profile.stats.packsOpened += 1;
-    opened.pulls.forEach((card) => {
-      state.profile.collection[card.id] = (state.profile.collection[card.id] ?? 0) + 1;
-    });
+    opened.pulls.forEach((card) => { state.profile.collection[card.id] = (state.profile.collection[card.id] ?? 0) + 1; });
     bumpQuestMetric('packsOpened', 1);
     await animatePackOpening(opened.pulls);
-    log(`Opened ${product.name}: ${opened.pulls.map((card) => `${card.name} (${card.rarity})`).join(', ')}`);
     emitVfx('pack-open', { product: product.id, count: opened.pulls.length });
   }
   persistProfile();
@@ -453,6 +350,9 @@ async function boot() {
 function render() {
   document.querySelector('#player-health').textContent = state.playerHealth;
   document.querySelector('#enemy-health').textContent = state.enemyHealth;
+  setBar('#player-hero-bar', state.playerHealth, state.playerMaxHealth);
+  setBar('#enemy-hero-bar', state.enemyHealth, state.enemyMaxHealth);
+
   const handHost = document.querySelector('#hand');
   handHost.innerHTML = '';
   state.hand.forEach((card) => {
@@ -463,6 +363,7 @@ function render() {
     enableCardDrag(node, card.instanceId);
     handHost.appendChild(node);
   });
+
   renderLane('#player-minions', state.playerMinions, true);
   renderLane('#enemy-minions', state.enemyMinions, false);
 }
@@ -474,11 +375,13 @@ function renderLane(selector, minions, playerOwned) {
   minions.forEach((minion) => {
     const node = document.createElement('div');
     const indicators = getRivalryIndicators(minion, opponents, state, playerOwned ? 'player' : 'enemy');
-    node.className = `minion target ${minion.taunt ? 'taunt' : ''} ${indicators.hasAdvantage ? 'rivalry-advantage' : ''} ${indicators.hasDisadvantage ? 'rivalry-danger' : ''}`;
+    node.className = `minion target rarity-${minion.rarity ?? 'common'} ${minion.taunt ? 'taunt' : ''} ${indicators.hasAdvantage ? 'rivalry-advantage' : ''} ${indicators.hasDisadvantage ? 'rivalry-danger' : ''}`;
     node.dataset.id = minion.id;
     node.dataset.targetId = minion.id;
     node.dataset.defense = String(minion.defense);
-    node.innerHTML = `<strong>${minion.name}</strong><div>${Math.max(0, minion.attack - (minion.statuses?.weakened ? 1 : 0))}/${minion.health}</div><div class="meta">${minion.race ?? 'neutral'} · ${minion.element ?? 'none'}</div><div class="status-row">${minion.statuses?.weakened ? '<span class="status">Weakened</span>' : ''}</div><button>Defense</button>`;
+    const currentAttack = Math.max(0, minion.attack - (minion.statuses?.weakened ? 1 : 0));
+    const hpPct = Math.max(0, Math.min(100, (minion.health / Math.max(1, minion.maxHealth ?? minion.health)) * 100));
+    node.innerHTML = `<strong>${minion.name}</strong><div>${currentAttack}/${minion.health}</div><div class="health-bar"><div class="health-fill" style="width:${hpPct}%"></div></div><div class="meta">${minion.race ?? 'neutral'} · ${minion.element ?? 'none'}</div><div class="status-row">${minion.statuses?.weakened ? '<span class="status">Weakened</span>' : ''}</div><button>Defense</button>`;
     node.querySelector('button').onclick = () => { minion.defense = !minion.defense; emitVfx('stance-toggle', { id: minion.id, defense: minion.defense }); render(); };
     if (playerOwned) enableAttackDrag(node, minion.id);
     lane.appendChild(node);
@@ -493,11 +396,10 @@ function playCard(cardId) {
   if (card.type === 'minion') {
     state.hand.splice(index, 1);
     state.mana -= card.cost;
-    state.playerMinions.push({ id: uid('m'), name: card.name, attack: card.attack, health: card.health, taunt: !!card.taunt, defense: false, race: card.race ?? 'neutral', element: card.element ?? 'none', statuses: {} });
+    state.playerMinions.push({ id: uid('m'), name: card.name, attack: card.attack, health: card.health, maxHealth: card.health, taunt: !!card.taunt, defense: false, race: card.race ?? 'neutral', element: card.element ?? 'none', statuses: {}, rarity: card.rarity ?? 'common' });
     emitVfx('play-card', { cardId: card.id });
     bumpQuestMetric('cardsPlayed', 1);
-    render();
-    renderPanels();
+    render(); renderPanels();
     return;
   }
   if (card.type === 'spell' && state.playerMinions.length > 0 && state.enemyMinions.length > 0) {
@@ -508,8 +410,7 @@ function playCard(cardId) {
     state.mana -= card.cost;
     bumpQuestMetric('cardsPlayed', 1);
     cleanupDead();
-    render();
-    renderPanels();
+    render(); renderPanels();
   }
 }
 
@@ -575,10 +476,7 @@ function clearHighlights() {
   document.querySelectorAll('.target-valid,.target-blocked').forEach((el) => el.classList.remove('target-valid', 'target-blocked'));
 }
 
-function highlightCardPlayTargets() {
-  clearHighlights();
-  document.querySelector('#drop-zone').classList.add('target-valid');
-}
+function highlightCardPlayTargets() { clearHighlights(); document.querySelector('#drop-zone').classList.add('target-valid'); }
 
 function highlightAttackTargets(attackerId) {
   clearHighlights();
@@ -627,22 +525,18 @@ document.querySelector('#chat-input').addEventListener('keydown', (event) => {
   if (cmd === './DevAbil') {
     setDevUnlocked(true);
     toast('Developer panels unlocked.', 'info');
-    log('Dev unlock persisted to localStorage.');
   }
   if (cmd === './ResetProgress') {
     state.profile = resetProfile();
     persistProfile();
-    toast('Progress reset to defaults.', 'info');
+    toast('Progress reset.', 'info');
     renderPanels();
     render();
   }
   event.target.value = '';
 });
 
-document.querySelector('#menu-btn').addEventListener('click', () => {
-  window.location.href = '../index.html';
-});
-
+document.querySelector('#menu-btn').addEventListener('click', () => { window.location.href = '../index.html'; });
 document.querySelector('#win-demo').addEventListener('click', claimDemoWin);
 
 boot();

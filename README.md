@@ -1,3 +1,10 @@
+# Quick Run
+
+- Windows: run `run_game.bat` from repo root.
+- Cross-platform: `python -m http.server 8080` then open `http://localhost:8080/game/`.
+
+---
+
 # CardForge Framework Prompt (GPT-5.2 Thinking Extended) — Expanded Creative + QoL Edition
 
 You are **GPT-5.2 Thinking (Extended)** acting as a **lead systems architect + gameplay engineer + UI/UX designer + tools/creator engineer + VFX/audio designer + economy designer**.

@@ -2,7 +2,6 @@ import { Registry } from '../core/registry.js';
 import { loadPlugins } from '../core/loader.js';
 
 const registry = new Registry();
-
 const state = { groups: [] };
 
 function addGroup(initialOp = 'AND') {
@@ -23,13 +22,7 @@ function renderGroups() {
   state.groups.forEach((group) => {
     const wrapper = document.createElement('div');
     wrapper.className = 'group';
-    const rows = group.conditions.map((condition, i) => `
-      <div class="condition-row" data-group="${group.id}" data-index="${i}">
-        <select data-key="kind"><option value="board" ${condition.kind === 'board' ? 'selected' : ''}>board</option><option value="resource" ${condition.kind === 'resource' ? 'selected' : ''}>resource</option><option value="tribe" ${condition.kind === 'tribe' ? 'selected' : ''}>tribe</option><option value="status" ${condition.kind === 'status' ? 'selected' : ''}>status</option></select>
-        <input data-key="field" value="${condition.field}" />
-        <input data-key="value" value="${condition.value}" />
-        <button type="button" data-remove="${i}">Remove</button>
-      </div>`).join('');
+    const rows = group.conditions.map((condition, i) => `<div class="condition-row" data-group="${group.id}" data-index="${i}"><select data-key="kind"><option value="board" ${condition.kind === 'board' ? 'selected' : ''}>board</option><option value="resource" ${condition.kind === 'resource' ? 'selected' : ''}>resource</option><option value="tribe" ${condition.kind === 'tribe' ? 'selected' : ''}>tribe</option><option value="status" ${condition.kind === 'status' ? 'selected' : ''}>status</option></select><input data-key="field" value="${condition.field}" /><input data-key="value" value="${condition.value}" /><button type="button" data-remove="${i}">Remove</button></div>`).join('');
     wrapper.innerHTML = `<div class="group-header"><strong>Group ${group.id}</strong><label>Operator <select data-op="${group.id}"><option value="AND" ${group.op === 'AND' ? 'selected' : ''}>AND</option><option value="OR" ${group.op === 'OR' ? 'selected' : ''}>OR</option></select></label><button type="button" data-add="${group.id}">Add Condition</button></div>${rows}`;
     host.appendChild(wrapper);
   });
@@ -41,8 +34,7 @@ function renderGroups() {
       input.oninput = () => {
         const group = state.groups.find((entry) => entry.id === row.dataset.group);
         if (!group) return;
-        const condition = group.conditions[Number(row.dataset.index)];
-        condition[input.dataset.key] = input.value;
+        group.conditions[Number(row.dataset.index)][input.dataset.key] = input.value;
       };
     });
     row.querySelector('[data-remove]').onclick = () => {
@@ -80,8 +72,42 @@ function collectAbility() {
 
 function explainAbility(ability) {
   const conditions = ability.conditions.map((group, i) => `Group ${i + 1} (${group.operator}): ${group.entries.map((c) => `${c.kind}.${c.field}=${c.value}`).join(', ')}`).join(' | ');
-  const targetFilter = ability.targeting.filterTag ? ` filtered by tag '${ability.targeting.filterTag}'` : '';
-  return `${ability.name} triggers on ${ability.trigger} and applies ${ability.effect.action} to ${ability.targeting.scope}${targetFilter}. Conditions: ${conditions || 'none'}.`;
+  return `${ability.name} triggers on ${ability.trigger}; effect: ${ability.effect.action}. Conditions: ${conditions || 'none'}.`;
+}
+
+function setupCardTemplates() {
+  const select = document.querySelector('#card-template-select');
+  const templates = registry.list('creatorCardPacks').flatMap((pack) => pack.cards ?? []).filter((c) => c.template);
+  templates.forEach((template) => {
+    const option = document.createElement('option');
+    option.value = template.id;
+    option.textContent = `${template.name} (${template.type})`;
+    select.appendChild(option);
+  });
+  if (templates.length === 0) {
+    const option = document.createElement('option');
+    option.value = '';
+    option.textContent = 'No templates loaded';
+    select.appendChild(option);
+  }
+
+  document.querySelector('#use-template').onclick = () => {
+    const template = templates.find((entry) => entry.id === select.value);
+    if (!template) return;
+    const form = document.querySelector('#card-form');
+    form.elements.id.value = template.id;
+    form.elements.name.value = template.name;
+    form.elements.cardType.value = template.type;
+    form.elements.cost.value = template.cost ?? 1;
+    form.elements.attack.value = template.attack ?? 1;
+    form.elements.health.value = template.health ?? 1;
+    form.elements.damage.value = template.damage ?? 0;
+    form.elements.race.value = template.race ?? '';
+    form.elements.element.value = template.element ?? '';
+    form.elements.rarity.value = template.rarity ?? 'common';
+    form.elements.synergy.value = (template.synergy ?? []).join(',');
+    form.elements.taunt.checked = !!template.taunt;
+  };
 }
 
 function setupCardCreator() {
@@ -118,17 +144,6 @@ function setupAiCreator() {
   });
 }
 
-function setupHeroCreator() {
-  const form = document.querySelector('#hero-form');
-  const preview = document.querySelector('#preview');
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const hero = { type: 'hero', id: data.get('id'), name: data.get('name'), health: Number(data.get('health')), tribe: data.get('tribe') || null, heroPower: { name: data.get('powerName'), cost: Number(data.get('powerCost')) } };
-    preview.textContent = JSON.stringify(hero, null, 2);
-  });
-}
-
 function setupAbilityBuilder() {
   const select = document.querySelector('#ability-template');
   const templates = registry.list('abilityPacks').flatMap((pack) => pack.templates ?? []);
@@ -144,6 +159,7 @@ function setupAbilityBuilder() {
     option.value = '';
     select.appendChild(option);
   }
+
   document.querySelector('#preview-ability').onclick = () => {
     const ability = collectAbility();
     document.querySelector('#preview').textContent = JSON.stringify(ability, null, 2);
@@ -175,9 +191,9 @@ async function boot() {
     host.appendChild(card);
   });
 
+  setupCardTemplates();
   setupCardCreator();
   setupAiCreator();
-  setupHeroCreator();
   setupAbilityBuilder();
   addGroup('AND');
 }
