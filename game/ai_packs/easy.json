@@ -1,0 +1,30 @@
+{
+  "type": "ai-pack",
+  "id": "easy",
+  "name": "Eamon Pike",
+  "weights": {
+    "attackFace": 0.25,
+    "trade": 0.3,
+    "summon": 0.5
+  },
+  "summons": [
+    {
+      "name": "Timid Squire",
+      "attack": 1,
+      "health": 2,
+      "race": "beast",
+      "element": "earth"
+    }
+  ],
+  "personality": {
+    "title": "Wandering Page",
+    "backstory": "A rookie guardian from the Candle Marches who still second-guesses every move.",
+    "dimensionTag": "#Fable-01"
+  },
+  "strategy": "value",
+  "level": 2,
+  "thinkMsRange": [
+    350,
+    650
+  ]
+}

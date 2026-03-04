@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CardForge Universal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="launcher">
+    <h1>CardForge Universal</h1>
+    <p>Multidimensional battle nexus.</p>
+
+    <section class="battlemap panel">
+      <h2>Dimensional Battle Map</h2>
+      <div class="galaxy-bg" aria-label="Galaxy backdrop placeholder"></div>
+      <svg id="dimension-map" viewBox="0 0 900 260"></svg>
+      <div class="hint">Colored routes show escalating difficulty.</div>
+    </section>
+
+    <div class="links">
+      <a href="./game/index.html">Play Game</a>
+      <a href="./creator/index.html">Open Creator</a>
+      <button id="open-lobby">Lobby</button>
+    </div>
+
+    <section id="lobby-panel" class="menu-panel hidden">
+      <h2>Lobby</h2>
+      <label>Color Scheme <select id="lobby-scheme"><option value="arcane">Arcane</option><option value="monarch">Monarch</option></select></label>
+      <div class="lobby-tabs">
+        <button data-tab="match">Matchmaking</button>
+        <button data-tab="deck">Deck Builder</button>
+        <button data-tab="quests">Quest Board</button>
+        <button data-tab="shop">Shop</button>
+        <button data-tab="carnifex">Codex</button>
+        <button data-tab="world">Visit Your World</button>
+      </div>
+      <div id="match-tab" class="tab-body"></div>
+      <div id="deck-tab" class="tab-body hidden"></div>
+      <div id="quests-tab" class="tab-body hidden"></div>
+      <div id="shop-tab" class="tab-body hidden"></div>
+      <div id="carnifex-tab" class="tab-body hidden">
+        <div id="cardex-meta"></div>
+        <input id="cardex-search" placeholder="Search cards, abilities, tags..." />
+        <div id="cardex-list"></div>
+        <hr />
+        <label>Locate Dimension by Name</label>
+        <div class="row"><input id="dimension-input" placeholder="e.g. Aster-2" /><button id="dimension-locate">Locate Dimension</button></div>
+        <canvas id="dimension-canvas" width="860" height="340"></canvas>
+      </div>
+      <div id="world-tab" class="tab-body hidden"><h3>Visit Your World</h3><button id="visit-world">Work in progress!</button></div>
+    </section>
+
+    <p class="hint">Run with <code>python -m http.server 8080</code></p>
+  </main>
+
+  <div id="match-cinematic" class="hidden">
+    <div class="cinematic-card" id="cinematic-player">Novice</div>
+    <div class="cinematic-vs">VS</div>
+    <div class="cinematic-card" id="cinematic-opponent">Opponent</div>
+  </div>
+
+<script type="module">
+const STORAGE_KEY = 'cardforge.profile.v1';
+const WORLD_KEY = 'cardforge.world.seed.v1';
+const MATCH_KEY = 'cardforge.match.opponent.v1';
+const lobby = document.getElementById('lobby-panel');
+const openLobby = document.getElementById('open-lobby');
+
+function loadProfile() {
+  const base = { economy: { gold: 400 }, collection: {}, customDecks: [], starterDeckId: 'starter-balanced-core', discoveredDimensions: [] };
+  try { return { ...base, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') }; } catch { return base; }
+}
+function saveProfile(profile) { localStorage.setItem(STORAGE_KEY, JSON.stringify(profile)); }
+
+function getSessionSeed() {
+  let seed = localStorage.getItem(WORLD_KEY);
+  if (!seed) {
+    seed = `${Date.now()}-${Math.floor(Math.random() * 99999)}`;
+    localStorage.setItem(WORLD_KEY, seed);
+  }
+  return seed;
+}
+
+openLobby.onclick = async () => {
+  lobby.classList.remove('hidden');
+  await renderMatchTab();
+  await renderDeckTab();
+  await renderQuestTab();
+  await renderShopTab();
+  await renderCarnifex();
+  showTab('match');
+};
+if (window.location.hash === '#lobby') openLobby.click();
+
+document.querySelectorAll('[data-tab]').forEach((button) => button.onclick = () => showTab(button.dataset.tab));
+function showTab(tab) { ['match', 'deck', 'quests', 'shop', 'carnifex', 'world'].forEach((id) => document.getElementById(`${id}-tab`).classList.toggle('hidden', id !== tab)); }
+
+async function loadAiProfiles() {
+  const idx = await (await fetch('./game/ai_packs/index.json')).json();
+  const out = [];
+  for (const entry of idx.entries) {
+    const data = await (await fetch(`./game/ai_packs/${entry}`)).json();
+    if (data.personality) out.push(data);
+  }
+  return out.sort((a,b)=>(a.level??1)-(b.level??1));
+}
+
+function renderBattleMap(profiles) {
+  const svg = document.getElementById('dimension-map');
+  svg.innerHTML = '';
+  profiles.forEach((p, i) => {
+    const x = 60 + i * 82;
+    const y = 120 + Math.sin(i) * 50;
+    const color = p.level >= 8 ? '#ff6b6b' : p.level >= 6 ? '#ffb86b' : p.level >= 4 ? '#8ac6ff' : '#7dffa2';
+    if (i > 0) {
+      const prevX = 60 + (i - 1) * 82;
+      const prevY = 120 + Math.sin(i - 1) * 50;
+      svg.insertAdjacentHTML('beforeend', `<line x1="${prevX}" y1="${prevY}" x2="${x}" y2="${y}" stroke="${color}" stroke-width="3" opacity="0.7"/>`);
+    }
+    svg.insertAdjacentHTML('beforeend', `<circle cx="${x}" cy="${y}" r="16" fill="${color}" opacity="0.86"/><text x="${x}" y="${y + 4}" text-anchor="middle" fill="#050914" font-size="11">${p.level}</text>`);
+  });
+}
+
+async function renderMatchTab() {
+  const host = document.getElementById('match-tab');
+  const profileState = loadProfile();
+  const profiles = await loadAiProfiles();
+  renderBattleMap(profiles);
+  host.innerHTML = '<h3>Select Opponent Dimension</h3>';
+  const list = document.createElement('div');
+  list.id = 'deck-list';
+  profiles.forEach((p) => {
+    const row = document.createElement('article');
+    const gate = Math.max(0, (p.level ?? 1) - 3);
+    const unlocked = (profileState.stats?.wins ?? 0) >= gate;
+    row.innerHTML = `<strong>${p.name}</strong> — Lvl ${p.level}<div>${p.personality.title} ${p.personality.dimensionTag}</div><small>${p.personality.backstory}</small><div>${unlocked ? 'Unlocked' : `Locked: win ${gate} total matches`}</div>`;
+    const b = document.createElement('button');
+    b.textContent = 'Matchmake';
+    b.disabled = !unlocked;
+    b.onclick = () => startCinematic('Novice', p);
+    row.appendChild(b);
+    list.appendChild(row);
+  });
+  host.appendChild(list);
+}
+
+function startCinematic(playerName, aiProfile) {
+  localStorage.setItem(MATCH_KEY, aiProfile.id);
+  const cinematic = document.getElementById('match-cinematic');
+  document.getElementById('cinematic-player').textContent = playerName;
+  document.getElementById('cinematic-opponent').textContent = aiProfile.name;
+  cinematic.classList.remove('hidden');
+  setTimeout(() => { cinematic.classList.add('fade'); }, 300);
+  setTimeout(() => { window.location.assign('./game/index.html'); }, 2800);
+}
+
+
+async function renderQuestTab() {
+  const host = document.getElementById('quests-tab');
+  const profile = loadProfile();
+  const qp = await (await fetch('./game/quest_packs/daily.json')).json();
+  const quests = qp.quests || [];
+  host.innerHTML = '<h3>Quest Board</h3>';
+  quests.forEach((q) => {
+    const current = profile.questProgress?.[q.metric] ?? 0;
+    const done = current >= q.target;
+    const claimed = !!(profile.questClaims || {})[q.id];
+    const row = document.createElement('article');
+    row.innerHTML = `<strong>${q.goal}</strong><div>${current}/${q.target} • Reward ${q.reward}g</div>`;
+    const b = document.createElement('button');
+    b.textContent = claimed ? 'Claimed' : 'Claim';
+    b.disabled = claimed || !done;
+    b.onclick = () => {
+      profile.questClaims = profile.questClaims || {};
+      profile.economy = profile.economy || { gold: 0 };
+      profile.questClaims[q.id] = true;
+      profile.economy.gold = (profile.economy.gold || 0) + q.reward;
+      saveProfile(profile);
+      renderQuestTab();
+      renderShopTab();
+    };
+    row.appendChild(b);
+    host.appendChild(row);
+  });
+}
+
+async function renderDeckTab() {
+  const host = document.getElementById('deck-tab');
+  const profile = loadProfile();
+  const cards = (await (await fetch('./cardex.json')).json()).cards;
+  const response = await fetch('./game/deck_packs/starter_decks.json');
+  const deckPack = await response.json();
+  const allDecks = [...(deckPack.decks || []), ...(profile.customDecks || [])];
+  host.innerHTML = '<h3>Deck Builder + Simulator</h3>';
+  const deckSelect = document.createElement('select');
+  allDecks.forEach((deck) => {
+    const option = document.createElement('option');
+    option.value = deck.id;
+    option.textContent = `${deck.name} (${deck.entries.reduce((s, e) => s + e.count, 0)}/30)`;
+    option.selected = deck.id === profile.starterDeckId;
+    deckSelect.appendChild(option);
+  });
+  host.appendChild(deckSelect);
+  const setButton = document.createElement('button');
+  setButton.textContent = 'Set as Simulation Deck';
+  setButton.onclick = () => { profile.starterDeckId = deckSelect.value; saveProfile(profile); };
+  host.appendChild(setButton);
+  const saveButton = document.createElement('button');
+  saveButton.textContent = 'Save Copy to Custom Decks';
+  saveButton.onclick = () => {
+    const chosen = allDecks.find((d) => d.id === deckSelect.value);
+    if (!chosen) return;
+    const cloned = { ...chosen, id: `${chosen.id}-custom-${Date.now()}`, name: `${chosen.name} (Custom)` };
+    profile.customDecks = [...(profile.customDecks || []), cloned];
+    saveProfile(profile); renderDeckTab();
+  };
+  host.appendChild(saveButton);
+  const list = document.createElement('div'); list.id = 'deck-list';
+  const selected = allDecks.find((d) => d.id === deckSelect.value) || allDecks[0];
+  (selected?.entries || []).forEach((entry) => {
+    const card = cards.find((c) => c.id === entry.cardId);
+    const row = document.createElement('article');
+    row.textContent = `${entry.count}x ${card?.name || entry.cardId}`;
+    list.appendChild(row);
+  });
+  host.appendChild(list);
+}
+
+async function renderShopTab() {
+  const host = document.getElementById('shop-tab');
+  const profile = loadProfile();
+  const store = await (await fetch('./game/store_packs/starter_store.json')).json();
+  host.innerHTML = `<h3>Shop</h3><div>Gold: ${profile.economy?.gold ?? 0}</div>`;
+  (store.products || []).forEach((p) => {
+    const row = document.createElement('article');
+    row.textContent = `${p.name} (${p.price}g) - ${p.description}`;
+    host.appendChild(row);
+  });
+}
+
+function seededRandom(seed) { let t = 0; for (let i = 0; i < seed.length; i++) t += seed.charCodeAt(i) * (i + 1); return () => { t = (t * 9301 + 49297) % 233280; return t / 233280; }; }
+let orbitAnimHandle = null;
+let currentSystem = null;
+
+function drawDimensionSystem(name) {
+  const canvas = document.getElementById('dimension-canvas');
+  const ctx = canvas.getContext('2d');
+  const seed = `${getSessionSeed()}-${name}`;
+  const rand = seededRandom(seed);
+  const planets = Array.from({ length: 6 }, (_, i) => ({
+    id: `P-${i + 1}`,
+    radius: 40 + i * 36,
+    angle: rand() * Math.PI * 2,
+    speed: 0.002 + (i * 0.0007),
+    size: 6 + rand() * 7,
+    color: `hsl(${Math.floor(rand() * 360)},85%,60%)`,
+    terrain: ['crystal','ash','oceanic','forest','storm','ice'][i % 6],
+  }));
+  currentSystem = { name, planets };
+  if (orbitAnimHandle) cancelAnimationFrame(orbitAnimHandle);
+
+  const renderFrame = () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = '#050914'; ctx.fillRect(0,0,canvas.width,canvas.height);
+    const cx = canvas.width / 2, cy = canvas.height / 2;
+    ctx.fillStyle = '#ffd58a'; ctx.beginPath(); ctx.arc(cx, cy, 20, 0, Math.PI*2); ctx.fill();
+    planets.forEach((p) => {
+      ctx.strokeStyle = 'hsla(210,65%,75%,0.35)';
+      ctx.beginPath(); ctx.arc(cx, cy, p.radius, 0, Math.PI * 2); ctx.stroke();
+      p.angle += p.speed;
+      const px = cx + Math.cos(p.angle) * p.radius;
+      const py = cy + Math.sin(p.angle) * p.radius;
+      p.x = px; p.y = py;
+      const grad = ctx.createRadialGradient(px - p.size * 0.3, py - p.size * 0.3, 1, px, py, p.size);
+      grad.addColorStop(0, '#ffffff');
+      grad.addColorStop(1, p.color);
+      ctx.fillStyle = grad;
+      ctx.beginPath(); ctx.arc(px, py, p.size, 0, Math.PI * 2); ctx.fill();
+    });
+    ctx.fillStyle = '#bdd1ff';
+    ctx.fillText(`Dimension: ${name}`, 12, 18);
+    orbitAnimHandle = requestAnimationFrame(renderFrame);
+  };
+  renderFrame();
+}
+
+async function renderCarnifex() {
+  const payload = await (await fetch('./cardex.json')).json();
+  const meta = document.getElementById('cardex-meta');
+  const list = document.getElementById('cardex-list');
+  const search = document.getElementById('cardex-search');
+  meta.textContent = `Updated: ${payload.updatedAt} • Cards: ${payload.count}`;
+  const render = () => {
+    const q = search.value.trim().toLowerCase(); list.innerHTML = '';
+    payload.cards.filter((c) => `${c.name} ${c.type} ${(c.tags || []).join(' ')} ${JSON.stringify(c.ability || {})} ${c.bibliography || ''}`.toLowerCase().includes(q)).slice(0, 300).forEach((card) => {
+      const row = document.createElement('article'); row.className = `rarity-${card.rarity} cardex-card`;
+      row.innerHTML = `<strong>${card.name}</strong> <span>${card.type} • ${card.rarity}</span><div>Cost ${card.cost} • ${card.ability?.action || 'none'} ${card.ability?.amount || ''}</div><small>${card.bibliography || ''}</small>`;
+      list.appendChild(row);
+    });
+  };
+  search.oninput = render; render();
+  document.getElementById('dimension-locate').onclick = () => {
+    const name = document.getElementById('dimension-input').value.trim() || 'Unknown';
+    drawDimensionSystem(name);
+    const profile = loadProfile();
+    if (!profile.discoveredDimensions.includes(name)) { profile.discoveredDimensions.push(name); saveProfile(profile); }
+  };
+}
+
+document.getElementById('dimension-canvas').addEventListener('click', (event) => {
+  if (!currentSystem) return;
+  const rect = event.target.getBoundingClientRect();
+  const x = (event.clientX - rect.left) * (event.target.width / rect.width);
+  const y = (event.clientY - rect.top) * (event.target.height / rect.height);
+  const hit = currentSystem.planets.find((p) => p.x && Math.hypot(p.x - x, p.y - y) <= p.size + 4);
+  if (hit) alert(`${currentSystem.name} • ${hit.id}\nTerrain: ${hit.terrain}`);
+});
+
+
+const schemeSelect = document.getElementById('lobby-scheme');
+const savedScheme = localStorage.getItem('cardforge.lobby.scheme') || 'arcane';
+document.body.classList.toggle('scheme-monarch', savedScheme === 'monarch');
+schemeSelect.value = savedScheme;
+schemeSelect.onchange = () => {
+  const v = schemeSelect.value;
+  localStorage.setItem('cardforge.lobby.scheme', v);
+  document.body.classList.toggle('scheme-monarch', v === 'monarch');
+};
+
+document.getElementById('visit-world').onclick = () => alert('Work in progress!');
+</script>
+</body>
+</html>

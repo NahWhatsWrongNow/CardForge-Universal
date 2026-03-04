@@ -1,0 +1,19 @@
+{
+  "type": "ai-pack",
+  "id": "mira",
+  "name": "Mira Sol",
+  "level": 10,
+  "strategy": "value",
+  "thinkMsRange": [650, 1400],
+  "weights": { "attackFace": 0.3, "trade": 0.6, "summon": 0.8 },
+  "summons": [
+    { "name": "Solar Arbiter", "attack": 6, "health": 6, "taunt": true, "race": "celestial", "element": "holy", "rarity": "legendary" },
+    { "name": "Prism Disciple", "attack": 3, "health": 6, "taunt": false, "race": "celestial", "element": "arcane", "rarity": "epic" }
+  ],
+  "personality": {
+    "title": "Voice of the Seventh Sun",
+    "dimensionTag": "#Helion-Prime",
+    "backstory": "Mira Sol commands a starbound liturgy where planets orbit in choral precision.",
+    "victoryLine": "Write Helion-Prime in your codex and watch the sky answer."
+  }
+}

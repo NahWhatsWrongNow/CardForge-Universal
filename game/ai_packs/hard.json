@@ -1,0 +1,32 @@
+{
+  "type": "ai-pack",
+  "id": "hard",
+  "name": "Varken Draul",
+  "weights": {
+    "attackFace": 0.45,
+    "trade": 0.75,
+    "summon": 0.5
+  },
+  "summons": [
+    {
+      "name": "Grim Duelist",
+      "attack": 3,
+      "health": 3,
+      "race": "undead",
+      "element": "shadow"
+    },
+    {
+      "name": "Rift Elemental",
+      "attack": 4,
+      "health": 2,
+      "race": "elemental",
+      "element": "arcane"
+    }
+  ],
+  "strategy": "control",
+  "level": 6,
+  "thinkMsRange": [
+    500,
+    900
+  ]
+}

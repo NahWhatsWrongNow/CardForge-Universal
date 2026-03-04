@@ -1,0 +1,487 @@
+{
+  "type": "ability-pack",
+  "id": "starter-abilities",
+  "name": "Starter Ability Templates",
+  "templates": [
+    {
+      "id": "gen-ability-01",
+      "name": "Arc Technique 1",
+      "effect": {
+        "action": "dealDamage",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-02",
+      "name": "Blaze Technique 2",
+      "effect": {
+        "action": "grantArmor",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-03",
+      "name": "Frost Technique 3",
+      "effect": {
+        "action": "draw",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-04",
+      "name": "Venom Technique 4",
+      "effect": {
+        "action": "summonToken",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-05",
+      "name": "Solar Technique 5",
+      "effect": {
+        "action": "heal",
+        "amount": 5
+      }
+    },
+    {
+      "id": "gen-ability-06",
+      "name": "Void Technique 6",
+      "effect": {
+        "action": "buffAttack",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-07",
+      "name": "Arc Technique 7",
+      "effect": {
+        "action": "buffHealth",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-08",
+      "name": "Blaze Technique 8",
+      "effect": {
+        "action": "freeze",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-09",
+      "name": "Frost Technique 9",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-10",
+      "name": "Venom Technique 10",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 5
+      }
+    },
+    {
+      "id": "gen-ability-11",
+      "name": "Solar Technique 11",
+      "effect": {
+        "action": "dealDamage",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-12",
+      "name": "Void Technique 12",
+      "effect": {
+        "action": "grantArmor",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-13",
+      "name": "Arc Technique 13",
+      "effect": {
+        "action": "draw",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-14",
+      "name": "Blaze Technique 14",
+      "effect": {
+        "action": "summonToken",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-15",
+      "name": "Frost Technique 15",
+      "effect": {
+        "action": "heal",
+        "amount": 5
+      }
+    },
+    {
+      "id": "gen-ability-16",
+      "name": "Venom Technique 16",
+      "effect": {
+        "action": "buffAttack",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-17",
+      "name": "Solar Technique 17",
+      "effect": {
+        "action": "buffHealth",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-18",
+      "name": "Void Technique 18",
+      "effect": {
+        "action": "freeze",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-19",
+      "name": "Arc Technique 19",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-20",
+      "name": "Blaze Technique 20",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 5
+      }
+    },
+    {
+      "id": "gen-ability-21",
+      "name": "Frost Technique 21",
+      "effect": {
+        "action": "dealDamage",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-22",
+      "name": "Venom Technique 22",
+      "effect": {
+        "action": "grantArmor",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-23",
+      "name": "Solar Technique 23",
+      "effect": {
+        "action": "draw",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-24",
+      "name": "Void Technique 24",
+      "effect": {
+        "action": "summonToken",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-25",
+      "name": "Arc Technique 25",
+      "effect": {
+        "action": "heal",
+        "amount": 5
+      }
+    },
+    {
+      "id": "gen-ability-26",
+      "name": "Blaze Technique 26",
+      "effect": {
+        "action": "buffAttack",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-27",
+      "name": "Frost Technique 27",
+      "effect": {
+        "action": "buffHealth",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-28",
+      "name": "Venom Technique 28",
+      "effect": {
+        "action": "freeze",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-29",
+      "name": "Solar Technique 29",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-30",
+      "name": "Void Technique 30",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 5
+      }
+    },
+    {
+      "id": "gen-ability-31",
+      "name": "Arc Technique 31",
+      "effect": {
+        "action": "dealDamage",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-32",
+      "name": "Blaze Technique 32",
+      "effect": {
+        "action": "grantArmor",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-33",
+      "name": "Frost Technique 33",
+      "effect": {
+        "action": "draw",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-34",
+      "name": "Venom Technique 34",
+      "effect": {
+        "action": "summonToken",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-35",
+      "name": "Solar Technique 35",
+      "effect": {
+        "action": "heal",
+        "amount": 5
+      }
+    },
+    {
+      "id": "gen-ability-36",
+      "name": "Void Technique 36",
+      "effect": {
+        "action": "buffAttack",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-37",
+      "name": "Arc Technique 37",
+      "effect": {
+        "action": "buffHealth",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-38",
+      "name": "Blaze Technique 38",
+      "effect": {
+        "action": "freeze",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-39",
+      "name": "Frost Technique 39",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-40",
+      "name": "Venom Technique 40",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 5
+      }
+    },
+    {
+      "id": "gen-ability-41",
+      "name": "Solar Technique 41",
+      "effect": {
+        "action": "dealDamage",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-42",
+      "name": "Void Technique 42",
+      "effect": {
+        "action": "grantArmor",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-43",
+      "name": "Arc Technique 43",
+      "effect": {
+        "action": "draw",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-44",
+      "name": "Blaze Technique 44",
+      "effect": {
+        "action": "summonToken",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-45",
+      "name": "Frost Technique 45",
+      "effect": {
+        "action": "heal",
+        "amount": 5
+      }
+    },
+    {
+      "id": "gen-ability-46",
+      "name": "Venom Technique 46",
+      "effect": {
+        "action": "buffAttack",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-47",
+      "name": "Solar Technique 47",
+      "effect": {
+        "action": "buffHealth",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-48",
+      "name": "Void Technique 48",
+      "effect": {
+        "action": "freeze",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-49",
+      "name": "Arc Technique 49",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-50",
+      "name": "Blaze Technique 50",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 5
+      }
+    },
+    {
+      "id": "gen-ability-51",
+      "name": "Frost Technique 51",
+      "effect": {
+        "action": "dealDamage",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-52",
+      "name": "Venom Technique 52",
+      "effect": {
+        "action": "grantArmor",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-53",
+      "name": "Solar Technique 53",
+      "effect": {
+        "action": "draw",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-54",
+      "name": "Void Technique 54",
+      "effect": {
+        "action": "summonToken",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-55",
+      "name": "Arc Technique 55",
+      "effect": {
+        "action": "heal",
+        "amount": 5
+      }
+    },
+    {
+      "id": "gen-ability-56",
+      "name": "Blaze Technique 56",
+      "effect": {
+        "action": "buffAttack",
+        "amount": 1
+      }
+    },
+    {
+      "id": "gen-ability-57",
+      "name": "Frost Technique 57",
+      "effect": {
+        "action": "buffHealth",
+        "amount": 2
+      }
+    },
+    {
+      "id": "gen-ability-58",
+      "name": "Venom Technique 58",
+      "effect": {
+        "action": "freeze",
+        "amount": 3
+      }
+    },
+    {
+      "id": "gen-ability-59",
+      "name": "Solar Technique 59",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 4
+      }
+    },
+    {
+      "id": "gen-ability-60",
+      "name": "Void Technique 60",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 5
+      }
+    }
+  ]
+}
