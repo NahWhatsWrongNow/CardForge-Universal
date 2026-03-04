@@ -1,0 +1,22 @@
+{
+  "type": "ability-pack",
+  "id": "starter-abilities",
+  "name": "Starter Ability Templates",
+  "templates": [
+    {
+      "id": "deal-2",
+      "name": "Deal 2 Damage",
+      "effect": { "action": "dealDamage", "amount": 2 }
+    },
+    {
+      "id": "grant-armor-3",
+      "name": "Grant 3 Armor",
+      "effect": { "action": "grantArmor", "amount": 3 }
+    },
+    {
+      "id": "draw-1",
+      "name": "Draw 1 Card",
+      "effect": { "action": "draw", "amount": 1 }
+    }
+  ]
+}
