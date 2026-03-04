@@ -6,6 +6,7 @@ import { emitVfx, onVfx } from './engine/animation_bus.js';
 import { explainInvalidAction } from './engine/targeting.js';
 import { getRivalryIndicators, resolveCombat, resolveSpellPower } from './engine/rivalry.js';
 import { evaluateQuest, getWinReward, openPack } from './engine/economy.js';
+import { chooseAction, createSummon } from './engine/ai.js';
 
 const registry = new Registry();
 const state = {
@@ -17,6 +18,10 @@ const state = {
   rivalryPacks: [],
   quests: [],
   storeProducts: [],
+  aiProfiles: [],
+  selectedAiId: null,
+  bossMode: false,
+  lastAiTrace: 'not-run',
   playerMinions: [],
   enemyMinions: [
     { id: uid('enemy'), name: 'Guard Pup', attack: 1, health: 3, taunt: true, defense: false, race: 'undead', element: 'shadow', statuses: {} },
@@ -32,6 +37,10 @@ const log = (msg) => {
 const showHint = (msg = '') => {
   document.querySelector('#hint').textContent = msg;
 };
+
+function currentAiProfile() {
+  return state.aiProfiles.find((profile) => profile.id === state.selectedAiId) ?? state.aiProfiles[0] ?? null;
+}
 
 function persistProfile() {
   saveProfile(state.profile);
@@ -74,6 +83,61 @@ function claimDemoWin() {
   renderEconomyAndPanels();
 }
 
+function performEnemyAttack(attackerId, targetId) {
+  const attacker = state.enemyMinions.find((m) => m.id === attackerId);
+  if (!attacker) return;
+  if (targetId === 'player-hero') {
+    state.playerHealth -= attacker.attack;
+    spawnDamageNumber(document.querySelector('[data-target-id="player-hero"]'), attacker.attack);
+    log(`Enemy ${attacker.name} attacked your hero for ${attacker.attack}.`);
+    return;
+  }
+
+  const defender = state.playerMinions.find((m) => m.id === targetId);
+  if (!defender) return;
+  const result = resolveCombat(attacker, defender, state, 'enemy');
+  defender.health -= result.damageToDefender;
+  attacker.health -= result.damageToAttacker;
+  spawnDamageNumber(document.querySelector(`[data-id="${defender.id}"]`), result.damageToDefender);
+  spawnDamageNumber(document.querySelector(`[data-id="${attacker.id}"]`), result.damageToAttacker);
+  const extra = result.events.length > 0 ? ` (${result.events.join(', ')})` : '';
+  log(`Enemy ${attacker.name} attacked ${defender.name} for ${result.damageToDefender}/${result.damageToAttacker}${extra}. Trace: ${result.matchedRuleIds.join(', ') || 'none'}.`);
+}
+
+function runEnemyTurn() {
+  const profile = currentAiProfile();
+  if (!profile) {
+    toast('No AI profiles loaded.', 'error');
+    return;
+  }
+
+  const action = chooseAction(state, profile);
+  state.lastAiTrace = `${profile.name} -> ${action.trace}`;
+
+  if (action.type === 'summon') {
+    const summon = createSummon(profile);
+    if (summon) {
+      state.enemyMinions.push(summon);
+      log(`AI summoned ${summon.name}.`);
+    }
+  } else if (action.type === 'attack-minion') {
+    performEnemyAttack(action.attackerId, action.targetId);
+  } else if (action.type === 'attack-hero') {
+    performEnemyAttack(action.attackerId, 'player-hero');
+  } else if (action.type === 'boss-roar') {
+    state.playerHealth -= 2;
+    state.enemyMinions.forEach((m) => { m.attack += 1; });
+    spawnDamageNumber(document.querySelector('[data-target-id="player-hero"]'), 2);
+    log('Boss script shadow-roar: your hero takes 2 and all enemy minions gain +1 attack.');
+  } else {
+    log('AI passed this turn.');
+  }
+
+  cleanupDead();
+  render();
+  renderEconomyAndPanels();
+}
+
 function renderEconomyAndPanels() {
   document.querySelector('#gold').textContent = state.profile.economy.gold;
   document.querySelector('#streak').textContent = state.profile.stats.streak;
@@ -105,6 +169,45 @@ function renderEconomyAndPanels() {
     row.appendChild(button);
     storeHost.appendChild(row);
   });
+
+  const aiHost = document.querySelector('#ai-panel');
+  aiHost.innerHTML = '<h3>AI Control</h3>';
+  const select = document.createElement('select');
+  state.aiProfiles.forEach((profile) => {
+    const option = document.createElement('option');
+    option.value = profile.id;
+    option.textContent = profile.name;
+    option.selected = profile.id === state.selectedAiId;
+    select.appendChild(option);
+  });
+  select.onchange = () => {
+    state.selectedAiId = select.value;
+    renderEconomyAndPanels();
+  };
+  aiHost.appendChild(select);
+
+  const actions = document.createElement('div');
+  actions.className = 'ai-actions';
+
+  const runButton = document.createElement('button');
+  runButton.textContent = 'Run Enemy Turn';
+  runButton.onclick = runEnemyTurn;
+  actions.appendChild(runButton);
+
+  const bossButton = document.createElement('button');
+  bossButton.textContent = state.bossMode ? 'Disable Boss Mode' : 'Enable Boss Mode';
+  bossButton.onclick = () => {
+    state.bossMode = !state.bossMode;
+    log(`Boss mode ${state.bossMode ? 'enabled' : 'disabled'}.`);
+    renderEconomyAndPanels();
+  };
+  actions.appendChild(bossButton);
+  aiHost.appendChild(actions);
+
+  const trace = document.createElement('div');
+  trace.id = 'ai-trace';
+  trace.textContent = `Decision trace: ${state.lastAiTrace}`;
+  aiHost.appendChild(trace);
 }
 
 async function buyAndOpen(productId) {
@@ -161,6 +264,8 @@ async function boot() {
   state.rivalryPacks = registry.list('rivalryPacks');
   state.quests = registry.list('questPacks').flatMap((pack) => pack.quests ?? []);
   state.storeProducts = registry.list('storePacks').flatMap((pack) => pack.products ?? []);
+  state.aiProfiles = registry.list('ai');
+  state.selectedAiId = state.aiProfiles[0]?.id ?? null;
 
   onVfx('play-card', ({ payload }) => log(`VFX play-card: ${payload.cardId}`));
   onVfx('attack', ({ payload }) => log(`VFX attack: ${payload.attackerId} -> ${payload.targetId}`));
@@ -168,7 +273,7 @@ async function boot() {
 
   const cards = registry.list('cardPacks').flatMap((pack) => pack.cards);
   state.hand = cards.slice(0, 4).map((card) => ({ ...card, instanceId: uid('card') }));
-  log(`Loaded ${state.rivalryPacks.length} rivalry pack(s), ${state.quests.length} quest(s), and ${state.storeProducts.length} store product(s).`);
+  log(`Loaded ${state.rivalryPacks.length} rivalry pack(s), ${state.quests.length} quest(s), ${state.storeProducts.length} store product(s), and ${state.aiProfiles.length} AI profile(s).`);
   render();
   renderEconomyAndPanels();
 }

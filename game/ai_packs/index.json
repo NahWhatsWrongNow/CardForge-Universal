@@ -1,1 +1,1 @@
-{ "entries": ["easy.json"] }
+{ "entries": ["easy.json", "normal.json", "hard.json", "boss_lich.json"] }

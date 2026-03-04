@@ -8,7 +8,7 @@ header { display: flex; gap: 1rem; align-items: center; }
 .hero { padding: 0.75rem; border-radius: 10px; margin: 0.4rem 0; background: #2d355a; }
 .lane { min-height: 100px; display: flex; gap: 0.6rem; align-items: center; padding: 0.5rem; border: 1px dashed #3f4970; border-radius: 8px; margin: 0.4rem 0; }
 #drop-zone { text-align: center; padding: 0.5rem; border: 1px dashed #6f7cff; border-radius: 8px; color: #b8c1ff; }
-#side-panels { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; margin-bottom: .75rem; }
+#side-panels { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin-bottom: .75rem; }
 .panel { background: #10152a; border: 1px solid #2d3659; border-radius: 8px; padding: 0.6rem; }
 .panel h3 { margin: 0 0 .45rem 0; }
 #store button, #quests button { margin-top: .3rem; background: #3f4f88; color: #fff; border: none; border-radius: 6px; padding: .35rem .6rem; cursor: pointer; }
@@ -40,3 +40,8 @@ header { display: flex; gap: 1rem; align-items: center; }
 #toast-host { position: fixed; top: 10px; right: 10px; display: grid; gap: 8px; }
 .toast { transform: translateY(-6px); opacity: 0; transition: all .2s; background: #2d355a; padding: .45rem .6rem; border-radius: 8px; }
 .toast-show { opacity: 1; transform: translateY(0); }
+
+#ai-panel select { width: 100%; margin: .25rem 0 .4rem; background: #161f3e; color: #fff; border: 1px solid #3b4c86; border-radius: 6px; padding: .35rem; }
+#ai-panel .ai-actions { display: flex; gap: .45rem; flex-wrap: wrap; }
+#ai-panel button { background: #5b3f88; color: #fff; border: none; border-radius: 6px; padding: .35rem .6rem; cursor: pointer; }
+#ai-trace { margin-top: .35rem; font-size: .8rem; opacity: .85; }
