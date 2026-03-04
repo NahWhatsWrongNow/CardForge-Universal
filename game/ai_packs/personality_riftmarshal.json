@@ -1,0 +1,30 @@
+{
+  "type": "ai-pack",
+  "id": "rift-marshal",
+  "name": "Personality AI: Rift Marshal",
+  "weights": {
+    "attackFace": 0.62,
+    "trade": 0.78,
+    "summon": 0.45
+  },
+  "strategy": "control",
+  "level": 7,
+  "thinkMsRange": [
+    600,
+    1100
+  ],
+  "summons": [
+    {
+      "name": "Rift Sentinel",
+      "attack": 4,
+      "health": 5,
+      "race": "construct",
+      "element": "arcane"
+    }
+  ],
+  "personality": {
+    "title": "Marshal Dren of the Split Gate",
+    "backstory": "A tactician who seals timelines shut and wins by exhausting enemy plans.",
+    "dimensionTag": "#Rift-7"
+  }
+}

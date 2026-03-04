@@ -6,7 +6,7 @@ import { emitVfx, onVfx } from './engine/animation_bus.js';
 import { explainInvalidAction } from './engine/targeting.js';
 import { getRivalryIndicators, resolveCombat, resolveSpellPower } from './engine/rivalry.js';
 import { evaluateQuest, getWinReward, openPack } from './engine/economy.js';
-import { chooseAction, createSummon } from './engine/ai.js';
+import { chooseAction, createSummon, getThinkDelay, getThinkingLine } from './engine/ai.js';
 
 const registry = new Registry();
 const state = {
@@ -18,11 +18,11 @@ const state = {
   mana: 3,
   hand: [],
   rivalryPacks: [], quests: [], storeProducts: [], aiProfiles: [], backdrops: [], playlists: [], cardBacks: [], themes: [], decks: [],
-  deckMode: 'planning', deckSearch: '', selectedDeckId: null, selectedAiId: null, bossMode: false, lastAiTrace: 'not-run',
+  deckMode: 'planning', deckSearch: '', selectedDeckId: null, selectedAiId: null, bossMode: false, aiThinking: false, aiThinkingLine: '', lastAiTrace: 'not-run',
   playerMinions: [],
   enemyMinions: [
-    { id: uid('enemy'), name: 'Guard Pup', attack: 1, health: 3, maxHealth: 3, taunt: true, defense: false, race: 'undead', element: 'shadow', statuses: {}, rarity: 'common' },
-    { id: uid('enemy'), name: 'Ash Spirit', attack: 2, health: 2, maxHealth: 2, taunt: false, defense: false, race: 'elemental', element: 'fire', statuses: {}, rarity: 'rare' },
+    { id: uid('enemy'), name: 'Guard Pup', attack: 1, health: 3, maxHealth: 3, taunt: true, defense: false, race: 'undead', element: 'shadow', statuses: {}, rarity: 'common', level: 2 },
+    { id: uid('enemy'), name: 'Ash Spirit', attack: 2, health: 2, maxHealth: 2, taunt: false, defense: false, race: 'elemental', element: 'fire', statuses: {}, rarity: 'rare', level: 3 },
   ],
 };
 
@@ -123,15 +123,24 @@ function performEnemyAttack(attackerId, targetId) {
   spawnDamageNumber(document.querySelector(`[data-id="${attacker.id}"]`), result.damageToAttacker);
 }
 
-function runEnemyTurn() {
+async function runEnemyTurn() {
   const profile = currentAiProfile();
-  if (!profile) return;
+  if (!profile || state.aiThinking) return;
+
+  state.aiThinking = true;
+  state.aiThinkingLine = getThinkingLine(profile);
+  renderPanels();
+
+  const delayMs = getThinkDelay(profile);
+  await new Promise((resolve) => setTimeout(resolve, delayMs));
+
   const action = chooseAction(state, profile);
-  state.lastAiTrace = `${profile.name} -> ${action.trace}`;
+  state.lastAiTrace = `${profile.name} -> ${action.trace} (${delayMs}ms)`;
   if (action.type === 'summon') {
     const summon = createSummon(profile);
     if (summon) {
       summon.maxHealth = summon.health;
+      summon.level = profile.level ?? 1;
       state.enemyMinions.push(summon);
       emitVfx('summon', { side: 'enemy', unit: summon.name });
     }
@@ -145,6 +154,9 @@ function runEnemyTurn() {
     spawnDamageNumber(document.querySelector('[data-target-id="player-hero"]'), 2);
     emitVfx('boss-skill', { skill: 'shadow-roar' });
   }
+
+  state.aiThinking = false;
+  state.aiThinkingLine = '';
   cleanupDead();
   render();
   renderPanels();
@@ -208,6 +220,12 @@ function renderPanels() {
   const bossButton = document.createElement('button'); bossButton.textContent = state.bossMode ? 'Disable Boss Mode' : 'Enable Boss Mode'; bossButton.onclick = () => { state.bossMode = !state.bossMode; renderPanels(); };
   aiHost.append(runButton, bossButton);
   const trace = document.createElement('div'); trace.id = 'ai-trace'; trace.textContent = `Decision trace: ${state.lastAiTrace}`; aiHost.appendChild(trace);
+  if (state.aiThinking) {
+    const thinking = document.createElement('div');
+    thinking.id = 'ai-trace';
+    thinking.textContent = `${state.aiThinkingLine} ...`;
+    aiHost.appendChild(thinking);
+  }
 
   const settings = document.querySelector('#settings-panel');
   settings.innerHTML = '<h3>Settings</h3>';
@@ -381,7 +399,7 @@ function renderLane(selector, minions, playerOwned) {
     node.dataset.defense = String(minion.defense);
     const currentAttack = Math.max(0, minion.attack - (minion.statuses?.weakened ? 1 : 0));
     const hpPct = Math.max(0, Math.min(100, (minion.health / Math.max(1, minion.maxHealth ?? minion.health)) * 100));
-    node.innerHTML = `<strong>${minion.name}</strong><div>${currentAttack}/${minion.health}</div><div class="health-bar"><div class="health-fill" style="width:${hpPct}%"></div></div><div class="meta">${minion.race ?? 'neutral'} · ${minion.element ?? 'none'}</div><div class="status-row">${minion.statuses?.weakened ? '<span class="status">Weakened</span>' : ''}</div><button>Defense</button>`;
+    node.innerHTML = `<strong>${minion.name}</strong><div>${currentAttack}/${minion.health}</div><div class="health-bar"><div class="health-fill" style="width:${hpPct}%"></div></div><div class="meta">${minion.race ?? 'neutral'} · ${minion.element ?? 'none'} · L${minion.level ?? 1}</div><div class="status-row">${minion.statuses?.weakened ? '<span class="status">Weakened</span>' : ''}</div><button>Defense</button>`;
     node.querySelector('button').onclick = () => { minion.defense = !minion.defense; emitVfx('stance-toggle', { id: minion.id, defense: minion.defense }); render(); };
     if (playerOwned) enableAttackDrag(node, minion.id);
     lane.appendChild(node);
@@ -396,7 +414,7 @@ function playCard(cardId) {
   if (card.type === 'minion') {
     state.hand.splice(index, 1);
     state.mana -= card.cost;
-    state.playerMinions.push({ id: uid('m'), name: card.name, attack: card.attack, health: card.health, maxHealth: card.health, taunt: !!card.taunt, defense: false, race: card.race ?? 'neutral', element: card.element ?? 'none', statuses: {}, rarity: card.rarity ?? 'common' });
+    state.playerMinions.push({ id: uid('m'), name: card.name, attack: card.attack, health: card.health, maxHealth: card.health, taunt: !!card.taunt, defense: false, race: card.race ?? 'neutral', element: card.element ?? 'none', statuses: {}, rarity: card.rarity ?? 'common', level: card.level ?? 1 });
     emitVfx('play-card', { cardId: card.id });
     bumpQuestMetric('cardsPlayed', 1);
     render(); renderPanels();

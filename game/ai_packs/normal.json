@@ -2,9 +2,31 @@
   "type": "ai-pack",
   "id": "normal",
   "name": "Normal AI",
-  "weights": { "attackFace": 0.35, "trade": 0.55, "summon": 0.45 },
+  "weights": {
+    "attackFace": 0.35,
+    "trade": 0.55,
+    "summon": 0.45
+  },
   "summons": [
-    { "name": "Stonewarden", "attack": 2, "health": 3, "race": "undead", "element": "shadow" },
-    { "name": "Emberling", "attack": 2, "health": 2, "race": "elemental", "element": "fire" }
+    {
+      "name": "Stonewarden",
+      "attack": 2,
+      "health": 3,
+      "race": "undead",
+      "element": "shadow"
+    },
+    {
+      "name": "Emberling",
+      "attack": 2,
+      "health": 2,
+      "race": "elemental",
+      "element": "fire"
+    }
+  ],
+  "strategy": "tempo",
+  "level": 4,
+  "thinkMsRange": [
+    400,
+    800
   ]
 }

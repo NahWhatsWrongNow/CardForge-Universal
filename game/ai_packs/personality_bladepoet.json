@@ -2,9 +2,29 @@
   "type": "ai-pack",
   "id": "bladepoet",
   "name": "Personality AI: Bladepoet",
-  "weights": { "attackFace": 0.4, "trade": 0.65, "summon": 0.55 },
+  "weights": {
+    "attackFace": 0.4,
+    "trade": 0.65,
+    "summon": 0.55
+  },
   "summons": [
-    { "name": "Velvet Duelist", "attack": 3, "health": 2, "race": "human", "element": "air" }
+    {
+      "name": "Velvet Duelist",
+      "attack": 3,
+      "health": 2,
+      "race": "human",
+      "element": "air"
+    }
   ],
-  "personality": {"title":"Ser Kael, the Bladepoet","backstory":"A knight who writes oaths in moonlight and wins by dramatic, surgical strikes.","dimensionTag":"#Lumen-4"}
+  "personality": {
+    "title": "Ser Kael, the Bladepoet",
+    "backstory": "A knight who writes oaths in moonlight and wins by dramatic, surgical strikes.",
+    "dimensionTag": "#Lumen-4"
+  },
+  "strategy": "tempo",
+  "level": 7,
+  "thinkMsRange": [
+    500,
+    950
+  ]
 }

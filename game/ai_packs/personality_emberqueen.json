@@ -1,0 +1,30 @@
+{
+  "type": "ai-pack",
+  "id": "ember-queen",
+  "name": "Personality AI: Ember Queen",
+  "weights": {
+    "attackFace": 0.8,
+    "trade": 0.5,
+    "summon": 0.7
+  },
+  "strategy": "aggro",
+  "level": 8,
+  "thinkMsRange": [
+    450,
+    900
+  ],
+  "summons": [
+    {
+      "name": "Cinder Matron",
+      "attack": 5,
+      "health": 3,
+      "race": "elemental",
+      "element": "fire"
+    }
+  ],
+  "personality": {
+    "title": "Aurelia, Ember Queen",
+    "backstory": "She burns patience to ash and ends duels before they begin.",
+    "dimensionTag": "#Pyre-3"
+  }
+}
