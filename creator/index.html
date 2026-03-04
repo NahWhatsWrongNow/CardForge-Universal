@@ -39,6 +39,10 @@
         <select name="rarity"><option>common</option><option>rare</option><option>epic</option><option>legendary</option></select>
         <input name="synergy" placeholder="synergy tags csv" />
         <label><input name="taunt" type="checkbox" /> Taunt</label>
+        <label><input name="allowFriendlyAttack" type="checkbox" /> Allowed to attack friendlies</label>
+        <label>Damage displayed color
+          <select name="damageColorMode"><option value="elementalDamage">Elemental Damage</option><option value="elementalAffiliation">Elemental Affiliation</option></select>
+        </label>
         <button type="submit">Preview Card JSON</button>
       </form>
     </section>

@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-03-04T16:34:15.485289Z",
-  "count": 233,
+  "updatedAt": "2026-03-04T17:06:35.683877Z",
+  "count": 263,
   "cards": [
     {
       "id": "river-scout",
@@ -12,7 +12,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "River Scout is documented in the Gen1 chronicles."
     },
     {
       "id": "iron-guard",
@@ -24,7 +27,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Iron Guard is documented in the Gen1 chronicles."
     },
     {
       "id": "ember-adept",
@@ -36,7 +42,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Ember Adept is documented in the Gen1 chronicles."
     },
     {
       "id": "skybound-hunter",
@@ -48,7 +57,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Skybound Hunter is documented in the Gen1 chronicles."
     },
     {
       "id": "grave-oracle",
@@ -60,7 +72,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Grave Oracle is documented in the Gen1 chronicles."
     },
     {
       "id": "wildfang-alpha",
@@ -72,7 +87,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Wildfang Alpha is documented in the Gen1 chronicles."
     },
     {
       "id": "forest-pouncer",
@@ -84,7 +102,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Forest Pouncer is documented in the Gen1 chronicles."
     },
     {
       "id": "tangle-warden",
@@ -96,7 +117,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Tangle Warden is documented in the Gen1 chronicles."
     },
     {
       "id": "grove-guardian",
@@ -108,7 +132,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Grove Guardian is documented in the Gen1 chronicles."
     },
     {
       "id": "crypt-keeper",
@@ -120,7 +147,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Crypt Keeper is documented in the Gen1 chronicles."
     },
     {
       "id": "bone-colossus",
@@ -132,7 +162,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Bone Colossus is documented in the Gen1 chronicles."
     },
     {
       "id": "soul-lantern",
@@ -144,7 +177,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Soul Lantern is documented in the Gen1 chronicles."
     },
     {
       "id": "frost-weaver",
@@ -156,7 +192,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Frost Weaver is documented in the Gen1 chronicles."
     },
     {
       "id": "storm-channeler",
@@ -168,7 +207,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Storm Channeler is documented in the Gen1 chronicles."
     },
     {
       "id": "rift-elemental",
@@ -180,7 +222,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Rift Elemental is documented in the Gen1 chronicles."
     },
     {
       "id": "pyre-hound",
@@ -192,7 +237,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Pyre Hound is documented in the Gen1 chronicles."
     },
     {
       "id": "dune-sentinel",
@@ -204,7 +252,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Dune Sentinel is documented in the Gen1 chronicles."
     },
     {
       "id": "arcane-scholar",
@@ -216,7 +267,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Arcane Scholar is documented in the Gen1 chronicles."
     },
     {
       "id": "totem-caller",
@@ -228,7 +282,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Totem Caller is documented in the Gen1 chronicles."
     },
     {
       "id": "pack-bolt",
@@ -240,7 +297,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Pack Bolt is documented in the Gen1 chronicles."
     },
     {
       "id": "pack-howl",
@@ -252,7 +312,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Pack Howl is documented in the Gen1 chronicles."
     },
     {
       "id": "alpha-command",
@@ -264,7 +327,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Alpha Command is documented in the Gen1 chronicles."
     },
     {
       "id": "primal-charge",
@@ -276,7 +342,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Primal Charge is documented in the Gen1 chronicles."
     },
     {
       "id": "swift-ambush",
@@ -288,7 +357,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Swift Ambush is documented in the Gen1 chronicles."
     },
     {
       "id": "grave-bind",
@@ -300,7 +372,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Grave Bind is documented in the Gen1 chronicles."
     },
     {
       "id": "dark-bargain",
@@ -312,7 +387,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Dark Bargain is documented in the Gen1 chronicles."
     },
     {
       "id": "void-silence",
@@ -324,7 +402,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Void Silence is documented in the Gen1 chronicles."
     },
     {
       "id": "soul-drain",
@@ -336,7 +417,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Soul Drain is documented in the Gen1 chronicles."
     },
     {
       "id": "night-shroud",
@@ -348,7 +432,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Night Shroud is documented in the Gen1 chronicles."
     },
     {
       "id": "mana-surge",
@@ -360,7 +447,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Mana Surge is documented in the Gen1 chronicles."
     },
     {
       "id": "arc-flare",
@@ -372,7 +462,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Arc Flare is documented in the Gen1 chronicles."
     },
     {
       "id": "chain-lightning",
@@ -384,7 +477,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Chain Lightning is documented in the Gen1 chronicles."
     },
     {
       "id": "tidal-burst",
@@ -396,7 +492,10 @@
         "action": "none",
         "amount": 0
       },
-      "tags": []
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Tidal Burst is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-001",
@@ -410,8 +509,10 @@
       },
       "tags": [
         "combo",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 1 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-002",
@@ -425,8 +526,10 @@
       },
       "tags": [
         "combo",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 2 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-003",
@@ -440,8 +543,10 @@
       },
       "tags": [
         "aggressive",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 3 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-004",
@@ -455,8 +560,10 @@
       },
       "tags": [
         "taunt",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 4 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-005",
@@ -470,8 +577,10 @@
       },
       "tags": [
         "tribal",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 5 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-006",
@@ -485,8 +594,10 @@
       },
       "tags": [
         "burn",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 6 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-007",
@@ -500,8 +611,10 @@
       },
       "tags": [
         "tempo",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 7 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-008",
@@ -515,8 +628,10 @@
       },
       "tags": [
         "tribal",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 8 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-009",
@@ -530,8 +645,10 @@
       },
       "tags": [
         "aggressive",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 9 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-010",
@@ -545,8 +662,10 @@
       },
       "tags": [
         "value",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 10 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-011",
@@ -560,8 +679,10 @@
       },
       "tags": [
         "spellcraft",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 11 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-012",
@@ -575,8 +696,10 @@
       },
       "tags": [
         "aggressive",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 12 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-013",
@@ -590,8 +713,10 @@
       },
       "tags": [
         "tempo",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 13 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-014",
@@ -605,8 +730,10 @@
       },
       "tags": [
         "summon",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 14 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-015",
@@ -620,8 +747,10 @@
       },
       "tags": [
         "aggressive",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 15 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-016",
@@ -635,8 +764,10 @@
       },
       "tags": [
         "value",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 16 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-017",
@@ -650,8 +781,10 @@
       },
       "tags": [
         "summon",
-        "combo"
-      ]
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 17 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-018",
@@ -665,8 +798,10 @@
       },
       "tags": [
         "summon",
-        "combo"
-      ]
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 18 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-019",
@@ -680,8 +815,10 @@
       },
       "tags": [
         "summon",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 19 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-020",
@@ -695,8 +832,10 @@
       },
       "tags": [
         "burn",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 20 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-021",
@@ -710,8 +849,10 @@
       },
       "tags": [
         "summon",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 21 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-022",
@@ -725,8 +866,10 @@
       },
       "tags": [
         "control",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 22 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-023",
@@ -740,8 +883,10 @@
       },
       "tags": [
         "burn",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 23 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-024",
@@ -755,8 +900,10 @@
       },
       "tags": [
         "summon",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 24 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-025",
@@ -770,8 +917,10 @@
       },
       "tags": [
         "combo",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 25 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-026",
@@ -785,8 +934,10 @@
       },
       "tags": [
         "spellcraft",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 26 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-027",
@@ -800,8 +951,10 @@
       },
       "tags": [
         "control",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 27 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-028",
@@ -815,8 +968,10 @@
       },
       "tags": [
         "burn",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 28 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-029",
@@ -830,8 +985,10 @@
       },
       "tags": [
         "aggressive",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 29 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-030",
@@ -845,8 +1002,10 @@
       },
       "tags": [
         "tempo",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 30 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-031",
@@ -860,8 +1019,10 @@
       },
       "tags": [
         "burn",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 31 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-032",
@@ -875,8 +1036,10 @@
       },
       "tags": [
         "tribal",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 32 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-033",
@@ -890,8 +1053,10 @@
       },
       "tags": [
         "tribal",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 33 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-034",
@@ -905,8 +1070,10 @@
       },
       "tags": [
         "combo",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 34 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-035",
@@ -920,8 +1087,10 @@
       },
       "tags": [
         "spellcraft",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 35 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-036",
@@ -935,8 +1104,10 @@
       },
       "tags": [
         "combo",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 36 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-037",
@@ -950,8 +1121,10 @@
       },
       "tags": [
         "spellcraft",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 37 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-038",
@@ -965,8 +1138,10 @@
       },
       "tags": [
         "spellcraft",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 38 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-039",
@@ -980,8 +1155,10 @@
       },
       "tags": [
         "aggressive",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 39 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-040",
@@ -995,8 +1172,10 @@
       },
       "tags": [
         "tempo",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 40 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-041",
@@ -1010,8 +1189,10 @@
       },
       "tags": [
         "taunt",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 41 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-042",
@@ -1025,8 +1206,10 @@
       },
       "tags": [
         "aggressive",
-        "combo"
-      ]
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 42 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-043",
@@ -1040,8 +1223,10 @@
       },
       "tags": [
         "tribal",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 43 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-044",
@@ -1055,8 +1240,10 @@
       },
       "tags": [
         "burn",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 44 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-045",
@@ -1070,8 +1257,10 @@
       },
       "tags": [
         "value",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 45 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-046",
@@ -1085,8 +1274,10 @@
       },
       "tags": [
         "summon",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 46 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-047",
@@ -1100,8 +1291,10 @@
       },
       "tags": [
         "tribal",
-        "combo"
-      ]
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 47 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-048",
@@ -1115,8 +1308,10 @@
       },
       "tags": [
         "combo",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 48 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-049",
@@ -1130,8 +1325,10 @@
       },
       "tags": [
         "value",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 49 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-050",
@@ -1145,8 +1342,10 @@
       },
       "tags": [
         "value",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 50 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-051",
@@ -1160,8 +1359,10 @@
       },
       "tags": [
         "summon",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 51 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-052",
@@ -1175,8 +1376,10 @@
       },
       "tags": [
         "combo",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 52 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-053",
@@ -1190,8 +1393,10 @@
       },
       "tags": [
         "summon",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 53 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-054",
@@ -1205,8 +1410,10 @@
       },
       "tags": [
         "burn",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 54 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-055",
@@ -1220,8 +1427,10 @@
       },
       "tags": [
         "aggressive",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 55 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-056",
@@ -1235,8 +1444,10 @@
       },
       "tags": [
         "control",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 56 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-057",
@@ -1250,8 +1461,10 @@
       },
       "tags": [
         "control",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 57 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-058",
@@ -1265,8 +1478,10 @@
       },
       "tags": [
         "aggressive",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 58 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-059",
@@ -1280,8 +1495,10 @@
       },
       "tags": [
         "combo",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 59 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-060",
@@ -1295,8 +1512,10 @@
       },
       "tags": [
         "value",
-        "combo"
-      ]
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 60 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-061",
@@ -1310,8 +1529,10 @@
       },
       "tags": [
         "summon",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 61 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-062",
@@ -1325,8 +1546,10 @@
       },
       "tags": [
         "control",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 62 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-063",
@@ -1340,8 +1563,10 @@
       },
       "tags": [
         "spellcraft",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 63 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-064",
@@ -1355,8 +1580,10 @@
       },
       "tags": [
         "spellcraft",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 64 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-065",
@@ -1370,8 +1597,10 @@
       },
       "tags": [
         "combo",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 65 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-066",
@@ -1385,8 +1614,10 @@
       },
       "tags": [
         "aggressive",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 66 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-067",
@@ -1400,8 +1631,10 @@
       },
       "tags": [
         "value",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 67 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-068",
@@ -1415,8 +1648,10 @@
       },
       "tags": [
         "tempo",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 68 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-069",
@@ -1430,8 +1665,10 @@
       },
       "tags": [
         "spellcraft",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 69 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-070",
@@ -1445,8 +1682,10 @@
       },
       "tags": [
         "summon",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 70 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-071",
@@ -1460,8 +1699,10 @@
       },
       "tags": [
         "tempo",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 71 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-072",
@@ -1475,8 +1716,10 @@
       },
       "tags": [
         "tribal",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 72 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-073",
@@ -1490,8 +1733,10 @@
       },
       "tags": [
         "tribal",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 73 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-074",
@@ -1505,8 +1750,10 @@
       },
       "tags": [
         "burn",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 74 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-075",
@@ -1520,8 +1767,10 @@
       },
       "tags": [
         "spellcraft",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 75 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-076",
@@ -1535,8 +1784,10 @@
       },
       "tags": [
         "tempo",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 76 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-077",
@@ -1550,8 +1801,10 @@
       },
       "tags": [
         "value",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 77 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-078",
@@ -1565,8 +1818,10 @@
       },
       "tags": [
         "control",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 78 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-079",
@@ -1580,8 +1835,10 @@
       },
       "tags": [
         "summon",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 79 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-080",
@@ -1595,8 +1852,10 @@
       },
       "tags": [
         "tempo",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 80 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-081",
@@ -1610,8 +1869,10 @@
       },
       "tags": [
         "spellcraft",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 81 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-082",
@@ -1625,8 +1886,10 @@
       },
       "tags": [
         "tribal",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 82 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-083",
@@ -1640,8 +1903,10 @@
       },
       "tags": [
         "spellcraft",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 83 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-084",
@@ -1655,8 +1920,10 @@
       },
       "tags": [
         "spellcraft",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 84 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-085",
@@ -1670,8 +1937,10 @@
       },
       "tags": [
         "value",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 85 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-086",
@@ -1685,8 +1954,10 @@
       },
       "tags": [
         "summon",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 86 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-087",
@@ -1700,8 +1971,10 @@
       },
       "tags": [
         "value",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 87 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-088",
@@ -1715,8 +1988,10 @@
       },
       "tags": [
         "aggressive",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 88 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-089",
@@ -1730,8 +2005,10 @@
       },
       "tags": [
         "taunt",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 89 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-090",
@@ -1745,8 +2022,10 @@
       },
       "tags": [
         "combo",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 90 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-091",
@@ -1760,8 +2039,10 @@
       },
       "tags": [
         "tempo",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 91 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-092",
@@ -1775,8 +2056,10 @@
       },
       "tags": [
         "combo",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 92 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-093",
@@ -1790,8 +2073,10 @@
       },
       "tags": [
         "combo",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 93 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-094",
@@ -1805,8 +2090,10 @@
       },
       "tags": [
         "value",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 94 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-095",
@@ -1820,8 +2107,10 @@
       },
       "tags": [
         "spellcraft",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 95 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-096",
@@ -1835,8 +2124,10 @@
       },
       "tags": [
         "combo",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 96 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-097",
@@ -1850,8 +2141,10 @@
       },
       "tags": [
         "burn",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 97 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-098",
@@ -1865,8 +2158,10 @@
       },
       "tags": [
         "tempo",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 98 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-099",
@@ -1880,8 +2175,10 @@
       },
       "tags": [
         "value",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 99 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-100",
@@ -1895,8 +2192,10 @@
       },
       "tags": [
         "value",
-        "combo"
-      ]
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 100 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-101",
@@ -1910,8 +2209,10 @@
       },
       "tags": [
         "burn",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 101 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-102",
@@ -1925,8 +2226,10 @@
       },
       "tags": [
         "combo",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 102 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-103",
@@ -1940,8 +2243,10 @@
       },
       "tags": [
         "combo",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 103 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-104",
@@ -1955,8 +2260,10 @@
       },
       "tags": [
         "spellcraft",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 104 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-105",
@@ -1970,8 +2277,10 @@
       },
       "tags": [
         "summon",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 105 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-106",
@@ -1985,8 +2294,10 @@
       },
       "tags": [
         "spellcraft",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 106 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-107",
@@ -2000,8 +2311,10 @@
       },
       "tags": [
         "summon",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 107 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-108",
@@ -2015,8 +2328,10 @@
       },
       "tags": [
         "combo",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 108 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-109",
@@ -2030,8 +2345,10 @@
       },
       "tags": [
         "value",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 109 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-110",
@@ -2045,8 +2362,10 @@
       },
       "tags": [
         "control",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 110 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-111",
@@ -2060,8 +2379,10 @@
       },
       "tags": [
         "combo",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 111 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-112",
@@ -2075,8 +2396,10 @@
       },
       "tags": [
         "taunt",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 112 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-113",
@@ -2090,8 +2413,10 @@
       },
       "tags": [
         "control",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 113 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-114",
@@ -2105,8 +2430,10 @@
       },
       "tags": [
         "aggressive",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 114 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-115",
@@ -2120,8 +2447,10 @@
       },
       "tags": [
         "tempo",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 115 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-116",
@@ -2135,8 +2464,10 @@
       },
       "tags": [
         "taunt",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 116 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-117",
@@ -2150,8 +2481,10 @@
       },
       "tags": [
         "aggressive",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 117 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-118",
@@ -2165,8 +2498,10 @@
       },
       "tags": [
         "control",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 118 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-119",
@@ -2180,8 +2515,10 @@
       },
       "tags": [
         "tribal",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 119 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-minion-120",
@@ -2195,8 +2532,10 @@
       },
       "tags": [
         "tribal",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 120 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-001",
@@ -2210,8 +2549,10 @@
       },
       "tags": [
         "spellcraft",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 1 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-002",
@@ -2225,8 +2566,10 @@
       },
       "tags": [
         "summon",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 2 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-003",
@@ -2240,8 +2583,10 @@
       },
       "tags": [
         "tribal",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 3 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-004",
@@ -2255,8 +2600,10 @@
       },
       "tags": [
         "burn",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 4 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-005",
@@ -2270,8 +2617,10 @@
       },
       "tags": [
         "control",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 5 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-006",
@@ -2285,8 +2634,10 @@
       },
       "tags": [
         "summon",
-        "combo"
-      ]
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 6 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-007",
@@ -2300,8 +2651,10 @@
       },
       "tags": [
         "tribal",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 7 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-008",
@@ -2315,8 +2668,10 @@
       },
       "tags": [
         "spellcraft",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 8 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-009",
@@ -2330,8 +2685,10 @@
       },
       "tags": [
         "aggressive",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 9 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-010",
@@ -2345,8 +2702,10 @@
       },
       "tags": [
         "control",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 10 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-011",
@@ -2360,8 +2719,10 @@
       },
       "tags": [
         "aggressive",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 11 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-012",
@@ -2375,8 +2736,10 @@
       },
       "tags": [
         "taunt",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 12 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-013",
@@ -2390,8 +2753,10 @@
       },
       "tags": [
         "tribal",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 13 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-014",
@@ -2405,8 +2770,10 @@
       },
       "tags": [
         "tribal",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 14 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-015",
@@ -2420,8 +2787,10 @@
       },
       "tags": [
         "tempo",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 15 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-016",
@@ -2435,8 +2804,10 @@
       },
       "tags": [
         "summon",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 16 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-017",
@@ -2450,8 +2821,10 @@
       },
       "tags": [
         "tempo",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 17 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-018",
@@ -2465,8 +2838,10 @@
       },
       "tags": [
         "summon",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 18 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-019",
@@ -2480,8 +2855,10 @@
       },
       "tags": [
         "summon",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 19 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-020",
@@ -2495,8 +2872,10 @@
       },
       "tags": [
         "spellcraft",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 20 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-021",
@@ -2510,8 +2889,10 @@
       },
       "tags": [
         "spellcraft",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 21 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-022",
@@ -2525,8 +2906,10 @@
       },
       "tags": [
         "spellcraft",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 22 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-023",
@@ -2540,8 +2923,10 @@
       },
       "tags": [
         "burn",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 23 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-024",
@@ -2555,8 +2940,10 @@
       },
       "tags": [
         "tempo",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 24 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-025",
@@ -2570,8 +2957,10 @@
       },
       "tags": [
         "tempo",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 25 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-026",
@@ -2585,8 +2974,10 @@
       },
       "tags": [
         "spellcraft",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 26 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-027",
@@ -2600,8 +2991,10 @@
       },
       "tags": [
         "combo",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 27 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-028",
@@ -2615,8 +3008,10 @@
       },
       "tags": [
         "aggressive",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 28 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-029",
@@ -2630,8 +3025,10 @@
       },
       "tags": [
         "summon",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 29 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-030",
@@ -2645,8 +3042,10 @@
       },
       "tags": [
         "aggressive",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 30 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-031",
@@ -2660,8 +3059,10 @@
       },
       "tags": [
         "taunt",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 31 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-032",
@@ -2675,8 +3076,10 @@
       },
       "tags": [
         "taunt",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 32 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-033",
@@ -2690,8 +3093,10 @@
       },
       "tags": [
         "tempo",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 33 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-034",
@@ -2705,8 +3110,10 @@
       },
       "tags": [
         "control",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 34 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-035",
@@ -2720,8 +3127,10 @@
       },
       "tags": [
         "tribal",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 35 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-036",
@@ -2735,8 +3144,10 @@
       },
       "tags": [
         "tribal",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 36 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-037",
@@ -2750,8 +3161,10 @@
       },
       "tags": [
         "value",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 37 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-038",
@@ -2765,8 +3178,10 @@
       },
       "tags": [
         "summon",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 38 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-039",
@@ -2780,8 +3195,10 @@
       },
       "tags": [
         "aggressive",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 39 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-040",
@@ -2795,8 +3212,10 @@
       },
       "tags": [
         "spellcraft",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 40 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-041",
@@ -2810,8 +3229,10 @@
       },
       "tags": [
         "tribal",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 41 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-042",
@@ -2825,8 +3246,10 @@
       },
       "tags": [
         "value",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 42 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-043",
@@ -2840,8 +3263,10 @@
       },
       "tags": [
         "tribal",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 43 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-044",
@@ -2855,8 +3280,10 @@
       },
       "tags": [
         "tribal",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 44 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-045",
@@ -2870,8 +3297,10 @@
       },
       "tags": [
         "combo",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 45 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-046",
@@ -2885,8 +3314,10 @@
       },
       "tags": [
         "spellcraft",
-        "tempo"
-      ]
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 46 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-047",
@@ -2900,8 +3331,10 @@
       },
       "tags": [
         "summon",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 47 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-048",
@@ -2915,8 +3348,10 @@
       },
       "tags": [
         "taunt",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 48 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-049",
@@ -2930,8 +3365,10 @@
       },
       "tags": [
         "control",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 49 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-050",
@@ -2945,8 +3382,10 @@
       },
       "tags": [
         "spellcraft",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 50 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-051",
@@ -2960,8 +3399,10 @@
       },
       "tags": [
         "summon",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 51 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-052",
@@ -2975,8 +3416,10 @@
       },
       "tags": [
         "summon",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 52 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-053",
@@ -2990,8 +3433,10 @@
       },
       "tags": [
         "control",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 53 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-054",
@@ -3005,8 +3450,10 @@
       },
       "tags": [
         "control",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 54 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-055",
@@ -3020,8 +3467,10 @@
       },
       "tags": [
         "control",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 55 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-056",
@@ -3035,8 +3484,10 @@
       },
       "tags": [
         "aggressive",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 56 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-057",
@@ -3050,8 +3501,10 @@
       },
       "tags": [
         "tempo",
-        "combo"
-      ]
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 57 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-058",
@@ -3065,8 +3518,10 @@
       },
       "tags": [
         "taunt",
-        "combo"
-      ]
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 58 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-059",
@@ -3080,8 +3535,10 @@
       },
       "tags": [
         "control",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 59 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-060",
@@ -3095,8 +3552,10 @@
       },
       "tags": [
         "combo",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 60 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-061",
@@ -3110,8 +3569,10 @@
       },
       "tags": [
         "tempo",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 61 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-062",
@@ -3125,8 +3586,10 @@
       },
       "tags": [
         "control",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 62 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-063",
@@ -3140,8 +3603,10 @@
       },
       "tags": [
         "summon",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 63 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-064",
@@ -3155,8 +3620,10 @@
       },
       "tags": [
         "value",
-        "combo"
-      ]
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 64 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-065",
@@ -3170,8 +3637,10 @@
       },
       "tags": [
         "spellcraft",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 65 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-066",
@@ -3185,8 +3654,10 @@
       },
       "tags": [
         "taunt",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 66 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-067",
@@ -3200,8 +3671,10 @@
       },
       "tags": [
         "tempo",
-        "combo"
-      ]
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 67 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-068",
@@ -3215,8 +3688,10 @@
       },
       "tags": [
         "combo",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 68 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-069",
@@ -3230,8 +3705,10 @@
       },
       "tags": [
         "combo",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 69 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-070",
@@ -3245,8 +3722,10 @@
       },
       "tags": [
         "value",
-        "summon"
-      ]
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 70 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-071",
@@ -3260,8 +3739,10 @@
       },
       "tags": [
         "tempo",
-        "control"
-      ]
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 71 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-072",
@@ -3275,8 +3756,10 @@
       },
       "tags": [
         "control",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 72 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-073",
@@ -3290,8 +3773,10 @@
       },
       "tags": [
         "taunt",
-        "tribal"
-      ]
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 73 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-074",
@@ -3305,8 +3790,10 @@
       },
       "tags": [
         "value",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 74 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-075",
@@ -3320,8 +3807,10 @@
       },
       "tags": [
         "tribal",
-        "aggressive"
-      ]
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 75 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-076",
@@ -3335,8 +3824,10 @@
       },
       "tags": [
         "summon",
-        "burn"
-      ]
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 76 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-077",
@@ -3350,8 +3841,10 @@
       },
       "tags": [
         "summon",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 77 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-078",
@@ -3365,8 +3858,10 @@
       },
       "tags": [
         "tribal",
-        "taunt"
-      ]
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 78 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-079",
@@ -3380,8 +3875,10 @@
       },
       "tags": [
         "value",
-        "spellcraft"
-      ]
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 79 is documented in the Gen1 chronicles."
     },
     {
       "id": "generated-spell-080",
@@ -3395,8 +3892,480 @@
       },
       "tags": [
         "summon",
-        "value"
-      ]
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 80 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "gen2-minion-1",
+      "name": "Venom Crown Adept",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Venom Crown Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-2",
+      "name": "Abyss Needle Adept",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Abyss Needle Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-3",
+      "name": "Sunflare Judge Adept",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Sunflare Judge Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-4",
+      "name": "Mire Oracle Adept",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Mire Oracle Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-5",
+      "name": "Storm Herald Adept",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Storm Herald Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-6",
+      "name": "Rift Siren Adept",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Rift Siren Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-7",
+      "name": "Grave Botanist Adept",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 6,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Grave Botanist Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-8",
+      "name": "Cinder Saint Adept",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Cinder Saint Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-9",
+      "name": "Tidebreaker Adept",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Tidebreaker Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-10",
+      "name": "Ashen Falcon Adept",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Ashen Falcon Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-spell-1",
+      "name": "Poison Hex 1",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 1: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-2",
+      "name": "Shadow Hex 2",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 2: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-3",
+      "name": "Fire Hex 3",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 3: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-4",
+      "name": "Water Hex 4",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 4: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-5",
+      "name": "Arcane Hex 5",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 2,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 5: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-6",
+      "name": "Poison Hex 6",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 6: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-7",
+      "name": "Shadow Hex 7",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 7: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-8",
+      "name": "Fire Hex 8",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 8: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-9",
+      "name": "Water Hex 9",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 9: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-10",
+      "name": "Arcane Hex 10",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 10: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-11",
+      "name": "Poison Hex 11",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 11: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-12",
+      "name": "Shadow Hex 12",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 12: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-13",
+      "name": "Fire Hex 13",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 13: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-14",
+      "name": "Water Hex 14",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 14: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-15",
+      "name": "Arcane Hex 15",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 15: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-16",
+      "name": "Poison Hex 16",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 16: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-17",
+      "name": "Shadow Hex 17",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 2,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 17: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-18",
+      "name": "Fire Hex 18",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 18: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-19",
+      "name": "Water Hex 19",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 19: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-20",
+      "name": "Arcane Hex 20",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 20: a hero-focused debuff rite."
     }
   ]
 }

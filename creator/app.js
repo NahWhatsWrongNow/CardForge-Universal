@@ -77,19 +77,25 @@ function explainAbility(ability) {
 
 function setupCardTemplates() {
   const select = document.querySelector('#card-template-select');
-  const templates = registry.list('creatorCardPacks').flatMap((pack) => pack.cards ?? []).filter((c) => c.template);
+  const packTemplates = registry.list('creatorCardPacks').flatMap((pack) => pack.cards ?? []).filter((c) => c.template);
+  const abilityTemplates = registry.list('abilityPacks').flatMap((pack) => pack.templates ?? []);
+  const generated = abilityTemplates.flatMap((template) => ([
+    { id: `minion-${template.id}`, name: `Minion Template: ${template.name}`, type: 'minion', cost: 3, attack: 3, health: 3, abilityTemplateId: template.id, template: true },
+    { id: `spell-${template.id}`, name: `Spell Template: ${template.name}`, type: 'spell', cost: 2, damage: template.effect?.amount ?? 2, abilityTemplateId: template.id, template: true },
+  ]));
+  const templates = [
+    { id: 'blank-minion', name: 'Blank Minion', type: 'minion', cost: 1, attack: 1, health: 1, template: true },
+    { id: 'blank-spell', name: 'Blank Spell', type: 'spell', cost: 1, damage: 0, template: true },
+    ...packTemplates,
+    ...generated,
+  ];
+
   templates.forEach((template) => {
     const option = document.createElement('option');
     option.value = template.id;
     option.textContent = `${template.name} (${template.type})`;
     select.appendChild(option);
   });
-  if (templates.length === 0) {
-    const option = document.createElement('option');
-    option.value = '';
-    option.textContent = 'No templates loaded';
-    select.appendChild(option);
-  }
 
   document.querySelector('#use-template').onclick = () => {
     const template = templates.find((entry) => entry.id === select.value);
@@ -107,9 +113,9 @@ function setupCardTemplates() {
     form.elements.rarity.value = template.rarity ?? 'common';
     form.elements.synergy.value = (template.synergy ?? []).join(',');
     form.elements.taunt.checked = !!template.taunt;
+    form.elements.allowFriendlyAttack.checked = !!template.allowFriendlyAttack;
   };
 }
-
 function setupCardCreator() {
   const form = document.querySelector('#card-form');
   const preview = document.querySelector('#preview');
@@ -117,9 +123,9 @@ function setupCardCreator() {
     event.preventDefault();
     const data = new FormData(form);
     const cardType = data.get('cardType');
-    const base = { id: data.get('id'), name: data.get('name'), type: cardType, cost: Number(data.get('cost')), rarity: data.get('rarity'), race: data.get('race') || null, element: data.get('element') || null };
+    const base = { id: data.get('id'), name: data.get('name'), type: cardType, cost: Number(data.get('cost')), rarity: data.get('rarity'), race: data.get('race') || null, element: data.get('element') || null, damageColorMode: data.get('damageColorMode') || 'elementalDamage' };
     const card = cardType === 'minion'
-      ? { ...base, attack: Number(data.get('attack')), health: Number(data.get('health')), taunt: data.get('taunt') === 'on' }
+      ? { ...base, attack: Number(data.get('attack')), health: Number(data.get('health')), taunt: data.get('taunt') === 'on', allowFriendlyAttack: data.get('allowFriendlyAttack') === 'on' }
       : { ...base, damage: Number(data.get('damage')), synergy: String(data.get('synergy') || '').split(',').map((s) => s.trim()).filter(Boolean) };
     preview.textContent = JSON.stringify(card, null, 2);
   });

@@ -1,1 +1,6 @@
-{ "entries": ["starter_cards.json"] }
+{
+  "entries": [
+    "gen1_cards.json",
+    "gen2_cards.json"
+  ]
+}

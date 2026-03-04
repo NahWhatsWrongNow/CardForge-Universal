@@ -1,39 +1,17 @@
-:root {
-  color-scheme: dark;
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-}
-body {
-  margin: 0;
-  min-height: 100dvh;
-  background: radial-gradient(circle at 20% 20%, #1f2a44, #0b1020 65%);
-  display: grid;
-  place-items: center;
-  color: #f5f6ff;
-}
-.launcher {
-  max-width: 620px;
-  padding: 2rem;
-  border-radius: 16px;
-  background: rgba(20, 24, 42, 0.88);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
-}
-.links { display: flex; gap: 1rem; }
-a {
-  background: #6f7cff;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.7rem 1rem;
-  border-radius: 10px;
-}
+:root { color-scheme: dark; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+body { margin: 0; min-height: 100dvh; background: radial-gradient(circle at 20% 20%, #1f2a44, #0b1020 65%); display: grid; place-items: center; color: #f5f6ff; }
+.launcher { width:min(920px,92vw); padding: 2rem; border-radius: 16px; background: rgba(20, 24, 42, 0.88); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35); }
+.links { display: flex; gap: 1rem; flex-wrap:wrap; }
+a,button { background: #6f7cff; color:#fff; text-decoration: none; border:none; padding: 0.7rem 1rem; border-radius: 10px; cursor:pointer; }
 .hint { opacity: 0.8; }
-
-button { background: #3f67ff; color:#fff; border:none; padding:.7rem 1rem; border-radius:10px; cursor:pointer; }
-#menu-panels { margin-top:1rem; }
-.menu-panel { background: rgba(20,24,42,.88); border:1px solid #344167; border-radius:12px; padding: .8rem; }
+.menu-panel { margin-top:1rem; background: rgba(20,24,42,.88); border:1px solid #344167; border-radius:12px; padding: .8rem; }
 .hidden { display:none; }
-#cardex-list { max-height: 320px; overflow:auto; display:grid; gap:.3rem; margin-top:.5rem; }
-#cardex-list article { padding:.35rem .45rem; border-radius:8px; background:#11182e; border:1px solid #2d3f6b; }
+.lobby-tabs { display:flex; gap:.5rem; margin-bottom:.6rem; }
+.tab-body { background:#0f152b; border:1px solid #2d3f6b; border-radius:10px; padding:.7rem; }
+#deck-list,#cardex-list { max-height: 320px; overflow:auto; display:grid; gap:.3rem; margin-top:.5rem; }
+#deck-list article,#cardex-list article { padding:.45rem .55rem; border-radius:8px; background:#11182e; border:1px solid #2d3f6b; }
 #cardex-search { width:100%; margin-top:.4rem; padding:.45rem; border-radius:8px; border:1px solid #45527a; background:#11172d; color:#eef; }
+.cardex-card span { opacity:.8; font-size:.85rem; margin-left:.5rem; }
 .rarity-common { border-left:4px solid #bdbdbd; }
 .rarity-rare { border-left:4px solid #5ea5ff; }
 .rarity-epic { border-left:4px solid #c06fff; }

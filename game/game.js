@@ -18,7 +18,7 @@ const state = {
   mana: 3,
   hand: [],
   rivalryPacks: [], quests: [], storeProducts: [], aiProfiles: [], backdrops: [], playlists: [], cardBacks: [], themes: [], decks: [],
-  deckMode: 'planning', deckSearch: '', selectedDeckId: null, selectedAiId: null, bossMode: false, aiThinking: false, aiThinkingLine: '', lastAiTrace: 'not-run',
+  deckMode: 'planning', deckSearch: '', selectedDeckId: null, selectedAiId: null, bossMode: false, aiThinking: false, aiThinkingLine: '', lastAiTrace: 'not-run', selectedPlayerSlot: null, selectedAttackerId: null, logHidden: false,
   playerMinions: [],
   enemyMinions: [
     { id: uid('enemy'), name: 'Guard Pup', attack: 1, health: 3, maxHealth: 3, taunt: true, defense: false, race: 'undead', element: 'shadow', statuses: {}, rarity: 'common', level: 2 },
@@ -46,11 +46,15 @@ function applyThemeAndSettings() {
   const board = document.querySelector('#board');
   const backdrop = state.backdrops.find((item) => item.id === state.profile.settings.selectedBackdrop) ?? state.backdrops[0];
   if (backdrop?.css) board.style.background = backdrop.css;
+  board.style.backgroundSize = 'cover';
+  board.style.backgroundPosition = 'center';
   const theme = state.themes.find((item) => item.id === state.profile.settings.selectedTheme) ?? state.themes[0];
   if (theme) {
     document.body.style.background = theme.appBg;
     document.querySelectorAll('.panel').forEach((panel) => { panel.style.background = theme.panelBg; });
     document.documentElement.style.setProperty('--accent', theme.accent);
+    if (theme.hpStart) document.documentElement.style.setProperty('--hp-start', theme.hpStart);
+    if (theme.hpEnd) document.documentElement.style.setProperty('--hp-end', theme.hpEnd);
   }
   document.body.style.transform = `scale(${state.profile.settings.uiScale})`;
   document.body.style.transformOrigin = 'top center';
@@ -171,7 +175,12 @@ async function runEnemyTurn() {
 
 
 function endTurn() {
+  if (state.enemyHeroPoison) {
+    state.enemyHealth -= state.enemyHeroPoison;
+    spawnDamageNumber(document.querySelector('[data-target-id=\"enemy-hero\"]'), state.enemyHeroPoison, 'poison');
+  }
   state.mana = 3;
+  state.selectedAttackerId = null;
   state.hand = getAllCards().slice(0, 5).map((card) => ({ ...card, instanceId: uid('card') }));
   runEnemyTurn();
   render();
@@ -196,113 +205,10 @@ function renderPanels() {
     questHost.appendChild(row);
   });
 
-  const shop = document.querySelector('#shop-panel');
-  shop.innerHTML = '<h3>Shop</h3>';
-  const giftButton = document.createElement('button');
-  giftButton.textContent = 'Daily Gift (+75g)';
-  giftButton.onclick = claimDailyGift;
-  shop.appendChild(giftButton);
-  state.storeProducts.forEach((product) => {
-    const row = document.createElement('div');
-    row.innerHTML = `<div><strong>${product.name}</strong> - ${product.price}g</div><div>${product.description ?? ''}</div>`;
-    const b1 = document.createElement('button'); b1.textContent = 'Buy x1'; b1.onclick = () => buyAndOpen(product.id, 1);
-    const b5 = document.createElement('button'); b5.textContent = 'Buy x5'; b5.onclick = () => buyAndOpen(product.id, 5, 0.9);
-    b1.disabled = state.profile.economy.gold < product.price;
-    b5.disabled = state.profile.economy.gold < Math.floor(product.price * 4.5);
-    row.append(b1, b5);
-    shop.appendChild(row);
-  });
-
-  const aiHost = document.querySelector('#ai-panel');
-  aiHost.innerHTML = '<h3>AI</h3>';
-  const aiSelect = document.createElement('select');
-  state.aiProfiles.forEach((profile) => {
-    const option = document.createElement('option');
-    option.value = profile.id;
-    option.textContent = profile.name;
-    option.selected = profile.id === state.selectedAiId;
-    aiSelect.appendChild(option);
-  });
-  aiSelect.onchange = () => { state.selectedAiId = aiSelect.value; renderPanels(); };
-  aiHost.appendChild(aiSelect);
-  const profile = currentAiProfile();
-  if (profile?.personality) {
-    const lore = document.createElement('div'); lore.id = 'ai-trace';
-    lore.textContent = `${profile.personality.title} ${profile.personality.dimensionTag}: ${profile.personality.backstory}`;
-    aiHost.appendChild(lore);
+  const slotHelp = document.querySelector('#slot-help');
+  if (slotHelp) {
+    slotHelp.innerHTML = '<h3>Battle Slots</h3><div>8 fixed minion slots per side.</div><div>Click an empty player slot before summoning from hand.</div><div>Click your minion, then click a target to attack.</div>';
   }
-  const runButton = document.createElement('button'); runButton.textContent = state.aiThinking ? 'Thinking...' : 'Run Enemy Turn'; runButton.disabled = state.aiThinking; runButton.onclick = runEnemyTurn;
-  const bossButton = document.createElement('button'); bossButton.textContent = state.bossMode ? 'Disable Boss Mode' : 'Enable Boss Mode'; bossButton.onclick = () => { state.bossMode = !state.bossMode; renderPanels(); };
-  aiHost.append(runButton, bossButton);
-  const trace = document.createElement('div'); trace.id = 'ai-trace'; trace.textContent = `Decision trace: ${state.lastAiTrace}`; aiHost.appendChild(trace);
-  if (state.aiThinking) {
-    const thinking = document.createElement('div');
-    thinking.id = 'ai-trace';
-    thinking.textContent = `${state.aiThinkingLine} ...`;
-    aiHost.appendChild(thinking);
-  }
-
-  const settings = document.querySelector('#settings-panel');
-  settings.innerHTML = '<h3>Settings</h3>';
-  const themeSelect = document.createElement('select');
-  state.themes.forEach((entry) => {
-    const option = document.createElement('option'); option.value = entry.id; option.textContent = `Theme: ${entry.name}`; option.selected = state.profile.settings.selectedTheme === entry.id; themeSelect.appendChild(option);
-  });
-  themeSelect.onchange = () => { state.profile.settings.selectedTheme = themeSelect.value; persistProfile(); applyThemeAndSettings(); };
-  settings.appendChild(themeSelect);
-
-  const backdrop = document.createElement('select');
-  state.backdrops.forEach((entry) => {
-    const option = document.createElement('option'); option.value = entry.id; option.textContent = `Backdrop: ${entry.name}`; option.selected = state.profile.settings.selectedBackdrop === entry.id; backdrop.appendChild(option);
-  });
-  backdrop.onchange = () => { state.profile.settings.selectedBackdrop = backdrop.value; persistProfile(); applyThemeAndSettings(); };
-  settings.appendChild(backdrop);
-
-  const playlist = document.createElement('select');
-  state.playlists.forEach((entry) => {
-    const option = document.createElement('option'); option.value = entry.id; option.textContent = `Playlist: ${entry.name}`; option.selected = state.profile.settings.selectedPlaylist === entry.id; playlist.appendChild(option);
-  });
-  playlist.onchange = () => { state.profile.settings.selectedPlaylist = playlist.value; persistProfile(); };
-  settings.appendChild(playlist);
-
-  const cardBack = document.createElement('select');
-  state.cardBacks.forEach((entry) => {
-    const option = document.createElement('option'); option.value = entry.id; option.textContent = `Card Back: ${entry.name}`; option.selected = state.profile.settings.selectedCardBack === entry.id; cardBack.appendChild(option);
-  });
-  cardBack.onchange = () => { state.profile.settings.selectedCardBack = cardBack.value; persistProfile(); render(); };
-  settings.appendChild(cardBack);
-
-  [['High Contrast','highContrast'],['Reduce Motion','reduceMotion']].forEach(([label,key])=>{
-    const btn=document.createElement('button'); btn.textContent=`${label}: ${state.profile.settings[key]?'On':'Off'}`;
-    btn.onclick=()=>{ state.profile.settings[key]=!state.profile.settings[key]; persistProfile(); applyThemeAndSettings(); renderPanels(); };
-    settings.appendChild(btn);
-  });
-
-  const deck = document.querySelector('#deckbuilder-panel');
-  deck.innerHTML = '<h3>Deck Builder</h3>';
-  const mode = document.createElement('select');
-  mode.innerHTML = `<option value="planning" ${state.deckMode === 'planning' ? 'selected' : ''}>Planning (all cards)</option><option value="final" ${state.deckMode === 'final' ? 'selected' : ''}>Final (owned)</option>`;
-  mode.onchange = () => { state.deckMode = mode.value; renderPanels(); };
-  deck.appendChild(mode);
-  const deckSelect = document.createElement('select');
-  state.decks.forEach((d)=>{ const opt=document.createElement('option'); opt.value=d.id; opt.textContent=d.name; opt.selected=d.id===state.selectedDeckId; deckSelect.appendChild(opt); });
-  deckSelect.onchange = () => { state.selectedDeckId = deckSelect.value; renderPanels(); };
-  deck.appendChild(deckSelect);
-  const search = document.createElement('input'); search.placeholder='Search cards...'; search.value=state.deckSearch; search.oninput=()=>{ state.deckSearch=search.value.toLowerCase(); renderPanels();}; deck.appendChild(search);
-
-  const selectedDeck = getSelectedDeck();
-  if (selectedDeck) {
-    const total = selectedDeck.entries.reduce((sum, entry) => sum + entry.count, 0);
-    const preview = document.createElement('div'); preview.id = 'deck-preview'; preview.textContent = `${selectedDeck.name}: ${total}/30 cards`; deck.appendChild(preview);
-  }
-
-  const list = document.createElement('div'); list.id = 'deck-list';
-  const visibleCards = getAllCards()
-    .filter((card) => state.deckMode === 'planning' || (state.profile.collection[card.id] ?? 0) > 0)
-    .filter((card) => card.name.toLowerCase().includes(state.deckSearch))
-    .sort((a,b)=>compatibilityScore(b, selectedDeck)-compatibilityScore(a, selectedDeck));
-  visibleCards.forEach((card)=>{ const row=document.createElement('article'); row.textContent=`${card.name} (${card.type}) • compat ${compatibilityScore(card, selectedDeck)} • owned ${state.profile.collection[card.id] ?? 0}`; list.appendChild(row); });
-  deck.appendChild(list);
 }
 
 async function buyAndOpen(productId, quantity = 1, discount = 1) {
@@ -313,7 +219,8 @@ async function buyAndOpen(productId, quantity = 1, discount = 1) {
   state.profile.economy.gold -= totalPrice;
   for (let i = 0; i < quantity; i += 1) {
     const pityState = state.profile.economy.pityByProduct[product.id] ?? { missesUntilGuaranteed: 0 };
-    const opened = openPack(getAllCards(), product, pityState);
+    const pool = product.poolTag ? getAllCards().filter((card) => (card.tags ?? []).includes(product.poolTag)) : getAllCards();
+    const opened = openPack(pool, product, pityState);
     state.profile.economy.pityByProduct[product.id] = opened.pityState;
     state.profile.stats.packsOpened += 1;
     opened.pulls.forEach((card) => { state.profile.collection[card.id] = (state.profile.collection[card.id] ?? 0) + 1; });
@@ -407,40 +314,97 @@ function renderLane(selector, minions, playerOwned) {
   const lane = document.querySelector(selector);
   const opponents = playerOwned ? state.enemyMinions : state.playerMinions;
   lane.innerHTML = '';
-  minions.forEach((minion) => {
+
+  for (let i = 0; i < 8; i += 1) {
+    const slot = document.createElement('div');
+    slot.className = 'board-slot';
+    slot.dataset.slotIndex = String(i);
+    const minion = minions[i];
+
+    if (!minion) {
+      slot.textContent = playerOwned ? `Player Slot ${i + 1}` : `Enemy Slot ${i + 1}`;
+      if (playerOwned) {
+        slot.onclick = () => { state.selectedPlayerSlot = i; render(); };
+        if (state.selectedPlayerSlot === i) slot.classList.add('selected');
+      }
+      lane.appendChild(slot);
+      continue;
+    }
+
     const node = document.createElement('div');
     const indicators = getRivalryIndicators(minion, opponents, state, playerOwned ? 'player' : 'enemy');
-    node.className = `minion target rarity-${minion.rarity ?? 'common'} ${minion.taunt ? 'taunt' : ''} ${indicators.hasAdvantage ? 'rivalry-advantage' : ''} ${indicators.hasDisadvantage ? 'rivalry-danger' : ''}`;
+    node.className = `minion target rarity-${minion.rarity ?? 'common'} ${minion.taunt ? 'taunt' : ''} ${indicators.hasAdvantage ? 'rivalry-advantage' : ''} ${indicators.hasDisadvantage ? 'rivalry-danger' : ''} ${state.selectedAttackerId === minion.id ? 'selected-attacker' : ''}`;
     node.dataset.id = minion.id;
     node.dataset.targetId = minion.id;
     node.dataset.defense = String(minion.defense);
     const currentAttack = Math.max(0, minion.attack - (minion.statuses?.weakened ? 1 : 0));
     const hpPct = Math.max(0, Math.min(100, (minion.health / Math.max(1, minion.maxHealth ?? minion.health)) * 100));
     node.innerHTML = `<strong>${minion.name}</strong><div>${currentAttack}/${minion.health}</div><div class="health-bar"><div class="health-fill" style="width:${hpPct}%"></div></div><div class="meta">${minion.race ?? 'neutral'} · ${minion.element ?? 'none'} · L${minion.level ?? 1}</div><div class="status-row">${minion.statuses?.weakened ? '<span class="status">Weakened</span>' : ''}</div><button>Defense</button>`;
-    node.querySelector('button').onclick = () => { minion.defense = !minion.defense; emitVfx('stance-toggle', { id: minion.id, defense: minion.defense }); render(); };
-    if (playerOwned) enableAttackDrag(node, minion.id);
-    lane.appendChild(node);
-  });
+    node.querySelector('button').onclick = (event) => { event.stopPropagation(); minion.defense = !minion.defense; emitVfx('stance-toggle', { id: minion.id, defense: minion.defense }); render(); };
+
+    if (playerOwned) {
+      node.onclick = () => {
+        if (state.selectedAttackerId && state.selectedAttackerId !== minion.id) {
+          attackWith(state.selectedAttackerId, minion.id);
+          state.selectedAttackerId = null;
+          render();
+          return;
+        }
+        state.selectedAttackerId = minion.id;
+        highlightAttackTargets(minion.id);
+        render();
+      };
+      enableAttackDrag(node, minion.id);
+    }
+
+    slot.appendChild(node);
+    lane.appendChild(slot);
+  }
 }
 
-function playCard(cardId) {
+function playCard(cardId, slotOverride = null) {
   const index = state.hand.findIndex((c) => c.instanceId === cardId);
   if (index === -1) return;
   const card = state.hand[index];
   if (card.cost > state.mana) { showHint(explainInvalidAction('mana')); return; }
+
   if (card.type === 'minion') {
+    if (state.playerMinions.length >= 8) { showHint('Board is full (8/8).'); return; }
+    const slot = slotOverride ?? state.selectedPlayerSlot ?? state.playerMinions.length;
+    if (slot < 0 || slot > 7) { showHint('Select a board slot first.'); return; }
+    const summon = { id: uid('m'), name: card.name, attack: card.attack, health: card.health, maxHealth: card.health, taunt: !!card.taunt, defense: false, race: card.race ?? 'neutral', element: card.element ?? 'none', statuses: {}, rarity: card.rarity ?? 'common', level: card.level ?? 1, allowFriendlyAttack: !!card.allowFriendlyAttack };
     state.hand.splice(index, 1);
     state.mana -= card.cost;
-    state.playerMinions.push({ id: uid('m'), name: card.name, attack: card.attack, health: card.health, maxHealth: card.health, taunt: !!card.taunt, defense: false, race: card.race ?? 'neutral', element: card.element ?? 'none', statuses: {}, rarity: card.rarity ?? 'common', level: card.level ?? 1 });
+    state.playerMinions.splice(slot, 0, summon);
+    state.playerMinions = state.playerMinions.slice(0, 8);
     emitVfx('play-card', { cardId: card.id });
     bumpQuestMetric('cardsPlayed', 1);
     render(); renderPanels();
     return;
   }
-  if (card.type === 'spell' && state.playerMinions.length > 0 && state.enemyMinions.length > 0) {
-    const spell = resolveSpellPower(state.playerMinions[0], state.enemyMinions[0], card.damage ?? 0, state, 'player');
-    state.enemyMinions[0].health -= spell.power;
-    spawnDamageNumber(document.querySelector(`[data-id="${state.enemyMinions[0].id}"]`), spell.power);
+
+  if (card.type === 'spell') {
+    const action = card.effect?.action ?? 'dealDamage';
+    const amount = card.effect?.amount ?? card.damage ?? 0;
+    const enemyHero = document.querySelector('[data-target-id="enemy-hero"]');
+
+    if (action === 'poisonHero') {
+      state.enemyHeroPoison = (state.enemyHeroPoison ?? 0) + amount;
+      spawnDamageNumber(enemyHero, amount, 'poison');
+    } else if (action === 'weakenAllEnemies') {
+      state.enemyMinions.forEach((m) => { m.statuses.weakened = true; });
+    } else {
+      const target = state.enemyMinions[0];
+      if (target) {
+        const spell = resolveSpellPower(state.playerMinions[0] ?? { race: 'none', element: 'none' }, target, amount, state, 'player');
+        target.health -= spell.power;
+        spawnDamageNumber(document.querySelector(`[data-id="${target.id}"]`), spell.power, card.element ?? target.element);
+      } else {
+        state.enemyHealth -= amount;
+        spawnDamageNumber(enemyHero, amount, card.element ?? 'arcane');
+      }
+    }
+
     state.hand.splice(index, 1);
     state.mana -= card.cost;
     bumpQuestMetric('cardsPlayed', 1);
@@ -448,33 +412,34 @@ function playCard(cardId) {
     render(); renderPanels();
   }
 }
-
 function attackWith(attackerId, targetId) {
   const attacker = state.playerMinions.find((m) => m.id === attackerId);
   if (!attacker || attacker.defense) return;
+  const friendlyTarget = state.playerMinions.find((m) => m.id === targetId);
   const forcedTaunt = state.enemyMinions.find((m) => m.taunt);
-  if (forcedTaunt && targetId !== forcedTaunt.id) return;
+  if (!friendlyTarget && forcedTaunt && targetId !== forcedTaunt.id) return;
+
   const attackerEl = document.querySelector(`[data-id="${attacker.id}"]`);
   const targetEl = document.querySelector(`[data-target-id="${targetId}"]`);
+
   if (targetId === 'enemy-hero') {
     if (state.enemyMinions.length > 0) return;
     state.enemyHealth -= attacker.attack;
-    spawnDamageNumber(targetEl, attacker.attack);
+    spawnDamageNumber(targetEl, attacker.attack, attacker.element ?? 'arcane');
   } else {
-    const defender = state.enemyMinions.find((m) => m.id === targetId);
+    const defender = state.enemyMinions.find((m) => m.id === targetId) ?? (attacker.allowFriendlyAttack ? state.playerMinions.find((m) => m.id === targetId) : null);
     if (!defender) return;
     const result = resolveCombat(attacker, defender, state, 'player');
     defender.health -= result.damageToDefender;
     attacker.health -= result.damageToAttacker;
-    spawnDamageNumber(document.querySelector(`[data-id="${defender.id}"]`), result.damageToDefender);
-    spawnDamageNumber(attackerEl, result.damageToAttacker);
+    spawnDamageNumber(document.querySelector(`[data-id="${defender.id}"]`), result.damageToDefender, attacker.element ?? defender.element);
+    spawnDamageNumber(attackerEl, result.damageToAttacker, defender.element ?? 'shadow');
   }
   drawAttackLine(attackerEl, targetEl);
   emitVfx('attack', { attackerId, targetId });
   cleanupDead();
   render();
 }
-
 function cleanupDead() {
   state.playerMinions = state.playerMinions.filter((m) => m.health > 0);
   state.enemyMinions = state.enemyMinions.filter((m) => m.health > 0);
@@ -494,13 +459,15 @@ function drawAttackLine(fromEl, toEl) {
   setTimeout(() => { svg.innerHTML = ''; }, 260);
 }
 
-function spawnDamageNumber(targetEl, amount) {
+function spawnDamageNumber(targetEl, amount, element = 'arcane') {
   if (!targetEl || amount <= 0) return;
   const boardRect = document.querySelector('#board').getBoundingClientRect();
   const rect = targetEl.getBoundingClientRect();
   const node = document.createElement('div');
   node.className = 'damage-float';
   node.textContent = `-${amount}`;
+  const colors = { fire: '#ff8a5b', water: '#67b8ff', shadow: '#b38cff', nature: '#7de092', arcane: '#c0d2ff', holy: '#ffe799', poison: '#9df75f' };
+  node.style.color = colors[element] ?? '#ffd0d8';
   node.style.left = `${rect.left + rect.width / 2 - boardRect.left}px`;
   node.style.top = `${rect.top + rect.height / 2 - boardRect.top}px`;
   document.querySelector('#float-layer').appendChild(node);
@@ -524,7 +491,10 @@ function highlightAttackTargets(attackerId) {
   }
   const enemyNodes = document.querySelectorAll('#enemy-minions .minion');
   if (enemyNodes.length > 0) enemyNodes.forEach((node) => node.classList.add('target-valid'));
-  else document.querySelector('[data-target-id="enemy-hero"]').classList.add('target-valid');
+  else document.querySelector('[data-target-id=\"enemy-hero\"]').classList.add('target-valid');
+  if (attacker.allowFriendlyAttack) {
+    document.querySelectorAll('#player-minions .minion').forEach((node) => { if (node.dataset.id !== attackerId) node.classList.add('target-valid'); });
+  }
 }
 
 function dragWithGhost(node, onMove, onDrop) {
@@ -544,8 +514,11 @@ function dragWithGhost(node, onMove, onDrop) {
 
 function enableCardDrag(node, cardId) {
   dragWithGhost(node, () => highlightCardPlayTargets(), (e) => {
-    const drop = document.elementFromPoint(e.clientX, e.clientY)?.closest('#drop-zone');
-    if (drop) playCard(cardId);
+    const target = document.elementFromPoint(e.clientX, e.clientY);
+    const slotNode = target?.closest('#player-minions .board-slot');
+    const drop = target?.closest('#drop-zone');
+    if (slotNode) playCard(cardId, Number(slotNode.dataset.slotIndex));
+    else if (drop) playCard(cardId);
   });
 }
 
@@ -572,9 +545,13 @@ function handleConsoleCommand(raw) {
     render();
     return;
   }
+  if (cmd === './Lobby') {
+    window.location.assign('../index.html#lobby');
+    return;
+  }
   if (cmd === './help') {
-    toast('Commands: ./help, ./DevAbil, ./ResetProgress', 'info');
-    log('Available commands: ./help | ./DevAbil | ./ResetProgress');
+    toast('Commands: ./help, ./DevAbil, ./ResetProgress, ./Lobby', 'info');
+    log('Available commands: ./help | ./DevAbil | ./ResetProgress | ./Lobby');
     return;
   }
   toast('Unknown command. Use ./help', 'error');
@@ -593,7 +570,13 @@ document.querySelector('#chat-send').addEventListener('click', () => {
 });
 
 document.querySelector('#menu-btn').addEventListener('click', () => { window.location.assign('../index.html'); });
+document.querySelector('#lobby-btn').addEventListener('click', () => { window.location.assign('../index.html#lobby'); });
 document.querySelector('#win-demo').addEventListener('click', claimDemoWin);
 document.querySelector('#end-turn').addEventListener('click', endTurn);
+document.querySelector('#toggle-log').addEventListener('click', () => {
+  state.logHidden = !state.logHidden;
+  document.querySelector('#log').classList.toggle('hidden', state.logHidden);
+  document.querySelector('#toggle-log').textContent = state.logHidden ? 'Show Log' : 'Hide Log';
+});
 
 boot();

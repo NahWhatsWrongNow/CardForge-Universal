@@ -10,12 +10,16 @@
   <div id="app">
     <header>
       <h1>CardForge Runtime</h1>
-      <button id="menu-btn">Menu</button>
+      <div class="header-actions">
+        <button id="lobby-btn">Lobby</button>
+        <button id="menu-btn">Menu</button>
+      </div>
     </header>
 
     <section id="console-row">
       <input id="chat-input" placeholder="Type commands (./help)" />
       <button id="chat-send">Enter</button>
+      <button id="toggle-log">Hide Log</button>
     </section>
 
     <section id="economy-bar">
@@ -32,11 +36,11 @@
       </div>
       <div id="enemy-minions" class="lane"></div>
       <div id="player-minions" class="lane"></div>
-      <div class="hero player" data-target-id="player-hero">
+      <div class="hero player target" data-target-id="player-hero">
         Player Hero <span id="player-health">30</span>
         <div class="health-bar"><div id="player-hero-bar" class="health-fill"></div></div>
       </div>
-      <div id="drop-zone" class="target">Drag cards here to play</div>
+      <div id="drop-zone" class="target">Drag cards to a slot to play</div>
       <svg id="attack-layer"></svg>
       <div id="float-layer"></div>
     </section>
@@ -47,8 +51,7 @@
         <aside id="ai-panel" class="panel"></aside>
         <aside id="settings-panel" class="panel"></aside>
       </div>
-      <div class="column"><aside id="shop-panel" class="panel"></aside></div>
-      <div class="column"><aside id="deckbuilder-panel" class="panel"></aside></div>
+      <div class="column"><aside id="slot-help" class="panel"></aside></div>
     </section>
 
     <section id="pack-opening" class="panel hidden">

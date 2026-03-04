@@ -9,56 +9,140 @@
 <body>
   <main class="launcher">
     <h1>CardForge Universal</h1>
-    <p>Modular card game runtime + creator suite.</p>
+    <p>Build decks in the Lobby, then simulate them in battle.</p>
 
     <div class="links">
       <a href="./game/index.html">Play Game</a>
       <a href="./creator/index.html">Open Creator</a>
-      <button id="open-options">Options</button>
-      <button id="open-shop">Shop Info</button>
-      <button id="open-other">Other</button>
+      <button id="open-lobby">Lobby</button>
     </div>
 
-    <section id="menu-panels">
-      <article id="options-panel" class="menu-panel hidden"><h2>Options</h2><p>In-game options are available under Settings panel in Runtime.</p></article>
-      <article id="shop-panel" class="menu-panel hidden"><h2>Shop</h2><p>Shop is available in Runtime with Daily Gift and pack bundles.</p></article>
-      <article id="other-panel" class="menu-panel hidden"><h2>Carnex (auto-updating card index)</h2><div id="cardex-meta"></div><input id="cardex-search" placeholder="Search Carnex cards..." /><div id="cardex-list"></div></article>
+    <section id="lobby-panel" class="menu-panel hidden">
+      <h2>Lobby</h2>
+      <div class="lobby-tabs">
+        <button data-tab="deck">Deck Builder</button>
+        <button data-tab="shop">Shop</button>
+        <button data-tab="carnifex">Carnifex</button>
+      </div>
+      <div id="deck-tab" class="tab-body"></div>
+      <div id="shop-tab" class="tab-body hidden"></div>
+      <div id="carnifex-tab" class="tab-body hidden">
+        <div id="cardex-meta"></div>
+        <input id="cardex-search" placeholder="Search cards, abilities, tags..." />
+        <div id="cardex-list"></div>
+      </div>
     </section>
 
     <p class="hint">Run with <code>python -m http.server 8080</code></p>
   </main>
 
-  <script>
-    const panels = ['options-panel', 'shop-panel', 'other-panel'];
-    function show(id) {
-      panels.forEach((pid) => document.getElementById(pid).classList.toggle('hidden', pid !== id));
-    }
-    document.getElementById('open-options').onclick = () => show('options-panel');
-    document.getElementById('open-shop').onclick = () => show('shop-panel');
-    document.getElementById('open-other').onclick = async () => {
-      show('other-panel');
-      const res = await fetch('./cardex.json');
-      const payload = await res.json();
-      const meta = document.getElementById('cardex-meta');
-      const list = document.getElementById('cardex-list');
-      const search = document.getElementById('cardex-search');
-      meta.textContent = `Updated: ${payload.updatedAt} • Cards: ${payload.count}`;
-      const render = () => {
-        const q = search.value.trim().toLowerCase();
-        list.innerHTML = '';
-        payload.cards
-          .filter((c) => c.name.toLowerCase().includes(q))
-          .slice(0, 250)
-          .forEach((card) => {
-            const row = document.createElement('article');
-            row.className = `rarity-${card.rarity}`;
-            row.textContent = `${card.name} [${card.type}] cost ${card.cost} • ability: ${card.ability.action} ${card.ability.amount}`;
-            list.appendChild(row);
-          });
-      };
-      search.oninput = render;
-      render();
-    };
-  </script>
+<script type="module">
+const STORAGE_KEY = 'cardforge.profile.v1';
+const lobby = document.getElementById('lobby-panel');
+const openLobby = document.getElementById('open-lobby');
+
+function loadProfile() {
+  const base = { economy: { gold: 400 }, collection: {}, customDecks: [], starterDeckId: 'starter-balanced-core' };
+  try { return { ...base, ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') }; } catch { return base; }
+}
+function saveProfile(profile) { localStorage.setItem(STORAGE_KEY, JSON.stringify(profile)); }
+
+openLobby.onclick = async () => {
+  lobby.classList.remove('hidden');
+  await renderDeckTab();
+  await renderShopTab();
+  await renderCarnifex();
+  showTab('deck');
+};
+if (window.location.hash === '#lobby') openLobby.click();
+
+document.querySelectorAll('[data-tab]').forEach((button) => button.onclick = () => showTab(button.dataset.tab));
+function showTab(tab) {
+  ['deck', 'shop', 'carnifex'].forEach((id) => document.getElementById(`${id}-tab`).classList.toggle('hidden', id !== tab));
+}
+
+async function renderDeckTab() {
+  const host = document.getElementById('deck-tab');
+  const profile = loadProfile();
+  const cards = (await (await fetch('./cardex.json')).json()).cards;
+  const response = await fetch('./game/deck_packs/starter_decks.json');
+  const deckPack = await response.json();
+  const allDecks = [...(deckPack.decks || []), ...(profile.customDecks || [])];
+  host.innerHTML = '<h3>Deck Builder + Simulator</h3>';
+
+  const deckSelect = document.createElement('select');
+  allDecks.forEach((deck) => {
+    const option = document.createElement('option');
+    option.value = deck.id;
+    option.textContent = `${deck.name} (${deck.entries.reduce((s, e) => s + e.count, 0)}/30)`;
+    option.selected = deck.id === profile.starterDeckId;
+    deckSelect.appendChild(option);
+  });
+  host.appendChild(deckSelect);
+
+  const setButton = document.createElement('button');
+  setButton.textContent = 'Set as Simulation Deck';
+  setButton.onclick = () => { profile.starterDeckId = deckSelect.value; saveProfile(profile); };
+  host.appendChild(setButton);
+
+  const saveButton = document.createElement('button');
+  saveButton.textContent = 'Save Copy to Custom Decks';
+  saveButton.onclick = () => {
+    const chosen = allDecks.find((d) => d.id === deckSelect.value);
+    if (!chosen) return;
+    const cloned = { ...chosen, id: `${chosen.id}-custom-${Date.now()}`, name: `${chosen.name} (Custom)` };
+    profile.customDecks = [...(profile.customDecks || []), cloned];
+    saveProfile(profile);
+    renderDeckTab();
+  };
+  host.appendChild(saveButton);
+
+  const list = document.createElement('div');
+  list.id = 'deck-list';
+  const selected = allDecks.find((d) => d.id === deckSelect.value) || allDecks[0];
+  (selected?.entries || []).forEach((entry) => {
+    const card = cards.find((c) => c.id === entry.cardId);
+    const row = document.createElement('article');
+    row.textContent = `${entry.count}x ${card?.name || entry.cardId}`;
+    list.appendChild(row);
+  });
+  host.appendChild(list);
+}
+
+async function renderShopTab() {
+  const host = document.getElementById('shop-tab');
+  const profile = loadProfile();
+  const store = await (await fetch('./game/store_packs/starter_store.json')).json();
+  host.innerHTML = `<h3>Shop</h3><div>Gold: ${profile.economy?.gold ?? 0}</div>`;
+  (store.products || []).forEach((p) => {
+    const row = document.createElement('article');
+    row.textContent = `${p.name} (${p.price}g) - ${p.description}`;
+    host.appendChild(row);
+  });
+}
+
+async function renderCarnifex() {
+  const payload = await (await fetch('./cardex.json')).json();
+  const meta = document.getElementById('cardex-meta');
+  const list = document.getElementById('cardex-list');
+  const search = document.getElementById('cardex-search');
+  meta.textContent = `Updated: ${payload.updatedAt} • Cards: ${payload.count}`;
+  const render = () => {
+    const q = search.value.trim().toLowerCase();
+    list.innerHTML = '';
+    payload.cards
+      .filter((c) => `${c.name} ${c.type} ${(c.tags || []).join(' ')} ${JSON.stringify(c.ability || {})}`.toLowerCase().includes(q))
+      .slice(0, 300)
+      .forEach((card) => {
+        const row = document.createElement('article');
+        row.className = `rarity-${card.rarity} cardex-card`;
+        row.innerHTML = `<strong>${card.name}</strong> <span>${card.type} • ${card.rarity}</span><div>Cost ${card.cost} • ${card.ability?.action || 'none'} ${card.ability?.amount || ''}</div>`;
+        list.appendChild(row);
+      });
+  };
+  search.oninput = render;
+  render();
+}
+</script>
 </body>
 </html>

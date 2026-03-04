@@ -1,0 +1,527 @@
+{
+  "type": "card-pack",
+  "id": "gen2-hero-debuffs",
+  "name": "GEN2 Hero Debuff Arsenal",
+  "cards": [
+    {
+      "id": "gen2-minion-1",
+      "name": "Venom Crown Adept",
+      "type": "minion",
+      "cost": 4,
+      "attack": 3,
+      "health": 4,
+      "race": "mystic",
+      "element": "shadow",
+      "rarity": "epic",
+      "allowFriendlyAttack": false,
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Venom Crown Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-2",
+      "name": "Abyss Needle Adept",
+      "type": "minion",
+      "cost": 5,
+      "attack": 4,
+      "health": 5,
+      "race": "mystic",
+      "element": "fire",
+      "rarity": "legendary",
+      "allowFriendlyAttack": true,
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Abyss Needle Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-3",
+      "name": "Sunflare Judge Adept",
+      "type": "minion",
+      "cost": 6,
+      "attack": 5,
+      "health": 6,
+      "race": "mystic",
+      "element": "water",
+      "rarity": "rare",
+      "allowFriendlyAttack": false,
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Sunflare Judge Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-4",
+      "name": "Mire Oracle Adept",
+      "type": "minion",
+      "cost": 3,
+      "attack": 2,
+      "health": 7,
+      "race": "mystic",
+      "element": "arcane",
+      "rarity": "epic",
+      "allowFriendlyAttack": true,
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Mire Oracle Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-5",
+      "name": "Storm Herald Adept",
+      "type": "minion",
+      "cost": 4,
+      "attack": 3,
+      "health": 3,
+      "race": "mystic",
+      "element": "poison",
+      "rarity": "legendary",
+      "allowFriendlyAttack": false,
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Storm Herald Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-6",
+      "name": "Rift Siren Adept",
+      "type": "minion",
+      "cost": 5,
+      "attack": 4,
+      "health": 4,
+      "race": "mystic",
+      "element": "shadow",
+      "rarity": "rare",
+      "allowFriendlyAttack": true,
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Rift Siren Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-7",
+      "name": "Grave Botanist Adept",
+      "type": "minion",
+      "cost": 6,
+      "attack": 5,
+      "health": 5,
+      "race": "mystic",
+      "element": "fire",
+      "rarity": "epic",
+      "allowFriendlyAttack": false,
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Grave Botanist Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-8",
+      "name": "Cinder Saint Adept",
+      "type": "minion",
+      "cost": 3,
+      "attack": 2,
+      "health": 6,
+      "race": "mystic",
+      "element": "water",
+      "rarity": "legendary",
+      "allowFriendlyAttack": true,
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Cinder Saint Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-9",
+      "name": "Tidebreaker Adept",
+      "type": "minion",
+      "cost": 4,
+      "attack": 3,
+      "health": 7,
+      "race": "mystic",
+      "element": "arcane",
+      "rarity": "rare",
+      "allowFriendlyAttack": false,
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Tidebreaker Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-10",
+      "name": "Ashen Falcon Adept",
+      "type": "minion",
+      "cost": 5,
+      "attack": 4,
+      "health": 3,
+      "race": "mystic",
+      "element": "poison",
+      "rarity": "epic",
+      "allowFriendlyAttack": true,
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Ashen Falcon Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-spell-1",
+      "name": "Poison Hex 1",
+      "type": "spell",
+      "cost": 2,
+      "damage": 1,
+      "element": "poison",
+      "rarity": "rare",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 1: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-2",
+      "name": "Shadow Hex 2",
+      "type": "spell",
+      "cost": 3,
+      "damage": 2,
+      "element": "shadow",
+      "rarity": "epic",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 2: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-3",
+      "name": "Fire Hex 3",
+      "type": "spell",
+      "cost": 4,
+      "damage": 3,
+      "element": "fire",
+      "rarity": "legendary",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 3: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-4",
+      "name": "Water Hex 4",
+      "type": "spell",
+      "cost": 5,
+      "damage": 4,
+      "element": "water",
+      "rarity": "rare",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 4: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-5",
+      "name": "Arcane Hex 5",
+      "type": "spell",
+      "cost": 2,
+      "damage": 5,
+      "element": "arcane",
+      "rarity": "epic",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 5: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-6",
+      "name": "Poison Hex 6",
+      "type": "spell",
+      "cost": 3,
+      "damage": 1,
+      "element": "poison",
+      "rarity": "legendary",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 6: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-7",
+      "name": "Shadow Hex 7",
+      "type": "spell",
+      "cost": 4,
+      "damage": 2,
+      "element": "shadow",
+      "rarity": "rare",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 7: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-8",
+      "name": "Fire Hex 8",
+      "type": "spell",
+      "cost": 5,
+      "damage": 3,
+      "element": "fire",
+      "rarity": "epic",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 8: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-9",
+      "name": "Water Hex 9",
+      "type": "spell",
+      "cost": 2,
+      "damage": 4,
+      "element": "water",
+      "rarity": "legendary",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 9: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-10",
+      "name": "Arcane Hex 10",
+      "type": "spell",
+      "cost": 3,
+      "damage": 5,
+      "element": "arcane",
+      "rarity": "rare",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 10: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-11",
+      "name": "Poison Hex 11",
+      "type": "spell",
+      "cost": 4,
+      "damage": 1,
+      "element": "poison",
+      "rarity": "epic",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 11: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-12",
+      "name": "Shadow Hex 12",
+      "type": "spell",
+      "cost": 5,
+      "damage": 2,
+      "element": "shadow",
+      "rarity": "legendary",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 12: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-13",
+      "name": "Fire Hex 13",
+      "type": "spell",
+      "cost": 2,
+      "damage": 3,
+      "element": "fire",
+      "rarity": "rare",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 13: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-14",
+      "name": "Water Hex 14",
+      "type": "spell",
+      "cost": 3,
+      "damage": 4,
+      "element": "water",
+      "rarity": "epic",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 14: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-15",
+      "name": "Arcane Hex 15",
+      "type": "spell",
+      "cost": 4,
+      "damage": 5,
+      "element": "arcane",
+      "rarity": "legendary",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 15: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-16",
+      "name": "Poison Hex 16",
+      "type": "spell",
+      "cost": 5,
+      "damage": 1,
+      "element": "poison",
+      "rarity": "rare",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 16: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-17",
+      "name": "Shadow Hex 17",
+      "type": "spell",
+      "cost": 2,
+      "damage": 2,
+      "element": "shadow",
+      "rarity": "epic",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 17: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-18",
+      "name": "Fire Hex 18",
+      "type": "spell",
+      "cost": 3,
+      "damage": 3,
+      "element": "fire",
+      "rarity": "legendary",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 18: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-19",
+      "name": "Water Hex 19",
+      "type": "spell",
+      "cost": 4,
+      "damage": 4,
+      "element": "water",
+      "rarity": "rare",
+      "effect": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 19: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-20",
+      "name": "Arcane Hex 20",
+      "type": "spell",
+      "cost": 5,
+      "damage": 5,
+      "element": "arcane",
+      "rarity": "epic",
+      "effect": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 20: a hero-focused debuff rite."
+    }
+  ]
+}
