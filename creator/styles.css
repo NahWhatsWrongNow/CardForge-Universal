@@ -1,0 +1,6 @@
+body { margin: 0; font-family: system-ui, sans-serif; background: #0f1325; color: #eef; }
+main { max-width: 800px; margin: 0 auto; padding: 1rem; }
+#plugin-list article { background: #1a1f39; margin: 0.4rem 0; border-radius: 8px; padding: 0.6rem; }
+form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.6rem; }
+input, button { padding: 0.5rem; border-radius: 8px; border: 1px solid #43507a; background: #11172d; color: #eef; }
+pre { background: #0b1020; padding: 0.75rem; border-radius: 8px; overflow: auto; }

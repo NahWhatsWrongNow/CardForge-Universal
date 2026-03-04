@@ -1,0 +1,1 @@
+{ "type": "ai-pack", "id": "easy", "name": "Easy AI", "weights": { "attackFace": 0.2, "trade": 0.8 } }
