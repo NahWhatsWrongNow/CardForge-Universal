@@ -1,0 +1,4371 @@
+{
+  "updatedAt": "2026-03-04T17:06:35.683877Z",
+  "count": 263,
+  "cards": [
+    {
+      "id": "river-scout",
+      "name": "River Scout",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "River Scout is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "iron-guard",
+      "name": "Iron Guard",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Iron Guard is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "ember-adept",
+      "name": "Ember Adept",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Ember Adept is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "skybound-hunter",
+      "name": "Skybound Hunter",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Skybound Hunter is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "grave-oracle",
+      "name": "Grave Oracle",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Grave Oracle is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "wildfang-alpha",
+      "name": "Wildfang Alpha",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Wildfang Alpha is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "forest-pouncer",
+      "name": "Forest Pouncer",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Forest Pouncer is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "tangle-warden",
+      "name": "Tangle Warden",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Tangle Warden is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "grove-guardian",
+      "name": "Grove Guardian",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Grove Guardian is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "crypt-keeper",
+      "name": "Crypt Keeper",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Crypt Keeper is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "bone-colossus",
+      "name": "Bone Colossus",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Bone Colossus is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "soul-lantern",
+      "name": "Soul Lantern",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Soul Lantern is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "frost-weaver",
+      "name": "Frost Weaver",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Frost Weaver is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "storm-channeler",
+      "name": "Storm Channeler",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Storm Channeler is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "rift-elemental",
+      "name": "Rift Elemental",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 6,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Rift Elemental is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "pyre-hound",
+      "name": "Pyre Hound",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Pyre Hound is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "dune-sentinel",
+      "name": "Dune Sentinel",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Dune Sentinel is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "arcane-scholar",
+      "name": "Arcane Scholar",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Arcane Scholar is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "totem-caller",
+      "name": "Totem Caller",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Totem Caller is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "pack-bolt",
+      "name": "Pack Bolt",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Pack Bolt is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "pack-howl",
+      "name": "Pack Howl",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Pack Howl is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "alpha-command",
+      "name": "Alpha Command",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Alpha Command is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "primal-charge",
+      "name": "Primal Charge",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Primal Charge is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "swift-ambush",
+      "name": "Swift Ambush",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Swift Ambush is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "grave-bind",
+      "name": "Grave Bind",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Grave Bind is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "dark-bargain",
+      "name": "Dark Bargain",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Dark Bargain is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "void-silence",
+      "name": "Void Silence",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Void Silence is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "soul-drain",
+      "name": "Soul Drain",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Soul Drain is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "night-shroud",
+      "name": "Night Shroud",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Night Shroud is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "mana-surge",
+      "name": "Mana Surge",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Mana Surge is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "arc-flare",
+      "name": "Arc Flare",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Arc Flare is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "chain-lightning",
+      "name": "Chain Lightning",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Chain Lightning is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "tidal-burst",
+      "name": "Tidal Burst",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN1"
+      ],
+      "bibliography": "Tidal Burst is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-001",
+      "name": "Forged Minion 1",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 1 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-002",
+      "name": "Forged Minion 2",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "combo",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 2 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-003",
+      "name": "Forged Minion 3",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 3 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-004",
+      "name": "Forged Minion 4",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "taunt",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 4 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-005",
+      "name": "Forged Minion 5",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "tribal",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 5 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-006",
+      "name": "Forged Minion 6",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 1,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "burn",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 6 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-007",
+      "name": "Forged Minion 7",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "tempo",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 7 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-008",
+      "name": "Forged Minion 8",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 8 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-009",
+      "name": "Forged Minion 9",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "tags": [
+        "aggressive",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 9 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-010",
+      "name": "Forged Minion 10",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 10 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-011",
+      "name": "Forged Minion 11",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 11 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-012",
+      "name": "Forged Minion 12",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 12 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-013",
+      "name": "Forged Minion 13",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "tempo",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 13 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-014",
+      "name": "Forged Minion 14",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 14 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-015",
+      "name": "Forged Minion 15",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 9,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "aggressive",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 15 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-016",
+      "name": "Forged Minion 16",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 16 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-017",
+      "name": "Forged Minion 17",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 17 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-018",
+      "name": "Forged Minion 18",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 18 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-019",
+      "name": "Forged Minion 19",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 6,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 19 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-020",
+      "name": "Forged Minion 20",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "burn",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 20 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-021",
+      "name": "Forged Minion 21",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 21 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-022",
+      "name": "Forged Minion 22",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "control",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 22 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-023",
+      "name": "Forged Minion 23",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "tags": [
+        "burn",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 23 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-024",
+      "name": "Forged Minion 24",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 9,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 24 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-025",
+      "name": "Forged Minion 25",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "combo",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 25 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-026",
+      "name": "Forged Minion 26",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "spellcraft",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 26 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-027",
+      "name": "Forged Minion 27",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 8,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "control",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 27 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-028",
+      "name": "Forged Minion 28",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "burn",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 28 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-029",
+      "name": "Forged Minion 29",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 29 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-030",
+      "name": "Forged Minion 30",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "tempo",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 30 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-031",
+      "name": "Forged Minion 31",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 8,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "burn",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 31 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-032",
+      "name": "Forged Minion 32",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 32 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-033",
+      "name": "Forged Minion 33",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "tags": [
+        "tribal",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 33 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-034",
+      "name": "Forged Minion 34",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "combo",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 34 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-035",
+      "name": "Forged Minion 35",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 35 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-036",
+      "name": "Forged Minion 36",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 36 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-037",
+      "name": "Forged Minion 37",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 37 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-038",
+      "name": "Forged Minion 38",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 7,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 38 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-039",
+      "name": "Forged Minion 39",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 39 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-040",
+      "name": "Forged Minion 40",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "tags": [
+        "tempo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 40 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-041",
+      "name": "Forged Minion 41",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "taunt",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 41 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-042",
+      "name": "Forged Minion 42",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 42 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-043",
+      "name": "Forged Minion 43",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 43 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-044",
+      "name": "Forged Minion 44",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "burn",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 44 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-045",
+      "name": "Forged Minion 45",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 45 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-046",
+      "name": "Forged Minion 46",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 46 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-047",
+      "name": "Forged Minion 47",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "tribal",
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 47 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-048",
+      "name": "Forged Minion 48",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 6,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "combo",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 48 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-049",
+      "name": "Forged Minion 49",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "value",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 49 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-050",
+      "name": "Forged Minion 50",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 50 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-051",
+      "name": "Forged Minion 51",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 9,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 51 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-052",
+      "name": "Forged Minion 52",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "combo",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 52 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-053",
+      "name": "Forged Minion 53",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 9,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 53 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-054",
+      "name": "Forged Minion 54",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "burn",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 54 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-055",
+      "name": "Forged Minion 55",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "aggressive",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 55 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-056",
+      "name": "Forged Minion 56",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "control",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 56 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-057",
+      "name": "Forged Minion 57",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 7,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 57 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-058",
+      "name": "Forged Minion 58",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 58 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-059",
+      "name": "Forged Minion 59",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 59 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-060",
+      "name": "Forged Minion 60",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 9,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 60 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-061",
+      "name": "Forged Minion 61",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 7,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 61 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-062",
+      "name": "Forged Minion 62",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "control",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 62 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-063",
+      "name": "Forged Minion 63",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 63 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-064",
+      "name": "Forged Minion 64",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 64 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-065",
+      "name": "Forged Minion 65",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "combo",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 65 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-066",
+      "name": "Forged Minion 66",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 8,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 66 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-067",
+      "name": "Forged Minion 67",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 67 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-068",
+      "name": "Forged Minion 68",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "tempo",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 68 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-069",
+      "name": "Forged Minion 69",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 69 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-070",
+      "name": "Forged Minion 70",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 8,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 70 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-071",
+      "name": "Forged Minion 71",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "tempo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 71 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-072",
+      "name": "Forged Minion 72",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 9,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 3
+      },
+      "tags": [
+        "tribal",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 72 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-073",
+      "name": "Forged Minion 73",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 73 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-074",
+      "name": "Forged Minion 74",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "burn",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 74 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-075",
+      "name": "Forged Minion 75",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "spellcraft",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 75 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-076",
+      "name": "Forged Minion 76",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 76 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-077",
+      "name": "Forged Minion 77",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 77 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-078",
+      "name": "Forged Minion 78",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 78 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-079",
+      "name": "Forged Minion 79",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 79 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-080",
+      "name": "Forged Minion 80",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "tempo",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 80 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-081",
+      "name": "Forged Minion 81",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 81 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-082",
+      "name": "Forged Minion 82",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 82 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-083",
+      "name": "Forged Minion 83",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 83 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-084",
+      "name": "Forged Minion 84",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "spellcraft",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 84 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-085",
+      "name": "Forged Minion 85",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 85 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-086",
+      "name": "Forged Minion 86",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 6,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 86 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-087",
+      "name": "Forged Minion 87",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 7,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 87 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-088",
+      "name": "Forged Minion 88",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 88 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-089",
+      "name": "Forged Minion 89",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "taunt",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 89 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-090",
+      "name": "Forged Minion 90",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 90 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-091",
+      "name": "Forged Minion 91",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 91 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-092",
+      "name": "Forged Minion 92",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "combo",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 92 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-093",
+      "name": "Forged Minion 93",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "combo",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 93 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-094",
+      "name": "Forged Minion 94",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 94 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-095",
+      "name": "Forged Minion 95",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 95 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-096",
+      "name": "Forged Minion 96",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 96 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-097",
+      "name": "Forged Minion 97",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "burn",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 97 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-098",
+      "name": "Forged Minion 98",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 98 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-099",
+      "name": "Forged Minion 99",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 6,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 1
+      },
+      "tags": [
+        "value",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 99 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-100",
+      "name": "Forged Minion 100",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "value",
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 100 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-101",
+      "name": "Forged Minion 101",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "burn",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 101 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-102",
+      "name": "Forged Minion 102",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "combo",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 102 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-103",
+      "name": "Forged Minion 103",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 7,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "combo",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 103 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-104",
+      "name": "Forged Minion 104",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 104 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-105",
+      "name": "Forged Minion 105",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 105 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-106",
+      "name": "Forged Minion 106",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 106 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-107",
+      "name": "Forged Minion 107",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 9,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 107 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-108",
+      "name": "Forged Minion 108",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "combo",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 108 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-109",
+      "name": "Forged Minion 109",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 109 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-110",
+      "name": "Forged Minion 110",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "control",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 110 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-111",
+      "name": "Forged Minion 111",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "combo",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 111 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-112",
+      "name": "Forged Minion 112",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 9,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "taunt",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 112 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-113",
+      "name": "Forged Minion 113",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 9,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 113 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-114",
+      "name": "Forged Minion 114",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "aggressive",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 114 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-115",
+      "name": "Forged Minion 115",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "tempo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 115 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-116",
+      "name": "Forged Minion 116",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 3
+      },
+      "tags": [
+        "taunt",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 116 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-117",
+      "name": "Forged Minion 117",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 117 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-118",
+      "name": "Forged Minion 118",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "control",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 118 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-119",
+      "name": "Forged Minion 119",
+      "type": "minion",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 119 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-minion-120",
+      "name": "Forged Minion 120",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "tribal",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Minion 120 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-001",
+      "name": "Forged Spell 1",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 1 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-002",
+      "name": "Forged Spell 2",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 2 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-003",
+      "name": "Forged Spell 3",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 3 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-004",
+      "name": "Forged Spell 4",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "burn",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 4 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-005",
+      "name": "Forged Spell 5",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "control",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 5 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-006",
+      "name": "Forged Spell 6",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 6 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-007",
+      "name": "Forged Spell 7",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 7 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-008",
+      "name": "Forged Spell 8",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 8 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-009",
+      "name": "Forged Spell 9",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 9 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-010",
+      "name": "Forged Spell 10",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 10 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-011",
+      "name": "Forged Spell 11",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "aggressive",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 11 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-012",
+      "name": "Forged Spell 12",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "taunt",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 12 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-013",
+      "name": "Forged Spell 13",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 13 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-014",
+      "name": "Forged Spell 14",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "tribal",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 14 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-015",
+      "name": "Forged Spell 15",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 1
+      },
+      "tags": [
+        "tempo",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 15 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-016",
+      "name": "Forged Spell 16",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 16 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-017",
+      "name": "Forged Spell 17",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 17 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-018",
+      "name": "Forged Spell 18",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 18 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-019",
+      "name": "Forged Spell 19",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 19 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-020",
+      "name": "Forged Spell 20",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 20 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-021",
+      "name": "Forged Spell 21",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "spellcraft",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 21 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-022",
+      "name": "Forged Spell 22",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 1
+      },
+      "tags": [
+        "spellcraft",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 22 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-023",
+      "name": "Forged Spell 23",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "burn",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 23 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-024",
+      "name": "Forged Spell 24",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 24 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-025",
+      "name": "Forged Spell 25",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "tempo",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 25 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-026",
+      "name": "Forged Spell 26",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 26 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-027",
+      "name": "Forged Spell 27",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 7,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "combo",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 27 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-028",
+      "name": "Forged Spell 28",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 28 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-029",
+      "name": "Forged Spell 29",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 29 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-030",
+      "name": "Forged Spell 30",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "tags": [
+        "aggressive",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 30 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-031",
+      "name": "Forged Spell 31",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "taunt",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 31 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-032",
+      "name": "Forged Spell 32",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "taunt",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 32 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-033",
+      "name": "Forged Spell 33",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "tempo",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 33 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-034",
+      "name": "Forged Spell 34",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "control",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 34 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-035",
+      "name": "Forged Spell 35",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 35 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-036",
+      "name": "Forged Spell 36",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 36 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-037",
+      "name": "Forged Spell 37",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 37 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-038",
+      "name": "Forged Spell 38",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 1,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 38 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-039",
+      "name": "Forged Spell 39",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 39 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-040",
+      "name": "Forged Spell 40",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 40 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-041",
+      "name": "Forged Spell 41",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 8,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 41 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-042",
+      "name": "Forged Spell 42",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 42 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-043",
+      "name": "Forged Spell 43",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "tribal",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 43 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-044",
+      "name": "Forged Spell 44",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 7,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "tribal",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 44 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-045",
+      "name": "Forged Spell 45",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 45 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-046",
+      "name": "Forged Spell 46",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 1,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "tempo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 46 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-047",
+      "name": "Forged Spell 47",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 47 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-048",
+      "name": "Forged Spell 48",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "taunt",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 48 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-049",
+      "name": "Forged Spell 49",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 49 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-050",
+      "name": "Forged Spell 50",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 3
+      },
+      "tags": [
+        "spellcraft",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 50 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-051",
+      "name": "Forged Spell 51",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 51 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-052",
+      "name": "Forged Spell 52",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 3,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 2
+      },
+      "tags": [
+        "summon",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 52 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-053",
+      "name": "Forged Spell 53",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 3
+      },
+      "tags": [
+        "control",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 53 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-054",
+      "name": "Forged Spell 54",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 2,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 54 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-055",
+      "name": "Forged Spell 55",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 2
+      },
+      "tags": [
+        "control",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 55 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-056",
+      "name": "Forged Spell 56",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 2,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 4
+      },
+      "tags": [
+        "aggressive",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 56 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-057",
+      "name": "Forged Spell 57",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 7,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 57 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-058",
+      "name": "Forged Spell 58",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "draw",
+        "amount": 2
+      },
+      "tags": [
+        "taunt",
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 58 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-059",
+      "name": "Forged Spell 59",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 8,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 2
+      },
+      "tags": [
+        "control",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 59 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-060",
+      "name": "Forged Spell 60",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 7,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 60 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-061",
+      "name": "Forged Spell 61",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 61 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-062",
+      "name": "Forged Spell 62",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 8,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 3
+      },
+      "tags": [
+        "control",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 62 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-063",
+      "name": "Forged Spell 63",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 8,
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "tags": [
+        "summon",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 63 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-064",
+      "name": "Forged Spell 64",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 4,
+      "ability": {
+        "action": "draw",
+        "amount": 1
+      },
+      "tags": [
+        "value",
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 64 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-065",
+      "name": "Forged Spell 65",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 7,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "spellcraft",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 65 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-066",
+      "name": "Forged Spell 66",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 8,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "taunt",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 66 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-067",
+      "name": "Forged Spell 67",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "combo",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 67 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-068",
+      "name": "Forged Spell 68",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 6,
+      "ability": {
+        "action": "draw",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 68 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-069",
+      "name": "Forged Spell 69",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 4
+      },
+      "tags": [
+        "combo",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 69 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-070",
+      "name": "Forged Spell 70",
+      "type": "spell",
+      "rarity": "common",
+      "cost": 5,
+      "ability": {
+        "action": "heal",
+        "amount": 3
+      },
+      "tags": [
+        "value",
+        "summon",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 70 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-071",
+      "name": "Forged Spell 71",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 6,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "tempo",
+        "control",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 71 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-072",
+      "name": "Forged Spell 72",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 7,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "control",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 72 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-073",
+      "name": "Forged Spell 73",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 7,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 2
+      },
+      "tags": [
+        "taunt",
+        "tribal",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 73 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-074",
+      "name": "Forged Spell 74",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "value",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 74 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-075",
+      "name": "Forged Spell 75",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "tribal",
+        "aggressive",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 75 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-076",
+      "name": "Forged Spell 76",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "grantArmor",
+        "amount": 3
+      },
+      "tags": [
+        "summon",
+        "burn",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 76 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-077",
+      "name": "Forged Spell 77",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 1,
+      "ability": {
+        "action": "dealDamage",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 77 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-078",
+      "name": "Forged Spell 78",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "buffAttack",
+        "amount": 1
+      },
+      "tags": [
+        "tribal",
+        "taunt",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 78 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-079",
+      "name": "Forged Spell 79",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "heal",
+        "amount": 1
+      },
+      "tags": [
+        "value",
+        "spellcraft",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 79 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "generated-spell-080",
+      "name": "Forged Spell 80",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "buffHealth",
+        "amount": 4
+      },
+      "tags": [
+        "summon",
+        "value",
+        "GEN1"
+      ],
+      "bibliography": "Forged Spell 80 is documented in the Gen1 chronicles."
+    },
+    {
+      "id": "gen2-minion-1",
+      "name": "Venom Crown Adept",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Venom Crown Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-2",
+      "name": "Abyss Needle Adept",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Abyss Needle Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-3",
+      "name": "Sunflare Judge Adept",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 6,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Sunflare Judge Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-4",
+      "name": "Mire Oracle Adept",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Mire Oracle Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-5",
+      "name": "Storm Herald Adept",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Storm Herald Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-6",
+      "name": "Rift Siren Adept",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Rift Siren Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-7",
+      "name": "Grave Botanist Adept",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 6,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Grave Botanist Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-8",
+      "name": "Cinder Saint Adept",
+      "type": "minion",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Cinder Saint Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-9",
+      "name": "Tidebreaker Adept",
+      "type": "minion",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Tidebreaker Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-minion-10",
+      "name": "Ashen Falcon Adept",
+      "type": "minion",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "none",
+        "amount": 0
+      },
+      "tags": [
+        "GEN2"
+      ],
+      "bibliography": "Ashen Falcon Adept manipulates battle lines with adjacent influence."
+    },
+    {
+      "id": "gen2-spell-1",
+      "name": "Poison Hex 1",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 1: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-2",
+      "name": "Shadow Hex 2",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 2: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-3",
+      "name": "Fire Hex 3",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 3: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-4",
+      "name": "Water Hex 4",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 4: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-5",
+      "name": "Arcane Hex 5",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 2,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 5: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-6",
+      "name": "Poison Hex 6",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 6: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-7",
+      "name": "Shadow Hex 7",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 7: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-8",
+      "name": "Fire Hex 8",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 8: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-9",
+      "name": "Water Hex 9",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 2,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 9: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-10",
+      "name": "Arcane Hex 10",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 3,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 10: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-11",
+      "name": "Poison Hex 11",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 4,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 11: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-12",
+      "name": "Shadow Hex 12",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 5,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 12: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-13",
+      "name": "Fire Hex 13",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 2,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 13: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-14",
+      "name": "Water Hex 14",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 3,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 14: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-15",
+      "name": "Arcane Hex 15",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 4,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 15: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-16",
+      "name": "Poison Hex 16",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 5,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 16: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-17",
+      "name": "Shadow Hex 17",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 2,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 17: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-18",
+      "name": "Fire Hex 18",
+      "type": "spell",
+      "rarity": "legendary",
+      "cost": 3,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 3
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 18: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-19",
+      "name": "Water Hex 19",
+      "type": "spell",
+      "rarity": "rare",
+      "cost": 4,
+      "ability": {
+        "action": "poisonHero",
+        "amount": 1
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 19: a hero-focused debuff rite."
+    },
+    {
+      "id": "gen2-spell-20",
+      "name": "Arcane Hex 20",
+      "type": "spell",
+      "rarity": "epic",
+      "cost": 5,
+      "ability": {
+        "action": "weakenAllEnemies",
+        "amount": 2
+      },
+      "tags": [
+        "GEN2",
+        "hero-debuff"
+      ],
+      "bibliography": "Gen2 codex entry 20: a hero-focused debuff rite."
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "type": "audio-pack",
+  "id": "starter-audio",
+  "name": "Starter Playlist",
+  "playlists": [
+    {"id":"menu-vibes","name":"Menu Vibes","tracks":["Calm Circuit","Skyline Echo"]},
+    {"id":"battle-drive","name":"Battle Drive","tracks":["Crimson Tempo","Arc Pulse"]}
+  ]
+}

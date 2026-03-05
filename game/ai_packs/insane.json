@@ -1,0 +1,37 @@
+{
+  "type": "ai-pack",
+  "id": "insane",
+  "name": "Nyx Calder",
+  "weights": {
+    "attackFace": 0.9,
+    "trade": 0.95,
+    "summon": 0.8
+  },
+  "summons": [
+    {
+      "name": "Paradox Wyrm",
+      "attack": 6,
+      "health": 6,
+      "race": "dragon",
+      "element": "arcane"
+    },
+    {
+      "name": "Chrono Harrier",
+      "attack": 5,
+      "health": 4,
+      "race": "construct",
+      "element": "air"
+    }
+  ],
+  "personality": {
+    "title": "The Unthreaded Mind",
+    "backstory": "An impossible war-engine that simulates ten thousand futures before each heartbeat.",
+    "dimensionTag": "#Abyss-\u03a9"
+  },
+  "strategy": "aggro",
+  "level": 10,
+  "thinkMsRange": [
+    450,
+    850
+  ]
+}

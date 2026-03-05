@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CardForge Game</title>
+  <link rel="stylesheet" href="./game.css" />
+</head>
+<body>
+  <div id="boot-loading" class="panel"><h3>Initializing CardForge Runtime</h3><div id="boot-files"></div></div>
+  <div id="app" class="hidden">
+    <header>
+      <h1>CardForge Runtime</h1>
+      <div class="header-actions">
+        <button id="lobby-btn">Lobby</button>
+        <button id="menu-btn">Menu</button>
+      </div>
+    </header>
+
+    <section id="console-row">
+      <input id="chat-input" placeholder="Type commands (./help)" />
+      <button id="chat-send">Enter</button>
+      <button id="toggle-log">Show Log</button>
+    </section>
+
+    <section id="economy-bar">
+      <div><strong>Gold:</strong> <span id="gold">0</span></div>
+      <div><strong>Streak:</strong> <span id="streak">0</span></div>
+      <div><strong>Mana:</strong> <span id="mana">3</span></div>
+      <button id="win-demo">Claim Demo Win Reward</button>
+      <button id="end-turn">End Turn</button>
+    </section>
+
+    <section id="board">
+      <div class="hero enemy target" data-target-id="enemy-hero">
+        Enemy Hero <span id="enemy-name">Unknown</span> · <span id="enemy-health">30</span>
+        <div class="health-bar"><div id="enemy-hero-bar" class="health-fill"></div></div>
+      </div>
+      <div id="enemy-minions" class="lane"></div>
+      <div id="player-minions" class="lane"></div>
+      <div class="hero player target" data-target-id="player-hero">
+        Player Hero <span id="player-name">Novice</span> · <span id="player-health">30</span>
+        <div class="health-bar"><div id="player-hero-bar" class="health-fill"></div></div>
+      </div>
+      <div id="drop-zone" class="target">Drag cards to a slot to play</div>
+      <svg id="attack-layer"></svg>
+      <div id="float-layer"></div>
+    </section>
+
+    <section id="main-panels">
+      <div class="column">
+        <aside id="ai-panel" class="panel"></aside>
+        <aside id="settings-panel" class="panel"></aside>
+      </div>
+      <div class="column"><aside id="slot-help" class="panel"></aside></div>
+    </section>
+
+    <section id="pack-opening" class="panel hidden">
+      <h3>Pack Opening</h3>
+      <div id="pack-guide" class="pack-guide hidden">Slide to cut →</div>
+      <div id="pack-reveal"></div>
+    </section>
+
+    <section id="hand"></section>
+    <aside id="hint"></aside>
+    <aside id="log" class="hidden"></aside>
+    <div id="toast-host"></div>
+  </div>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>

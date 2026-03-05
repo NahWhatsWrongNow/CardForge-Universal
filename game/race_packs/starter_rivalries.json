@@ -1,0 +1,41 @@
+{
+  "type": "race-pack",
+  "id": "starter-rivalries",
+  "name": "Starter Rivalry Matrix",
+  "rivalries": [
+    {
+      "id": "beast-hunts-undead",
+      "sourceRace": "beast",
+      "targetRace": "undead",
+      "layers": {
+        "combat": { "attackBonus": 1, "critChance": 0.2 },
+        "spell": { "powerBonus": 1 },
+        "status": { "applyChanceBonus": 0.25 },
+        "fear": { "chance": 0.15 }
+      },
+      "conditions": {
+        "adjacentAllyRace": "beast",
+        "enemyControlsElement": "shadow",
+        "familiarityAtLeast": 1
+      }
+    },
+    {
+      "id": "undead-deflects-elemental",
+      "sourceRace": "undead",
+      "targetRace": "elemental",
+      "layers": {
+        "combat": { "attackBonus": 1 },
+        "spell": { "powerBonus": 0 },
+        "status": { "resistChanceBonus": 0.25 },
+        "deflect": { "chance": 0.2 }
+      },
+      "conditions": {
+        "familiarityAtLeast": 1
+      }
+    }
+  ],
+  "familiarity": {
+    "beast": { "undead": 2 },
+    "undead": { "elemental": 1 }
+  }
+}

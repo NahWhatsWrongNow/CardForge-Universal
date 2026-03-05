@@ -1,0 +1,19 @@
+{
+  "type": "ai-pack",
+  "id": "cassian",
+  "name": "Cassian Vale",
+  "level": 8,
+  "strategy": "aggro",
+  "thinkMsRange": [320, 920],
+  "weights": { "attackFace": 0.7, "trade": 0.35, "summon": 0.65 },
+  "summons": [
+    { "name": "Rift Lancer", "attack": 5, "health": 3, "taunt": false, "race": "knight", "element": "arcane", "rarity": "epic" },
+    { "name": "Gatebreaker Hound", "attack": 4, "health": 4, "taunt": false, "race": "beast", "element": "fire", "rarity": "rare" }
+  ],
+  "personality": {
+    "title": "Harrier of Shattered Roads",
+    "dimensionTag": "#Valecross-6",
+    "backstory": "Cassian hunts along broken portals, striking before worlds can brace for impact.",
+    "victoryLine": "You want my trail? Mark Valecross-6 on your codex." 
+  }
+}

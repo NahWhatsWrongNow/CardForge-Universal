@@ -1,0 +1,19 @@
+{
+  "type": "ai-pack",
+  "id": "moonveil",
+  "name": "Selene Arq",
+  "level": 8,
+  "strategy": "value",
+  "thinkMsRange": [520, 1200],
+  "weights": { "attackFace": 0.35, "trade": 0.5, "summon": 0.7 },
+  "summons": [
+    { "name": "Veil Stag", "attack": 4, "health": 4, "taunt": false, "race": "spirit", "element": "moon", "rarity": "epic" },
+    { "name": "Gloam Archivist", "attack": 2, "health": 5, "taunt": false, "race": "sage", "element": "shadow", "rarity": "rare" }
+  ],
+  "personality": {
+    "title": "Chronicler of the Pale Choir",
+    "dimensionTag": "#Lunara-5",
+    "backstory": "Selene records futures in moonlit ink and only duels those who can rewrite a page without trembling.",
+    "victoryLine": "Lunara-5 opens at dusk. Speak my name at the silver gate."
+  }
+}
