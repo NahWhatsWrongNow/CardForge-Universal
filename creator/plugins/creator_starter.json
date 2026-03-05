@@ -1,8 +1,0 @@
-{
-  "type": "card-pack",
-  "id": "creator-examples",
-  "name": "Creator Examples",
-  "cards": [
-    { "id": "template-minion", "name": "Template Minion", "type": "minion", "cost": 1 }
-  ]
-}
