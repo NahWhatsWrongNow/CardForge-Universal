@@ -1,0 +1,10 @@
+{
+  "type": "cosmetic-pack",
+  "id": "starter-cosmetics",
+  "name": "Starter Cosmetics",
+  "cardBacks": [
+    {"id":"classic-onyx","name":"Classic Onyx"},
+    {"id":"verdant-rune","name":"Verdant Rune"},
+    {"id":"solar-prism","name":"Solar Prism"}
+  ]
+}

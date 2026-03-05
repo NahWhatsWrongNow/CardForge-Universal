@@ -1,0 +1,126 @@
+{
+  "type": "ai-pack",
+  "id": "neural-ai",
+  "name": "Neural AI",
+  "level": 20,
+  "strategy": "genius",
+  "tacticProfile": "neural-network",
+  "thinkMsRange": [
+    950,
+    1900
+  ],
+  "weights": {
+    "attackFace": 1.35,
+    "trade": 1.42,
+    "summon": 1.05
+  },
+  "deck": [
+    {
+      "name": "Entropy Shieldbearer",
+      "attack": 4,
+      "health": 8,
+      "taunt": true,
+      "race": "construct",
+      "element": "earth",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Vector Predator",
+      "attack": 8,
+      "health": 4,
+      "taunt": false,
+      "race": "paradox",
+      "element": "arcane",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Fractal Interdictor",
+      "attack": 6,
+      "health": 6,
+      "taunt": true,
+      "race": "paradox",
+      "element": "void",
+      "rarity": "epic"
+    },
+    {
+      "name": "Neural Swarm Node",
+      "attack": 5,
+      "health": 5,
+      "taunt": false,
+      "race": "construct",
+      "element": "light",
+      "rarity": "epic"
+    },
+    {
+      "name": "Singularity Duelist",
+      "attack": 7,
+      "health": 3,
+      "taunt": false,
+      "race": "assassin",
+      "element": "shadow",
+      "rarity": "epic"
+    },
+    {
+      "name": "Chrono Bastion",
+      "attack": 3,
+      "health": 9,
+      "taunt": true,
+      "race": "guardian",
+      "element": "steel",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Cortex Stormcaller",
+      "attack": 6,
+      "health": 5,
+      "taunt": false,
+      "race": "mage",
+      "element": "storm",
+      "rarity": "epic"
+    },
+    {
+      "name": "Axiom Reaper",
+      "attack": 9,
+      "health": 2,
+      "taunt": false,
+      "race": "specter",
+      "element": "void",
+      "rarity": "legendary"
+    }
+  ],
+  "summons": [
+    {
+      "name": "Entropy Shieldbearer",
+      "attack": 4,
+      "health": 8,
+      "taunt": true,
+      "race": "construct",
+      "element": "earth",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Vector Predator",
+      "attack": 8,
+      "health": 4,
+      "taunt": false,
+      "race": "paradox",
+      "element": "arcane",
+      "rarity": "legendary"
+    },
+    {
+      "name": "Axiom Reaper",
+      "attack": 9,
+      "health": 2,
+      "taunt": false,
+      "race": "specter",
+      "element": "void",
+      "rarity": "legendary"
+    }
+  ],
+  "personality": {
+    "title": "Adaptive Strategic Core",
+    "dimensionTag": "#Neural-Prime",
+    "backstory": "A combat intelligence trained on endless card-state graphs and counterfactual board timelines.",
+    "victoryLine": "Every card was modeled. Every line was solved."
+  }
+}

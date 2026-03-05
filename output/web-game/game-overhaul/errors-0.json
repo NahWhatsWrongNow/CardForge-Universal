@@ -1,0 +1,10 @@
+[
+  {
+    "type": "console.error",
+    "text": "Access to script at 'file:///C:/Users/jadon/Downloads/CardForge-Universal-CarnifexV13.8/CardForge-Universal/game/game.js' from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: chrome, chrome-untrusted, data, http, https."
+  },
+  {
+    "type": "console.error",
+    "text": "Failed to load resource: net::ERR_FAILED"
+  }
+]

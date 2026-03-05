@@ -1,0 +1,19 @@
+{
+  "type": "ai-pack",
+  "id": "thorne",
+  "name": "Ilya Thorne",
+  "level": 9,
+  "strategy": "control",
+  "thinkMsRange": [540, 1300],
+  "weights": { "attackFace": 0.25, "trade": 0.8, "summon": 0.55 },
+  "summons": [
+    { "name": "Briar Colossus", "attack": 4, "health": 8, "taunt": true, "race": "flora", "element": "nature", "rarity": "legendary" },
+    { "name": "Needle Binder", "attack": 3, "health": 5, "taunt": false, "race": "flora", "element": "poison", "rarity": "epic" }
+  ],
+  "personality": {
+    "title": "Keeper of the Verdant Maw",
+    "dimensionTag": "#Thornreach-9",
+    "backstory": "Ilya Thorne rules a sentient forest that remembers every blade ever drawn against it.",
+    "victoryLine": "The roots point to Thornreach-9. Follow them below the world."
+  }
+}

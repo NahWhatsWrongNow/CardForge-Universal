@@ -1,0 +1,27 @@
+{
+  "entries": [
+    "easy.json",
+    "normal.json",
+    "hard.json",
+    "insane.json",
+    "boss_lich.json",
+    "personality_bladepoet.json",
+    "personality_oracle.json",
+    "personality_riftmarshal.json",
+    "personality_emberqueen.json",
+    "personality_tidemind.json",
+    "personality_ironwarden.json",
+    "personality_moonveil.json",
+    "personality_thorne.json",
+    "personality_cassian.json",
+    "personality_mira.json",
+    "personality_vesperia.json",
+    "personality_roland.json",
+    "personality_elyra.json",
+    "personality_damien.json",
+    "personality_serah.json",
+    "personality_gregory.json",
+    "personality_nivinis.json",
+    "neural_ai.json"
+  ]
+}

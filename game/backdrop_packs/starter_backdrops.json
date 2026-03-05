@@ -1,0 +1,10 @@
+{
+  "type": "backdrop-pack",
+  "id": "starter-backdrops",
+  "name": "Starter Backdrops",
+  "backdrops": [
+    {"id":"nebula-board","name":"Nebula Board","css":"linear-gradient(135deg,#121836,#2f1d52)"},
+    {"id":"forest-board","name":"Forest Board","css":"linear-gradient(135deg,#132b20,#2c5b3c)"},
+    {"id":"ashen-board","name":"Ashen Board","css":"linear-gradient(135deg,#2c1d1d,#5c2f2f)"}
+  ]
+}

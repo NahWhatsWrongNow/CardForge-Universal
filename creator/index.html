@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CardForge Creator</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <main>
+    <div class="top-row">
+      <h1>Creator Suite — Guided Builder 2.1</h1>
+      <a class="menu-btn" href="../index.html">Back to Menu</a>
+    </div>
+
+    <section id="plugin-list" class="panel"><h2>Plugin Loader Report</h2></section>
+
+    <section class="panel">
+      <h2>Card Template Picker</h2>
+      <div class="grid-form">
+        <select id="card-template-select"></select>
+        <button id="use-template" type="button">Use Template in Card Creator</button>
+      </div>
+      <small>Includes blank cards and spell/minion templates for every current ability template.</small>
+    </section>
+
+    <section class="panel">
+      <h2>Card Creator (Expanded)</h2>
+      <form id="card-form" class="grid-form">
+        <input name="id" placeholder="card id" required />
+        <input name="name" placeholder="card name" required />
+        <select name="cardType"><option value="minion">Minion</option><option value="spell">Spell</option></select>
+        <input name="cost" type="number" min="0" value="1" />
+        <input name="attack" type="number" min="0" value="1" />
+        <input name="health" type="number" min="1" value="1" />
+        <input name="damage" type="number" min="0" value="2" />
+        <input name="race" placeholder="race" />
+        <input name="element" placeholder="element" />
+        <select name="rarity"><option>common</option><option>rare</option><option>epic</option><option>legendary</option></select>
+        <input name="synergy" placeholder="synergy tags csv" />
+        <label><input name="taunt" type="checkbox" /> Taunt</label>
+        <label><input name="allowFriendlyAttack" type="checkbox" /> Allowed to attack friendlies</label>
+        <label><input name="includeInPacks" type="checkbox" checked /> Include in packs</label>
+        <label>Pack type
+          <select name="packType">
+            <option value="booster">Booster</option>
+            <option value="event">Event</option>
+            <option value="trader">Trader</option>
+            <option value="none">Not in packs</option>
+          </select>
+        </label>
+        <label>Catch limit <input name="catchLimit" type="number" min="0" value="0" /></label>
+        <label>Home dimension <input name="homeDimension" placeholder="e.g. #Aster-2" /></label>
+        <label>Damage displayed color
+          <select name="damageColorMode"><option value="elementalDamage">Elemental Damage</option><option value="elementalAffiliation">Elemental Affiliation</option></select>
+        </label>
+        <button type="submit">Preview Card JSON</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>AI Personality Builder</h2>
+      <form id="ai-form" class="grid-form">
+        <input name="id" placeholder="ai id" required />
+        <input name="name" placeholder="display name" required />
+        <input name="title" placeholder="personality title" required />
+        <input name="dimensionTag" placeholder="#Dimension" required />
+        <input name="backstory" placeholder="cool fantasy backstory" required />
+        <input name="attackFace" type="number" step="0.05" min="0" max="1" value="0.4" />
+        <input name="trade" type="number" step="0.05" min="0" max="1" value="0.6" />
+        <input name="summon" type="number" step="0.05" min="0" max="1" value="0.5" />
+        <button type="submit">Preview AI JSON</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Ability Builder</h2>
+      <div class="grid-form">
+        <label>Template <select id="ability-template"></select></label>
+        <label>Trigger
+          <select id="ability-trigger">
+            <option value="onPlay">On Play</option><option value="onAttack">On Attack</option><option value="onDeath">On Death</option><option value="heroPower">Hero Power</option>
+          </select>
+        </label>
+      </div>
+      <div class="grid-form">
+        <label>Source <select id="target-source"><option value="self">Self</option><option value="controller">Controller</option><option value="opponent">Opponent</option></select></label>
+        <label>Target Scope <select id="target-scope"><option value="enemy-minion">Enemy Minion</option><option value="friendly-minion">Friendly Minion</option><option value="all-enemy-minions">All Enemy Minions</option><option value="enemy-hero">Enemy Hero</option><option value="any">Any Target</option></select></label>
+        <label>Filter Tag <input id="target-filter" placeholder="e.g. dragonkin" /></label>
+      </div>
+      <h3>Conditions</h3>
+      <div id="condition-groups"></div>
+      <button id="add-group" type="button">Add Condition Group</button>
+      <textarea id="advanced-json" rows="6" placeholder='{"extra": "override fields"}'></textarea>
+      <div class="actions">
+        <button id="preview-ability" type="button">Preview Ability JSON</button>
+        <button id="explain-ability" type="button">Explain Ability</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Solar System Builder</h2>
+      <form id="solar-form" class="grid-form">
+        <input name="systemName" placeholder="system name" required />
+        <input name="ownerAiId" placeholder="owner ai id" />
+        <input name="planetCount" type="number" min="1" max="16" value="6" />
+        <input name="orbitSpeedBase" type="number" step="0.0001" min="0.0001" value="0.0025" />
+        <input name="difficulty" type="number" min="1" max="20" value="5" />
+        <input name="captureMultiplier" type="number" step="0.1" min="0.1" value="1.0" />
+        <button type="submit">Preview Solar System JSON</button>
+      </form>
+    </section>
+
+    <section class="panel"><h2>Output</h2><pre id="preview"></pre><pre id="explanation"></pre></section>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

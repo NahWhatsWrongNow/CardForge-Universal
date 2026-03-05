@@ -1,0 +1,79 @@
+Original prompt: this is a html based game im developing - look at its ai and make it EXTREMELY good name the AI - Neural AI and use super advanced Neural networks for super advanced reasoning and extremely smart and strategic moves in the game - it needs to know how to use every card in its deck optimally
+
+2026-03-05
+- Reviewed `game/engine/ai.js` and confirmed current logic mixes weighted heuristics with a shallow neural-like score.
+- Identified core limitation: enemy executes a single action per turn in `runEnemyTurn`, so AI strength is capped regardless of scoring quality.
+- Located AI pack system in `game/ai_packs/*.json`; existing `nivinis` already flags `tacticProfile: neural-network`.
+- Plan: implement deeper neural search with turn plans, deck-aware summon choice, and add a dedicated `Neural AI` profile.
+- Replaced `game/engine/ai.js` with a stronger planner:
+  - Added a richer neural evaluator (two hidden layers + tactical feature fusion).
+  - Added beam-search enemy turn planning with multi-step action sequences.
+  - Added player counterplay simulation to score robust lines, not just greedy ones.
+  - Added deck-aware summon selection so neural profiles choose high-value cards from remaining deck state.
+  - Added `chooseTurnPlan(state, profile)` export; legacy profiles still use legacy weighted single action.
+- Updated `game/game.js`:
+  - Switched enemy decision import to `chooseTurnPlan`.
+  - Enemy turn now executes planned action sequences (multiple attacks/summons per turn).
+  - `drawEnemySummon` now supports indexed deck picks for optimal card selection.
+- Added new AI pack `game/ai_packs/neural_ai.json`:
+  - `id: neural-ai`, `name: Neural AI`, `tacticProfile: neural-network`, level 20.
+  - Added a varied deck so the planner can choose situationally optimal summons.
+- Updated `game/ai_packs/index.json` to include `neural_ai.json`.
+- Validation performed:
+  - Syntax checks: `node --check game/engine/ai.js`, `node --check game/game.js` passed.
+  - Playwright client run executed and screenshots captured under `output/web-game/neural-ai-test`.
+  - Focused headless check with `localStorage` forced to `neural-ai` confirmed `Enemy Hero Neural AI (Lvl 20)` and produced screenshot `output/web-game/neural-ai-focused/shot-neural-ai.png`.
+- Note:
+  - `window.render_game_to_text` is not currently implemented in this project; Playwright state JSON output is therefore absent.
+- Follow-up fix: ensured deck summons preserve advanced card flags in runtime (`allowMultiAttack`, `allowFriendlyAttack`, `charge`) so planner-selected cards keep full behavior.
+- Re-validated after fix with focused Playwright run (`localStorage` opponent override to `neural-ai`):
+  - `enemyName: Neural AI (Lvl 20)`
+  - `enemyCount: 8` after turn sequence (multi-step plan executed).
+
+2026-03-05 (Dimension/Lobby/Creator overhaul pass)
+- Rebuilt launcher into external `launcher.js` + updated `index.html`/`styles.css` for a cleaner layout and larger feature surface.
+- Dimensional battle map overhaul:
+  - Replaced single squiggle line layout with deterministic scattered node placement.
+  - Added hover highlight card with owner/status/Carnex code state.
+  - Added live moving orbit preview canvas on dimension hover.
+- Lobby progression systems:
+  - Added profile progression fields in storage (`defeatedAiIds`, `lobbyResidents`, `carnexCodes`, `capturedCards`, `paywallMode`, etc.).
+  - Updated runtime victory handling to mark defeated AI as unlocked/lobby resident and issue Carnex code.
+- Lobby interaction systems:
+  - Added AI dialogue panel with selectable responses.
+  - Added idle chatter feed among defeated AI residents.
+  - Added 2D room canvas with square avatars, movement controls, and talk-nearby trigger.
+- Capture/inventory/trader systems:
+  - Added reaction-based capture minigame (RGB targets, difficulty scaling, ratings).
+  - Added captured creature inventory + scrapper to lifeforce.
+  - Added dimensional trader offer purchase loop.
+- Creator upgrades:
+  - Added card availability controls (`includeInPacks`, `packType` incl. booster/event/trader/none).
+  - Added card capture limit + home dimension fields.
+  - Added `Solar System Builder` section producing JSON output.
+  - Added paywall-aware card creation cost output when lobby `paywallMode` is enabled.
+- Runtime/UX fixes:
+  - Added mana/gold icon assets and updated game HUD visuals.
+  - Fixed drag ghost offset so drag follows cursor properly.
+  - Added richer AI banter line injection during enemy turns.
+  - Added generated unique 30-card enemy deck construction when pack deck is sparse.
+- Offline/no-server delivery:
+  - Added `offline_singleplayer.html` entrypoint.
+  - Added `game/offline_runtime.html` standalone no-module, no-server single-player runtime for restricted laptops.
+- Validation runs:
+  - Syntax checks passed: `node --check launcher.js`, `node --check game/game.js`, `node --check creator/app.js`.
+  - Playwright client artifacts:
+    - `output/web-game/lobby-overhaul/shot-0.png..shot-2.png` (launcher+lobby map/world updates).
+    - `output/web-game/lobby-focused/*.png` (hover orbit, world room, capture UI).
+    - `output/web-game/offline-runtime/*.png` (standalone offline battle runtime).
+- Note:
+  - `game/index.html` remains module-based for full runtime; standalone offline play is provided via `game/offline_runtime.html` for no-server environments.
+- Follow-up fixes after validation:
+  - Switched launcher script include from module to classic script for file-protocol compatibility.
+  - Updated launcher `loadJson` to bypass fetch entirely in local file mode (prevents file:// fetch console errors).
+  - Added standalone `game/offline_runtime.html` and repointed `offline_singleplayer.html` to it for no-server battles.
+- Additional validation:
+  - Playwright client run (file-mode launcher) now produces screenshots without new console-error files in latest run.
+  - Custom focused Playwright checks confirmed map hover card/orbit panel, world room, capture panel, inventory/trader UI rendering.
+  - Playwright client run for `game/offline_runtime.html` produced clean screenshots and no error JSON.
+- Added `creator/offline_creator.html` and updated offline launcher link so creator workflows remain available without local server or module loading.

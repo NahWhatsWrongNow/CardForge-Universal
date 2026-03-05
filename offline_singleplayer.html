@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CardForge Offline Single-Player</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Segoe UI", sans-serif; }
+    body { margin: 0; min-height: 100dvh; display: grid; place-items: center; background: radial-gradient(circle at 20% 20%, #223b67, #08101f 70%); color: #eef4ff; }
+    main { width: min(740px, 94vw); background: rgba(13, 21, 39, 0.9); border: 1px solid #355384; border-radius: 14px; padding: 1rem; box-shadow: 0 18px 44px rgba(0, 0, 0, 0.45); }
+    h1 { margin-top: 0; }
+    .row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0.9rem 0; }
+    a, button { border: 1px solid #4b6ea9; border-radius: 10px; background: linear-gradient(180deg, #2d4678, #203259); color: #f2f7ff; text-decoration: none; padding: 0.55rem 0.85rem; cursor: pointer; }
+    .panel { border: 1px dashed #4a6396; border-radius: 10px; padding: 0.7rem; background: #0f1a30; }
+    ul { margin-top: 0.4rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Offline Single-Player Mode</h1>
+    <p>This launcher is for laptops where you cannot start local servers. It uses file-mode fallback data for solo play.</p>
+
+    <div class="row">
+      <a href="./game/offline_runtime.html">Start Offline Battle Runtime</a>
+      <a href="./index.html#lobby">Open Offline Lobby</a>
+      <a href="./creator/offline_creator.html">Open Creator</a>
+      <a href="./index.html">Main Launcher</a>
+    </div>
+
+    <section class="panel">
+      <strong>Notes</strong>
+      <ul>
+        <li>Single-player works directly from file mode.</li>
+        <li>Multiplayer still needs browser networking/WebRTC handshake.</li>
+        <li>For full plugin-pack loading, run a local server on machines where it is allowed.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

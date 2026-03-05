@@ -9,12 +9,106 @@
 <body>
   <main class="launcher">
     <h1>CardForge Universal</h1>
-    <p>Modular card game runtime + creator suite.</p>
+    <p>Multidimensional battle nexus.</p>
+
+    <section class="battlemap panel">
+      <h2>Dimensional Battle Map</h2>
+      <div class="galaxy-bg" aria-label="Galaxy backdrop"></div>
+      <svg id="dimension-map" viewBox="0 0 900 360"></svg>
+      <canvas id="map-orbit-canvas" width="300" height="190" aria-label="Hover orbit preview"></canvas>
+      <aside id="map-hover-card" class="map-hover-card hidden"></aside>
+      <div class="hint">Hover dimensions for owner/status + live home-system orbit simulation.</div>
+    </section>
+
     <div class="links">
-      <a href="./game/index.html">Open Game Runtime</a>
-      <a href="./creator/index.html">Open Creator Suite</a>
+      <a href="./game/index.html">Play Game</a>
+      <a href="./creator/index.html">Open Creator</a>
+      <a href="./offline_singleplayer.html">Offline Single-Player</a>
+      <a href="./multiplayer/index.html">Multiplayer</a>
+      <button id="open-lobby">Lobby</button>
     </div>
-    <p class="hint">Run with <code>python -m http.server 8080</code></p>
+
+    <section id="loading-panel" class="menu-panel hidden"><h2>Loading Assets</h2><div id="loading-files"></div></section>
+
+    <section id="lobby-panel" class="menu-panel hidden">
+      <h2>Lobby</h2>
+      <label>Color Scheme <select id="lobby-scheme"><option value="arcane">Arcane</option><option value="monarch">Monarch</option></select></label>
+      <div class="lobby-tabs">
+        <button data-tab="match">Matchmaking</button>
+        <button data-tab="deck">Deck Builder</button>
+        <button data-tab="quests">Quest Board</button>
+        <button data-tab="shop">Shop</button>
+        <button data-tab="carnifex">Codex</button>
+        <button data-tab="world">Lobby Dimension</button>
+      </div>
+      <div id="match-tab" class="tab-body"></div>
+      <div id="deck-tab" class="tab-body hidden"></div>
+      <div id="quests-tab" class="tab-body hidden"></div>
+      <div id="shop-tab" class="tab-body hidden"></div>
+      <div id="carnifex-tab" class="tab-body hidden">
+        <div id="cardex-meta"></div>
+        <input id="cardex-search" placeholder="Search cards, abilities, tags..." />
+        <div id="cardex-list"></div>
+        <hr />
+        <label>Locate Dimension by Name</label>
+        <div class="row"><input id="dimension-input" placeholder="e.g. Aster-2" /><button id="dimension-locate">Locate Dimension</button></div>
+        <canvas id="dimension-canvas" width="860" height="340"></canvas>
+      </div>
+      <div id="world-tab" class="tab-body hidden">
+        <div class="world-grid">
+          <section class="panel world-card">
+            <h3>Lobby Dimension Room</h3>
+            <canvas id="lobby-room-canvas" width="560" height="320" aria-label="2D lobby room"></canvas>
+            <div class="move-controls">
+              <button data-move="up">Up</button>
+              <button data-move="left">Left</button>
+              <button data-move="down">Down</button>
+              <button data-move="right">Right</button>
+              <button id="talk-nearby">Talk Nearby</button>
+            </div>
+            <div id="room-hint" class="hint"></div>
+          </section>
+
+          <section class="panel world-card">
+            <h3>AI Dialogue</h3>
+            <div id="dialog-log" class="scroll-list"></div>
+            <div id="dialog-choices" class="choice-grid"></div>
+          </section>
+
+          <section class="panel world-card">
+            <h3>Capture Expedition</h3>
+            <label>Target Dimension AI</label>
+            <select id="capture-target"></select>
+            <button id="start-capture">Start Reaction Capture</button>
+            <div id="capture-feedback" class="hint"></div>
+            <div id="capture-stage" class="capture-stage"></div>
+          </section>
+
+          <section class="panel world-card">
+            <h3>Inventory and Trader</h3>
+            <div id="lifeforce-meta"></div>
+            <div id="captured-list" class="scroll-list"></div>
+            <div id="trader-offer" class="panel-sub"></div>
+            <label><input id="paywall-toggle" type="checkbox" /> Paywall it (creator card costs enabled)</label>
+          </section>
+
+          <section class="panel world-card world-card-wide">
+            <h3>Idle Lobby Chatter</h3>
+            <div id="idle-chatter" class="scroll-list"></div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <p class="hint">Single-player runs directly from file. Multiplayer still requires browser networking/WebRTC.</p>
   </main>
+
+  <div id="match-cinematic" class="hidden">
+    <div class="cinematic-card" id="cinematic-player">Novice</div>
+    <div class="cinematic-vs">VS</div>
+    <div class="cinematic-card" id="cinematic-opponent">Opponent</div>
+  </div>
+
+  <script src="./launcher.js"></script>
 </body>
 </html>

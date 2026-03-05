@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CardForge Offline Runtime</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Segoe UI", sans-serif; }
+    body { margin: 0; background: radial-gradient(circle at 20% 20%, #203965, #070f1f 70%); color: #eef4ff; }
+    main { max-width: 1080px; margin: 0 auto; padding: 1rem; display: grid; gap: .7rem; }
+    .panel { background: rgba(12, 20, 37, 0.92); border: 1px solid #385584; border-radius: 12px; padding: .65rem; }
+    .row { display: flex; gap: .55rem; flex-wrap: wrap; align-items: center; }
+    button, select { border: 1px solid #4a6fa9; border-radius: 8px; background: linear-gradient(180deg, #2d4678, #203259); color: #fff; padding: .42rem .7rem; cursor: pointer; }
+    #board { display: grid; gap: .45rem; }
+    .hero { padding: .55rem; border-radius: 10px; background: #1a2a4c; border: 1px solid #4d6ea8; }
+    .lane { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .4rem; min-height: 120px; border: 1px dashed #3f5d90; border-radius: 10px; padding: .45rem; }
+    .minion, .card { border-radius: 9px; border: 1px solid #5778b4; background: #1a2442; padding: .45rem; cursor: pointer; }
+    .minion.selected { outline: 2px solid #7dffa2; }
+    #hand { display: flex; flex-wrap: wrap; gap: .45rem; }
+    #log { max-height: 180px; overflow: auto; display: grid; gap: .25rem; font-size: .92rem; }
+    #log div { background: #101a31; border: 1px solid #2e446e; border-radius: 8px; padding: .35rem; }
+    .hint { opacity: .84; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="panel">
+      <div class="row">
+        <h1 style="margin:0;font-size:1.35rem;">CardForge Offline Runtime</h1>
+        <a href="../offline_singleplayer.html"><button>Back</button></a>
+      </div>
+      <p class="hint">Standalone single-player runtime with no local server requirement.</p>
+      <div class="row">
+        <label>Opponent <select id="ai-select"></select></label>
+        <button id="new-match">Start Match</button>
+        <button id="end-turn">End Turn</button>
+      </div>
+    </section>
+
+    <section id="board" class="panel">
+      <div class="hero" id="enemy-hero"></div>
+      <div class="lane" id="enemy-lane"></div>
+      <div class="lane" id="player-lane"></div>
+      <div class="hero" id="player-hero"></div>
+    </section>
+
+    <section class="panel">
+      <h3 style="margin:.2rem 0;">Hand</h3>
+      <div id="hand"></div>
+    </section>
+
+    <section class="panel">
+      <h3 style="margin:.2rem 0;">Log</h3>
+      <div id="log"></div>
+    </section>
+  </main>
+
+  <script>
+    const STORAGE_KEY = 'cardforge.profile.v1';
+    const aiProfiles = [
+      { id: 'local-initiate', name: 'Mira Vale', level: 2, personality: { title: 'Dimensional Initiate', dimensionTag: '#Aster-2' }, deck: [{ name: 'Ember Acolyte', attack: 2, health: 2 }, { name: 'Ward Sentry', attack: 1, health: 4, taunt: true }] },
+      { id: 'local-sentinel', name: 'Gregory Of Oltine', level: 5, personality: { title: 'Oltine Sentinel', dimensionTag: '#Oltine-Prime' }, deck: [{ name: 'Oltine Bulwark', attack: 3, health: 5, taunt: true }, { name: 'Rift Lancer', attack: 4, health: 3 }] },
+      { id: 'neural-ai', name: 'Neural AI', level: 20, personality: { title: 'Adaptive Strategic Core', dimensionTag: '#Neural-Prime' }, deck: [{ name: 'Fractal Interdictor', attack: 6, health: 6, taunt: true }, { name: 'Axiom Reaper', attack: 8, health: 3 }] },
+    ];
+    const starterCards = [
+      { name: 'River Scout', cost: 1, attack: 2, health: 1 },
+      { name: 'Iron Guard', cost: 2, attack: 2, health: 3, taunt: true },
+      { name: 'Ember Adept', cost: 3, attack: 4, health: 2 },
+      { name: 'Skybound Hunter', cost: 4, attack: 5, health: 3 },
+      { name: 'Grave Oracle', cost: 5, attack: 6, health: 4 },
+    ];
+
+    const state = {
+      ai: aiProfiles[0],
+      playerHealth: 30,
+      enemyHealth: 30,
+      playerLane: [],
+      enemyLane: [],
+      hand: [],
+      mana: 1,
+      maxMana: 1,
+      selectedAttacker: null,
+      resolved: false,
+      enemyDeck: [],
+    };
+
+    const select = document.getElementById('ai-select');
+    aiProfiles.forEach((ai) => {
+      const option = document.createElement('option');
+      option.value = ai.id;
+      option.textContent = `${ai.name} (Lvl ${ai.level})`;
+      select.appendChild(option);
+    });
+
+    function loadProfile() {
+      const base = { stats: { wins: 0, losses: 0, streak: 0 }, defeatedAiIds: [], lobbyResidents: [], carnexCodes: {}, discoveredDimensions: [] };
+      try {
+        const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        return {
+          ...base,
+          ...parsed,
+          stats: { ...base.stats, ...(parsed.stats || {}) },
+          defeatedAiIds: [...new Set([...(parsed.defeatedAiIds || [])])],
+          lobbyResidents: [...new Set([...(parsed.lobbyResidents || [])])],
+          carnexCodes: { ...base.carnexCodes, ...(parsed.carnexCodes || {}) },
+          discoveredDimensions: [...new Set([...(parsed.discoveredDimensions || [])])],
+        };
+      } catch {
+        return base;
+      }
+    }
+
+    function saveProfile(profile) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(profile));
+    }
+
+    function log(msg) {
+      const row = document.createElement('div');
+      row.textContent = msg;
+      document.getElementById('log').prepend(row);
+    }
+
+    function drawCards(count = 1) {
+      for (let i = 0; i < count; i += 1) {
+        const card = starterCards[Math.floor(Math.random() * starterCards.length)];
+        state.hand.push({ ...card, id: `${card.name}-${Date.now()}-${Math.random()}` });
+      }
+    }
+
+    function buildEnemyDeck(ai) {
+      const out = [];
+      for (let i = 0; i < 30; i += 1) {
+        const t = ai.deck[i % ai.deck.length];
+        out.push({
+          ...t,
+          name: `${t.name} ${i + 1}`,
+          attack: Math.max(1, t.attack + ((i % 3) - 1)),
+          health: Math.max(1, t.health + ((i % 4) - 1)),
+        });
+      }
+      return out.sort(() => Math.random() - 0.5);
+    }
+
+    function render() {
+      document.getElementById('enemy-hero').textContent = `${state.ai.name} · HP ${state.enemyHealth}`;
+      document.getElementById('player-hero').textContent = `You · HP ${state.playerHealth} · Mana ${state.mana}/${state.maxMana}`;
+
+      const enemyLane = document.getElementById('enemy-lane');
+      enemyLane.innerHTML = '';
+      state.enemyLane.forEach((m, idx) => {
+        const node = document.createElement('div');
+        node.className = 'minion';
+        node.textContent = `${m.name} ${m.attack}/${m.health}${m.taunt ? ' [Taunt]' : ''}`;
+        node.onclick = () => playerAttack(idx);
+        enemyLane.appendChild(node);
+      });
+
+      const playerLane = document.getElementById('player-lane');
+      playerLane.innerHTML = '';
+      state.playerLane.forEach((m, idx) => {
+        const node = document.createElement('div');
+        node.className = `minion ${state.selectedAttacker === idx ? 'selected' : ''}`;
+        node.textContent = `${m.name} ${m.attack}/${m.health}${m.sick ? ' [Sick]' : ''}`;
+        node.onclick = () => { if (!m.sick) state.selectedAttacker = idx; render(); };
+        playerLane.appendChild(node);
+      });
+
+      const hand = document.getElementById('hand');
+      hand.innerHTML = '';
+      state.hand.forEach((c, idx) => {
+        const node = document.createElement('div');
+        node.className = 'card';
+        node.textContent = `${c.name} (${c.cost}) ${c.attack}/${c.health}`;
+        node.onclick = () => playCard(idx);
+        hand.appendChild(node);
+      });
+    }
+
+    function cleanup() {
+      state.playerLane = state.playerLane.filter((m) => m.health > 0);
+      state.enemyLane = state.enemyLane.filter((m) => m.health > 0);
+      if (state.resolved) return;
+      if (state.enemyHealth <= 0) {
+        state.resolved = true;
+        const profile = loadProfile();
+        profile.stats.wins += 1;
+        profile.stats.streak += 1;
+        profile.defeatedAiIds.push(state.ai.id);
+        profile.lobbyResidents.push(state.ai.id);
+        profile.defeatedAiIds = [...new Set(profile.defeatedAiIds)];
+        profile.lobbyResidents = [...new Set(profile.lobbyResidents)];
+        const code = `${state.ai.personality.dimensionTag}-${state.ai.level}-${state.ai.id}`;
+        profile.carnexCodes[state.ai.id] = code;
+        profile.discoveredDimensions.push(state.ai.personality.dimensionTag.replace('#', ''));
+        profile.discoveredDimensions = [...new Set(profile.discoveredDimensions)];
+        saveProfile(profile);
+        log(`Victory! ${state.ai.name} defeated. Carnex code: ${code}`);
+      } else if (state.playerHealth <= 0) {
+        state.resolved = true;
+        const profile = loadProfile();
+        profile.stats.losses += 1;
+        profile.stats.streak = 0;
+        saveProfile(profile);
+        log('Defeat. Retry dimension.');
+      }
+    }
+
+    function playCard(handIndex) {
+      if (state.resolved) return;
+      const card = state.hand[handIndex];
+      if (!card || card.cost > state.mana || state.playerLane.length >= 8) return;
+      state.hand.splice(handIndex, 1);
+      state.mana -= card.cost;
+      state.playerLane.push({ ...card, sick: true });
+      log(`Played ${card.name}.`);
+      render();
+    }
+
+    function playerAttack(enemyIndex) {
+      if (state.resolved || state.selectedAttacker == null) return;
+      const attacker = state.playerLane[state.selectedAttacker];
+      const defender = state.enemyLane[enemyIndex];
+      if (!attacker || !defender || attacker.sick) return;
+      const forcedTaunt = state.enemyLane.find((m) => m.taunt);
+      if (forcedTaunt && defender !== forcedTaunt) return;
+      defender.health -= attacker.attack;
+      attacker.health -= defender.attack;
+      log(`${attacker.name} attacked ${defender.name}.`);
+      state.selectedAttacker = null;
+      cleanup();
+      render();
+    }
+
+    function enemyTurn() {
+      if (state.resolved) return;
+      state.enemyLane.forEach((m) => { m.sick = false; });
+      if (state.enemyLane.length < 8 && state.enemyDeck.length > 0) {
+        const best = state.enemyDeck.sort((a, b) => (b.attack + b.health + (b.taunt ? 2 : 0)) - (a.attack + a.health + (a.taunt ? 2 : 0)))[0];
+        state.enemyDeck = state.enemyDeck.filter((c) => c !== best);
+        state.enemyLane.push({ ...best, sick: false });
+        log(`${state.ai.name} summoned ${best.name}.`);
+      }
+
+      for (const attacker of state.enemyLane) {
+        if (attacker.sick) continue;
+        const taunt = state.playerLane.find((m) => m.taunt);
+        if (taunt) {
+          taunt.health -= attacker.attack;
+          attacker.health -= taunt.attack;
+          log(`${attacker.name} traded into ${taunt.name}.`);
+        } else if (state.playerLane.length > 0) {
+          const target = state.playerLane.sort((a, b) => (b.attack + b.health) - (a.attack + a.health))[0];
+          target.health -= attacker.attack;
+          attacker.health -= target.attack;
+          log(`${attacker.name} attacked ${target.name}.`);
+        } else {
+          state.playerHealth -= attacker.attack;
+          log(`${attacker.name} hit your hero for ${attacker.attack}.`);
+        }
+      }
+
+      cleanup();
+      state.maxMana = Math.min(10, state.maxMana + 1);
+      state.mana = state.maxMana;
+      state.playerLane.forEach((m) => { m.sick = false; });
+      drawCards(1);
+      render();
+    }
+
+    function startMatch() {
+      state.ai = aiProfiles.find((ai) => ai.id === select.value) || aiProfiles[0];
+      state.playerHealth = 30;
+      state.enemyHealth = 30;
+      state.playerLane = [];
+      state.enemyLane = [];
+      state.hand = [];
+      state.mana = 1;
+      state.maxMana = 1;
+      state.selectedAttacker = null;
+      state.resolved = false;
+      state.enemyDeck = buildEnemyDeck(state.ai);
+      drawCards(5);
+      document.getElementById('log').innerHTML = '';
+      log(`Match started vs ${state.ai.name}.`);
+      render();
+    }
+
+    document.getElementById('new-match').onclick = startMatch;
+    document.getElementById('end-turn').onclick = enemyTurn;
+    startMatch();
+  </script>
+</body>
+</html>

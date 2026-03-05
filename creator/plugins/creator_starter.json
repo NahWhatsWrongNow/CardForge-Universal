@@ -1,0 +1,15 @@
+{
+  "type": "card-pack",
+  "id": "creator-examples",
+  "name": "Creator Examples",
+  "cards": [
+    { "id": "blank-minion", "name": "Blank Minion", "type": "minion", "cost": 1, "attack": 1, "health": 1, "template": true },
+    { "id": "blank-spell", "name": "Blank Spell", "type": "spell", "cost": 1, "damage": 0, "template": true },
+    { "id": "minion-deal-2", "name": "Minion Template: Deal 2", "type": "minion", "cost": 2, "attack": 2, "health": 2, "abilityTemplateId": "deal-2", "template": true },
+    { "id": "spell-deal-2", "name": "Spell Template: Deal 2", "type": "spell", "cost": 2, "damage": 2, "abilityTemplateId": "deal-2", "template": true },
+    { "id": "minion-armor-3", "name": "Minion Template: Grant 3 Armor", "type": "minion", "cost": 3, "attack": 1, "health": 4, "abilityTemplateId": "grant-armor-3", "template": true },
+    { "id": "spell-armor-3", "name": "Spell Template: Grant 3 Armor", "type": "spell", "cost": 2, "damage": 0, "abilityTemplateId": "grant-armor-3", "template": true },
+    { "id": "minion-draw-1", "name": "Minion Template: Draw 1", "type": "minion", "cost": 2, "attack": 1, "health": 3, "abilityTemplateId": "draw-1", "template": true },
+    { "id": "spell-draw-1", "name": "Spell Template: Draw 1", "type": "spell", "cost": 1, "damage": 0, "abilityTemplateId": "draw-1", "template": true }
+  ]
+}

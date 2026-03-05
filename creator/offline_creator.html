@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CardForge Offline Creator</title>
+  <style>
+    :root { color-scheme: dark; font-family: "Segoe UI", sans-serif; }
+    body { margin: 0; background: radial-gradient(circle at 20% 20%, #203965, #070f1f 70%); color: #eef4ff; }
+    main { max-width: 980px; margin: 0 auto; padding: 1rem; display: grid; gap: .8rem; }
+    .panel { background: rgba(12, 20, 37, 0.9); border: 1px solid #385584; border-radius: 12px; padding: .7rem; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .45rem; }
+    input, select, button, textarea { border: 1px solid #4a6fa9; border-radius: 8px; background: #121d34; color: #fff; padding: .45rem; }
+    textarea { min-height: 180px; width: 100%; box-sizing: border-box; }
+    .row { display: flex; gap: .5rem; flex-wrap: wrap; align-items: center; }
+    @media (max-width: 860px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="panel">
+      <div class="row">
+        <h1 style="margin:0;font-size:1.35rem;">Offline Creator</h1>
+        <a href="../offline_singleplayer.html"><button>Back</button></a>
+      </div>
+      <p>Standalone creator without plugin loading. Outputs JSON you can copy into packs.</p>
+    </section>
+
+    <section class="panel">
+      <h2>Card Builder</h2>
+      <form id="card-form" class="grid">
+        <input name="id" placeholder="card id" required />
+        <input name="name" placeholder="card name" required />
+        <select name="cardType"><option value="minion">minion</option><option value="spell">spell</option></select>
+        <input name="cost" type="number" min="0" value="1" />
+        <input name="attack" type="number" min="0" value="1" />
+        <input name="health" type="number" min="1" value="1" />
+        <input name="damage" type="number" min="0" value="2" />
+        <input name="race" placeholder="race" />
+        <input name="element" placeholder="element" />
+        <select name="rarity"><option>common</option><option>rare</option><option>epic</option><option>legendary</option></select>
+        <label><input name="taunt" type="checkbox" /> Taunt</label>
+        <label><input name="allowFriendlyAttack" type="checkbox" /> Friendly Attack</label>
+        <label><input name="includeInPacks" type="checkbox" checked /> Include in packs</label>
+        <select name="packType"><option value="booster">booster</option><option value="event">event</option><option value="trader">trader</option><option value="none">none</option></select>
+        <input name="catchLimit" type="number" min="0" value="0" placeholder="catch limit" />
+        <input name="homeDimension" placeholder="home dimension" />
+        <button type="submit">Generate Card JSON</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Solar System Builder</h2>
+      <form id="solar-form" class="grid">
+        <input name="systemName" placeholder="system name" required />
+        <input name="ownerAiId" placeholder="owner ai id" />
+        <input name="planetCount" type="number" min="1" max="16" value="6" />
+        <input name="orbitSpeedBase" type="number" step="0.0001" min="0.0001" value="0.0025" />
+        <input name="difficulty" type="number" min="1" max="20" value="5" />
+        <input name="captureMultiplier" type="number" step="0.1" min="0.1" value="1.0" />
+        <button type="submit">Generate System JSON</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>Output</h2>
+      <textarea id="output" readonly></textarea>
+    </section>
+  </main>
+
+  <script>
+    const output = document.getElementById('output');
+    const profile = JSON.parse(localStorage.getItem('cardforge.profile.v1') || '{}');
+    const paywall = !!profile.paywallMode;
+
+    document.getElementById('card-form').onsubmit = (event) => {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      const type = data.get('cardType');
+      const includeInPacks = data.get('includeInPacks') === 'on' && data.get('packType') !== 'none';
+      const base = {
+        id: data.get('id'),
+        name: data.get('name'),
+        type,
+        cost: Number(data.get('cost')),
+        rarity: data.get('rarity'),
+        race: data.get('race') || null,
+        element: data.get('element') || null,
+        availability: {
+          includeInPacks,
+          packType: includeInPacks ? data.get('packType') : 'none',
+          catchLimit: Number(data.get('catchLimit') || 0),
+          homeDimension: data.get('homeDimension') || null,
+        },
+      };
+      if (paywall) base.creationCost = Math.max(25, Number(data.get('cost')) * 25);
+      const card = type === 'minion'
+        ? { ...base, attack: Number(data.get('attack')), health: Number(data.get('health')), taunt: data.get('taunt') === 'on', allowFriendlyAttack: data.get('allowFriendlyAttack') === 'on' }
+        : { ...base, damage: Number(data.get('damage')) };
+      output.value = JSON.stringify(card, null, 2);
+    };
+
+    document.getElementById('solar-form').onsubmit = (event) => {
+      event.preventDefault();
+      const data = new FormData(event.target);
+      const planets = Array.from({ length: Number(data.get('planetCount')) }, (_, i) => ({
+        id: `planet-${i + 1}`,
+        orbitRadius: 40 + (i * 24),
+        orbitSpeed: Number((Number(data.get('orbitSpeedBase')) + (i * 0.0006)).toFixed(4)),
+        biome: ['crystal', 'ash', 'oceanic', 'forest', 'storm', 'ice'][i % 6],
+        captureWeight: Math.max(0.2, Number(data.get('captureMultiplier')) - (i * 0.05)),
+      }));
+      const system = {
+        type: 'solar-system',
+        id: `system-${String(data.get('systemName')).toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
+        name: data.get('systemName'),
+        ownerAiId: data.get('ownerAiId') || null,
+        difficulty: Number(data.get('difficulty')),
+        seed: `${data.get('systemName')}-${data.get('ownerAiId') || 'neutral'}`,
+        planets,
+      };
+      output.value = JSON.stringify(system, null, 2);
+    };
+  </script>
+</body>
+</html>
