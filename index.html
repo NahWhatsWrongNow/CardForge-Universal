@@ -54,7 +54,7 @@
       <div id="world-tab" class="tab-body hidden"><h3>Visit Your World</h3><button id="visit-world">Work in progress!</button></div>
     </section>
 
-    <p class="hint">Run with <code>python -m http.server 8080</code></p>
+    <p class="hint">Single-player can run directly from file. For best pack/plugin compatibility use a local web server.</p>
   </main>
 
   <div id="match-cinematic" class="hidden">
@@ -67,6 +67,47 @@
 const STORAGE_KEY = 'cardforge.profile.v1';
 const WORLD_KEY = 'cardforge.world.seed.v1';
 const MATCH_KEY = 'cardforge.match.opponent.v1';
+const LOCAL_MODE = window.location.protocol === 'file:';
+const LOCAL_DATA = {
+  aiIndex: { entries: [] },
+  quests: { quests: [{ id: 'local-win', goal: 'Win 1 match', metric: 'wins', target: 1, reward: 120 }] },
+  store: { products: [{ id: 'local-pack', name: 'Local Starter Pack', price: 60, cardsPerPack: 3 }] },
+  decks: {
+    decks: [
+      {
+        id: 'local-balanced',
+        name: 'Local Balanced',
+        entries: [
+          { cardId: 'local-ember-apprentice', count: 10 },
+          { cardId: 'local-ward-guardian', count: 10 },
+          { cardId: 'local-rift-scout', count: 10 }
+        ]
+      }
+    ]
+  },
+  cardex: {
+    count: 3,
+    cards: [
+      { id: 'local-ember-apprentice', name: 'Ember Apprentice', type: 'minion', cost: 1, attack: 2, health: 1, race: 'mage', element: 'fire', rarity: 'common', tags: ['starter'] },
+      { id: 'local-ward-guardian', name: 'Ward Guardian', type: 'minion', cost: 2, attack: 2, health: 3, race: 'guardian', element: 'light', rarity: 'rare', tags: ['starter'] },
+      { id: 'local-rift-scout', name: 'Rift Scout', type: 'minion', cost: 1, attack: 1, health: 2, race: 'scout', element: 'arcane', rarity: 'common', tags: ['starter'] }
+    ]
+  },
+  aiProfiles: [
+    {
+      id: 'local-initiate',
+      name: 'Mira Vale',
+      level: 2,
+      personality: { title: 'Dimensional Initiate', dimensionTag: 'Aster-2', backstory: 'A careful duelist from the Prism lanes.' }
+    },
+    {
+      id: 'local-sentinel',
+      name: 'Gregory Of Oltine',
+      level: 5,
+      personality: { title: 'Oltine Sentinel', dimensionTag: 'Oltine-Prime', backstory: 'A tactical veteran who defends the fracture gates.' }
+    }
+  ]
+};
 const lobby = document.getElementById('lobby-panel');
 const openLobby = document.getElementById('open-lobby');
 
@@ -83,6 +124,17 @@ function getSessionSeed() {
     localStorage.setItem(WORLD_KEY, seed);
   }
   return seed;
+}
+
+async function loadJson(path, fallback) {
+  try {
+    const response = await fetch(path);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    return await response.json();
+  } catch (error) {
+    if (LOCAL_MODE) return fallback;
+    throw error;
+  }
 }
 
 openLobby.onclick = async () => {
@@ -110,10 +162,11 @@ document.querySelectorAll('[data-tab]').forEach((button) => button.onclick = () 
 function showTab(tab) { ['match', 'deck', 'quests', 'shop', 'carnifex', 'world'].forEach((id) => document.getElementById(`${id}-tab`).classList.toggle('hidden', id !== tab)); }
 
 async function loadAiProfiles() {
-  const idx = await (await fetch('./game/ai_packs/index.json')).json();
+  if (LOCAL_MODE) return LOCAL_DATA.aiProfiles;
+  const idx = await loadJson('./game/ai_packs/index.json', LOCAL_DATA.aiIndex);
   const out = [];
   for (const entry of idx.entries) {
-    const data = await (await fetch(`./game/ai_packs/${entry}`)).json();
+    const data = await loadJson(`./game/ai_packs/${entry}`, null);
     if (data.personality) out.push(data);
   }
   return out.sort((a,b)=>(a.level??1)-(b.level??1));
@@ -172,7 +225,7 @@ function startCinematic(playerName, aiProfile) {
 async function renderQuestTab() {
   const host = document.getElementById('quests-tab');
   const profile = loadProfile();
-  const qp = await (await fetch('./game/quest_packs/daily.json')).json();
+  const qp = await loadJson('./game/quest_packs/daily.json', LOCAL_DATA.quests);
   const quests = qp.quests || [];
   host.innerHTML = '<h3>Quest Board</h3>';
   quests.forEach((q) => {
@@ -201,9 +254,8 @@ async function renderQuestTab() {
 async function renderDeckTab() {
   const host = document.getElementById('deck-tab');
   const profile = loadProfile();
-  const cards = (await (await fetch('./cardex.json')).json()).cards;
-  const response = await fetch('./game/deck_packs/starter_decks.json');
-  const deckPack = await response.json();
+  const cards = (await loadJson('./cardex.json', LOCAL_DATA.cardex)).cards;
+  const deckPack = await loadJson('./game/deck_packs/starter_decks.json', LOCAL_DATA.decks);
   const allDecks = [...(deckPack.decks || []), ...(profile.customDecks || [])];
   host.innerHTML = '<h3>Deck Builder + Simulator</h3>';
   const deckSelect = document.createElement('select');
@@ -243,7 +295,7 @@ async function renderDeckTab() {
 async function renderShopTab() {
   const host = document.getElementById('shop-tab');
   const profile = loadProfile();
-  const store = await (await fetch('./game/store_packs/starter_store.json')).json();
+  const store = await loadJson('./game/store_packs/starter_store.json', LOCAL_DATA.store);
   host.innerHTML = `<h3>Shop</h3><div>Gold: ${profile.economy?.gold ?? 0}</div>`;
   (store.products || []).forEach((p) => {
     const row = document.createElement('article');
@@ -299,7 +351,7 @@ function drawDimensionSystem(name) {
 }
 
 async function renderCarnifex() {
-  const payload = await (await fetch('./cardex.json')).json();
+  const payload = await loadJson('./cardex.json', LOCAL_DATA.cardex);
   const meta = document.getElementById('cardex-meta');
   const list = document.getElementById('cardex-list');
   const search = document.getElementById('cardex-search');

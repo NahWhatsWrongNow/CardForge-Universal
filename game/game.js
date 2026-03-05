@@ -10,6 +10,22 @@ import { chooseAction, createSummon, getThinkDelay, getThinkingLine } from './en
 
 const registry = new Registry();
 const MATCH_KEY = 'cardforge.match.opponent.v1';
+const LOCAL_MODE = window.location.protocol === 'file:';
+const LOCAL_RUNTIME_DATA = {
+  aiProfiles: [
+    { id: 'local-initiate', name: 'Mira Vale', level: 2, personality: { title: 'Initiate', dimensionTag: 'Aster-2' }, deck: [{ name: 'Ember Acolyte', attack: 2, health: 1, element: 'fire' }, { name: 'Ward Sentry', attack: 1, health: 3, taunt: true, element: 'light' }] },
+    { id: 'local-gregory', name: 'Gregory Of Oltine', level: 5, personality: { title: 'Sentinel', dimensionTag: 'Oltine-Prime' }, deck: [{ name: 'Oltine Bulwark', attack: 2, health: 4, taunt: true, element: 'earth' }, { name: 'Rift Lancer', attack: 4, health: 2, element: 'arcane' }] },
+  ],
+  storeProducts: [{ id: 'local-pack', name: 'Local Starter Pack', price: 60, cardsPerPack: 3, pityAfter: 4 }],
+  decks: [{ id: 'local-balanced', name: 'Local Balanced', entries: [{ cardId: 'local-ember-apprentice', count: 10 }, { cardId: 'local-ward-guardian', count: 10 }, { cardId: 'local-rift-scout', count: 10 }] }],
+  cards: [
+    { id: 'local-ember-apprentice', name: 'Ember Apprentice', type: 'minion', cost: 1, attack: 2, health: 1, race: 'mage', element: 'fire', rarity: 'common', tags: ['starter'] },
+    { id: 'local-ward-guardian', name: 'Ward Guardian', type: 'minion', cost: 2, attack: 2, health: 3, race: 'guardian', element: 'light', rarity: 'rare', tags: ['starter'] },
+    { id: 'local-rift-scout', name: 'Rift Scout', type: 'minion', cost: 1, attack: 1, health: 2, race: 'scout', element: 'arcane', rarity: 'common', tags: ['starter'] }
+  ],
+  themes: [{ id: 'local-theme', name: 'Nebula', appBg: 'linear-gradient(120deg,#0e1428,#1e1a44,#1a3e49)', panelBg: '#10152acc', accent: '#8f7bff', hpStart: '#7dffa2', hpEnd: '#3be0c6' }],
+  backdrops: [{ id: 'local-backdrop', name: 'Fracture Ring', css: 'radial-gradient(circle at 30% 20%, #2a4b9f 0%, #1c2446 45%, #0f1429 100%)' }],
+};
 const state = {
   profile: loadProfile(),
   playerHealth: 30,
@@ -20,7 +36,7 @@ const state = {
   maxMana: 1,
   hand: [],
   rivalryPacks: [], quests: [], storeProducts: [], aiProfiles: [], backdrops: [], playlists: [], cardBacks: [], themes: [], decks: [],
-  deckMode: 'planning', deckSearch: '', selectedDeckId: null, selectedAiId: null, bossMode: false, aiThinking: false, aiThinkingLine: '', lastAiTrace: 'not-run', selectedPlayerSlot: null, selectedAttackerId: null, logHidden: false, usedAttacks: {}, enemyUsedAttacks: {}, currentTurn: 'player', enemyDeck: [],
+  deckMode: 'planning', deckSearch: '', selectedDeckId: null, selectedAiId: null, bossMode: false, aiThinking: false, aiThinkingLine: '', lastAiTrace: 'not-run', selectedPlayerSlot: null, selectedAttackerId: null, logHidden: true, usedAttacks: {}, enemyUsedAttacks: {}, currentTurn: 'player', enemyDeck: [],
   playerMinions: [],
   enemyMinions: [
     { id: uid('enemy'), name: 'Guard Pup', attack: 1, health: 3, maxHealth: 3, taunt: true, defense: false, race: 'undead', element: 'shadow', statuses: {}, rarity: 'common', level: 2 },
@@ -33,7 +49,7 @@ const log = (msg) => {
   host.innerHTML = `<div>${msg}</div>` + host.innerHTML;
 };
 const showHint = (msg = '') => { document.querySelector('#hint').textContent = msg; };
-const getAllCards = () => registry.list('cardPacks').flatMap((pack) => pack.cards);
+const getAllCards = () => (LOCAL_MODE ? LOCAL_RUNTIME_DATA.cards : registry.list('cardPacks').flatMap((pack) => pack.cards));
 const currentAiProfile = () => state.aiProfiles.find((profile) => profile.id === state.selectedAiId) ?? state.aiProfiles[0] ?? null;
 const getSelectedDeck = () => state.decks.find((deck) => deck.id === state.selectedDeckId) ?? state.decks[0] ?? null;
 const persistProfile = () => saveProfile(state.profile);
@@ -253,7 +269,7 @@ function renderPanels() {
 
   const slotHelp = document.querySelector('#slot-help');
   if (slotHelp) {
-    slotHelp.innerHTML = '<h3>Battle Slots</h3><div>8 fixed minion slots per side.</div><div>Click an empty player slot before summoning from hand.</div><div>Click your minion, then click a target to attack.</div>';
+    slotHelp.innerHTML = '<h3>Tutorial</h3><div>Open Menu → Tutorial for battle basics and placement tips.</div><details><summary>Quick Controls</summary><div>Drag cards to highlighted slots to summon.</div><div>Click a minion then click a target to attack.</div><div>Newly summoned minions cannot attack unless they have Charge.</div></details>';
   }
 }
 
@@ -304,36 +320,40 @@ async function animatePackOpening(cards) {
 async function boot() {
   const bootFiles = document.querySelector('#boot-files');
   const bootLog = (line) => {
-    log(line);
     if (bootFiles) { const row = document.createElement('div'); row.textContent = line; bootFiles.prepend(row); }
   };
-  const errors = await loadPlugins(registry, [
-    { manifest: './mode_packs/index.json', base: './mode_packs', type: 'mode-pack', kind: 'modes' },
-    { manifest: './ai_packs/index.json', base: './ai_packs', type: 'ai-pack', kind: 'ai' },
-    { manifest: './race_packs/index.json', base: './race_packs', type: 'race-pack', kind: 'rivalryPacks' },
-    { manifest: './quest_packs/index.json', base: './quest_packs', type: 'quest-pack', kind: 'questPacks' },
-    { manifest: './store_packs/index.json', base: './store_packs', type: 'store-pack', kind: 'storePacks' },
-    { manifest: './deck_packs/index.json', base: './deck_packs', type: 'deck-pack', kind: 'deckPacks' },
-    { manifest: './backdrop_packs/index.json', base: './backdrop_packs', type: 'backdrop-pack', kind: 'backdropPacks' },
-    { manifest: './audio_packs/index.json', base: './audio_packs', type: 'audio-pack', kind: 'audioPacks' },
-    { manifest: './cosmetic_packs/index.json', base: './cosmetic_packs', type: 'cosmetic-pack', kind: 'cosmeticPacks' },
-    { manifest: './theme_packs/index.json', base: './theme_packs', type: 'theme-pack', kind: 'themePacks' },
-    { manifest: '../packs/index.json', base: '../packs', type: 'card-pack', kind: 'cardPacks' },
-  ], bootLog);
-  errors.forEach((error) => log(`Error: ${error}`));
+  if (!LOCAL_MODE) {
+    const errors = await loadPlugins(registry, [
+      { manifest: './mode_packs/index.json', base: './mode_packs', type: 'mode-pack', kind: 'modes' },
+      { manifest: './ai_packs/index.json', base: './ai_packs', type: 'ai-pack', kind: 'ai' },
+      { manifest: './race_packs/index.json', base: './race_packs', type: 'race-pack', kind: 'rivalryPacks' },
+      { manifest: './quest_packs/index.json', base: './quest_packs', type: 'quest-pack', kind: 'questPacks' },
+      { manifest: './store_packs/index.json', base: './store_packs', type: 'store-pack', kind: 'storePacks' },
+      { manifest: './deck_packs/index.json', base: './deck_packs', type: 'deck-pack', kind: 'deckPacks' },
+      { manifest: './backdrop_packs/index.json', base: './backdrop_packs', type: 'backdrop-pack', kind: 'backdropPacks' },
+      { manifest: './audio_packs/index.json', base: './audio_packs', type: 'audio-pack', kind: 'audioPacks' },
+      { manifest: './cosmetic_packs/index.json', base: './cosmetic_packs', type: 'cosmetic-pack', kind: 'cosmeticPacks' },
+      { manifest: './theme_packs/index.json', base: './theme_packs', type: 'theme-pack', kind: 'themePacks' },
+      { manifest: '../packs/index.json', base: '../packs', type: 'card-pack', kind: 'cardPacks' },
+    ], bootLog);
+    errors.forEach((error) => log(`Error: ${error}`));
+  } else {
+    bootLog('Local mode detected (file://).');
+    bootLog('Using embedded starter data.');
+  }
 
-  state.rivalryPacks = registry.list('rivalryPacks');
-  state.quests = registry.list('questPacks').flatMap((pack) => pack.quests ?? []);
-  state.storeProducts = registry.list('storePacks').flatMap((pack) => pack.products ?? []);
-  state.aiProfiles = registry.list('ai');
+  state.rivalryPacks = LOCAL_MODE ? [] : registry.list('rivalryPacks');
+  state.quests = LOCAL_MODE ? [{ id: 'local-win', goal: 'Win 1 match', metric: 'wins', target: 1, reward: 120 }] : registry.list('questPacks').flatMap((pack) => pack.quests ?? []);
+  state.storeProducts = LOCAL_MODE ? LOCAL_RUNTIME_DATA.storeProducts : registry.list('storePacks').flatMap((pack) => pack.products ?? []);
+  state.aiProfiles = LOCAL_MODE ? LOCAL_RUNTIME_DATA.aiProfiles : registry.list('ai');
   state.selectedAiId = state.aiProfiles[0]?.id ?? null;
   const queuedOpponent = localStorage.getItem(MATCH_KEY);
   if (queuedOpponent && state.aiProfiles.some((a) => a.id === queuedOpponent)) state.selectedAiId = queuedOpponent;
-  state.backdrops = registry.list('backdropPacks').flatMap((pack) => pack.backdrops ?? []);
+  state.backdrops = LOCAL_MODE ? LOCAL_RUNTIME_DATA.backdrops : registry.list('backdropPacks').flatMap((pack) => pack.backdrops ?? []);
   state.playlists = registry.list('audioPacks').flatMap((pack) => pack.playlists ?? []);
   state.cardBacks = registry.list('cosmeticPacks').flatMap((pack) => pack.cardBacks ?? []);
-  state.themes = registry.list('themePacks').flatMap((pack) => pack.themes ?? []);
-  state.decks = registry.list('deckPacks').flatMap((pack) => pack.decks ?? []);
+  state.themes = LOCAL_MODE ? LOCAL_RUNTIME_DATA.themes : registry.list('themePacks').flatMap((pack) => pack.themes ?? []);
+  state.decks = LOCAL_MODE ? LOCAL_RUNTIME_DATA.decks : registry.list('deckPacks').flatMap((pack) => pack.decks ?? []);
   state.selectedDeckId = state.profile.starterDeckId ?? state.decks[0]?.id ?? null;
 
   onVfx('play-card', ({ payload }) => log(`VFX play-card: ${payload.cardId}`));
@@ -351,6 +371,8 @@ async function boot() {
   render();
   toast('Runtime ready.', 'info');
   renderPanels();
+  document.querySelector('#log').classList.toggle('hidden', state.logHidden);
+  document.querySelector('#toggle-log').textContent = state.logHidden ? 'Show Log' : 'Hide Log';
   document.querySelector('#boot-loading')?.classList.add('hidden');
   document.querySelector('#app')?.classList.remove('hidden');
 }
