@@ -138,7 +138,10 @@ function claimDailyGift() {
   persistProfile();
   toast('Daily gift claimed (+75g).', 'info');
   renderPanels();
+  document.querySelector('#boot-loading')?.classList.add('hidden');
+  document.querySelector('#app')?.classList.remove('hidden');
 }
+
 
 function claimDemoWin() {
   const reward = getWinReward(state.profile.stats.streak);
@@ -148,7 +151,10 @@ function claimDemoWin() {
   persistProfile();
   toast(`Win reward claimed (+${reward}g).`, 'info');
   renderPanels();
+  document.querySelector('#boot-loading')?.classList.add('hidden');
+  document.querySelector('#app')?.classList.remove('hidden');
 }
+
 
 function performEnemyAttack(attackerId, targetId) {
   const attacker = state.enemyMinions.find((m) => m.id === attackerId);
@@ -219,7 +225,10 @@ async function runEnemyTurn() {
   render();
   toast('Enemy turn complete.', 'info');
   renderPanels();
+  document.querySelector('#boot-loading')?.classList.add('hidden');
+  document.querySelector('#app')?.classList.remove('hidden');
 }
+
 
 
 function endTurn() {
@@ -268,7 +277,10 @@ async function buyAndOpen(productId, quantity = 1, discount = 1) {
   persistProfile();
   toast(`Opened ${quantity} pack(s).`, 'info');
   renderPanels();
+  document.querySelector('#boot-loading')?.classList.add('hidden');
+  document.querySelector('#app')?.classList.remove('hidden');
 }
+
 
 async function animatePackOpening(cards) {
   const panel = document.querySelector('#pack-opening');
@@ -290,6 +302,11 @@ async function animatePackOpening(cards) {
 }
 
 async function boot() {
+  const bootFiles = document.querySelector('#boot-files');
+  const bootLog = (line) => {
+    log(line);
+    if (bootFiles) { const row = document.createElement('div'); row.textContent = line; bootFiles.prepend(row); }
+  };
   const errors = await loadPlugins(registry, [
     { manifest: './mode_packs/index.json', base: './mode_packs', type: 'mode-pack', kind: 'modes' },
     { manifest: './ai_packs/index.json', base: './ai_packs', type: 'ai-pack', kind: 'ai' },
@@ -302,7 +319,7 @@ async function boot() {
     { manifest: './cosmetic_packs/index.json', base: './cosmetic_packs', type: 'cosmetic-pack', kind: 'cosmeticPacks' },
     { manifest: './theme_packs/index.json', base: './theme_packs', type: 'theme-pack', kind: 'themePacks' },
     { manifest: '../packs/index.json', base: '../packs', type: 'card-pack', kind: 'cardPacks' },
-  ], log);
+  ], bootLog);
   errors.forEach((error) => log(`Error: ${error}`));
 
   state.rivalryPacks = registry.list('rivalryPacks');
@@ -334,7 +351,10 @@ async function boot() {
   render();
   toast('Runtime ready.', 'info');
   renderPanels();
+  document.querySelector('#boot-loading')?.classList.add('hidden');
+  document.querySelector('#app')?.classList.remove('hidden');
 }
+
 
 function render() {
   document.querySelector('#mana').textContent = `${state.mana}/${state.maxMana}`;

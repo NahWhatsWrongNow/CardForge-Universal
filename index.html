@@ -21,8 +21,11 @@
     <div class="links">
       <a href="./game/index.html">Play Game</a>
       <a href="./creator/index.html">Open Creator</a>
+      <a href="./multiplayer/index.html">Multiplayer</a>
       <button id="open-lobby">Lobby</button>
     </div>
+
+    <section id="loading-panel" class="menu-panel hidden"><h2>Loading Assets</h2><div id="loading-files"></div></section>
 
     <section id="lobby-panel" class="menu-panel hidden">
       <h2>Lobby</h2>
@@ -83,12 +86,22 @@ function getSessionSeed() {
 }
 
 openLobby.onclick = async () => {
-  lobby.classList.remove('hidden');
+  const loading = document.getElementById('loading-panel');
+  const fileLog = document.getElementById('loading-files');
+  const push=(msg)=>{const row=document.createElement('div');row.textContent=msg;fileLog.prepend(row);};
+  loading.classList.remove('hidden');
+  push('Loading AI packs...');
   await renderMatchTab();
+  push('Loading deck data...');
   await renderDeckTab();
+  push('Loading quests...');
   await renderQuestTab();
+  push('Loading store...');
   await renderShopTab();
+  push('Loading codex index...');
   await renderCarnifex();
+  loading.classList.add('hidden');
+  lobby.classList.remove('hidden');
   showTab('match');
 };
 if (window.location.hash === '#lobby') openLobby.click();
